@@ -8,7 +8,6 @@ CADEOS.io will support the following extensions in the first release: .stp, .igs
 The next releases in our roadmap will be mainly focused on adding new design modules and galleries to the existing platform.
 As added value to the community we want to create a job network where companies will be able to post their job offers to professionals seeking job in all the areas involved such as CAD, 3D printers parts, software development, etc. Being part of this network will be free for the jobseekers creating a huge benefit to the EOS ecosystem.
 Companies will just have to pay a fee for the service they will use or the duration. All invoices will be linked to a smart contract associated to their corresponding wallet. Data protection and security are guaranteed by Block.one/EOS reliability
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.
 
 ## ELIMINATING OBSTACLES FOR CREATORS
 
@@ -49,5 +48,7 @@ One of the key elements to EOS’s security and speed is Daniel Larimer’s uniq
 Through the use of DPoS, EOS aims to address concerns surrounding decentralization, safety, and scalability by allowing network token holders to cast votes in proportion to the size of their stake in the network to elect 21 block producers. DPoS in effect democratizes the process of whose work is chosen to be added to the network’s blockchain.
 Because EOS token holders are voting for who is elected into the group of block producers, the block producers are held accountable to the quality of their performance. In theory, the competition between block producers to earn the votes of the stakeholders will spur on increased speed and scalability while creating a barrier for entry that will prevent hackers from acquiring sufficient votes to have their fraudulent work added to the chain.
 DPoS is built on the idea that the barrier of entry block producers need to get through in order to be elected as adds an additional layer of security that a PoS model doesn’t have, and leads to faster transaction speeds than Ethereum’s overly complex sharding system can deliver.
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.
 
 
