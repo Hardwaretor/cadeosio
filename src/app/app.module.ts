@@ -1,9 +1,11 @@
-  
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
+import ScatterJS from '@scatterjs/core';
+import ScatterEOS from '@scatterjs/eosjs';
 
 @NgModule({
   declarations: [

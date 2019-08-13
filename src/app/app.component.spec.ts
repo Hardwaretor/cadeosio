@@ -3,22 +3,24 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 
 import ScatterJS from '@scatterjs/core';
-import ScatterEOS from '@scatterjs/eosjs'
+import ScatterEOS from '@scatterjs/eosjs';
 
 ScatterJS.plugins( new ScatterEOS() );
 
 const network = ScatterJS.Network.fromJson({
-  blockchain:'eos',
-  chainId:'aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906',
-  host:'nodes.get-scatter.com',
-  port:443,
-  protocol:'https'
+  blockchain: 'eos',
+  chainId: 'aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906',
+  host: 'nodes.get-scatter.com',
+  port: 443,
+  protocol: 'https'
 });
 
 ScatterJS.connect('cadeosio', {network}).then(connected => {
-  if(!connected) return false;
+  if (!connected) { return false; }
   // ScatterJS.someMethod();
 });
+
+
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
