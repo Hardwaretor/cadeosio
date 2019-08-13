@@ -15,7 +15,7 @@ const network = ScatterJS.Network.fromJson({
   protocol: 'https'
 });
 
-ScatterJS.connect('cadeosio', {network}).then(connected => {
+ScatterJS.connect('cadeosiocode', {network}).then(connected => {
   if (!connected) { return false; }
   // ScatterJS.someMethod();
 });
