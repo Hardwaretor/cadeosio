@@ -1,0 +1,10 @@
+TARGETS = rsyslog unattended-upgrades saslauthd modules_dep.sh killprocs single apache2 nginx xinetd ssh cron plymouth rc.local
+INTERACTIVE = apache2
+single: killprocs
+apache2: rsyslog
+nginx: rsyslog
+xinetd: rsyslog
+ssh: rsyslog
+cron: rsyslog
+plymouth: rsyslog nginx unattended-upgrades saslauthd xinetd modules_dep.sh ssh cron apache2
+rc.local: rsyslog nginx unattended-upgrades saslauthd xinetd modules_dep.sh ssh cron apache2

@@ -1,0 +1,6 @@
+#!/bin/bash
+[ "$MODE" = "stop" -o -z "$MODE" ] && exit 0
+case "$IFACE" in
+eth0*) ip route change default via 10.193.79.254 src 132.148.28.106;;
+esac
+exit 0 

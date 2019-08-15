@@ -1,0 +1,3 @@
+proc  /proc       proc    defaults    0    0
+none  /dev/pts    devpts  rw,gid=5,mode=620    0    0
+none  /run/shm    tmpfs   defaults    0    0

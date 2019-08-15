@@ -1,0 +1,11 @@
+TARGETS = nmbd smbd wide-dhcpv6-client samba-ad-dc fetchmail apache-htcacheclean uuidd ondemand rsync unattended-upgrades saslauthd modules_dep.sh apache2 nginx xinetd plymouth urandom bind9 sendsigs rsyslog umountnfs.sh hwclock.sh rpcbind networking umountfs umountroot halt reboot
+bind9: nginx apache2
+sendsigs: nmbd wide-dhcpv6-client nginx samba-ad-dc smbd unattended-upgrades saslauthd fetchmail plymouth xinetd bind9 apache-htcacheclean uuidd apache2
+rsyslog: wide-dhcpv6-client nginx xinetd sendsigs bind9 apache-htcacheclean apache2
+umountnfs.sh: nmbd wide-dhcpv6-client nginx samba-ad-dc sendsigs smbd unattended-upgrades saslauthd fetchmail plymouth xinetd rsyslog bind9 apache-htcacheclean uuidd apache2
+hwclock.sh: rsyslog uuidd
+networking: nmbd nginx samba-ad-dc smbd xinetd umountnfs.sh rpcbind bind9 apache2
+umountfs: nmbd wide-dhcpv6-client nginx samba-ad-dc smbd urandom unattended-upgrades hwclock.sh saslauthd fetchmail plymouth networking xinetd umountnfs.sh rpcbind bind9 apache-htcacheclean uuidd apache2
+umountroot: umountfs
+halt: umountroot
+reboot: umountroot

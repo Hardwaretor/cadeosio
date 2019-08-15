@@ -1,0 +1,14 @@
+server {     
+    listen 80;      
+    listen [::]:80;      
+    server_name CADEOS.io;      
+    root /var/www/html/dist;   
+    server_tokens off;   
+    index index.html index.htm;     
+    
+    location / {         
+        # First attempt to server request as file, then         
+        # as directory, then fall back to displaying a 404.          
+        try_files $uri $uri/ /index.html =404;      
+    } 
+}

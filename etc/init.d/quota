@@ -1,0 +1,53 @@
+#!/bin/sh
+
+### BEGIN INIT INFO
+# Provides:          quota
+# Short-Description: Enable user quota
+# Required-Start:    $remote_fs
+# Required-Stop:     $remote_fs
+# Default-Start:     S
+# Default-Stop:      0 6
+### END INIT INFO
+
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+DESC="quota service"
+
+# names of binaries
+on=/sbin/quotaon
+
+set -e
+
+. /lib/lsb/init-functions
+
+case "$1" in
+  start)
+	/usr/share/quota/quotaon.sh
+	;;
+  stop)
+	/usr/share/quota/quotaoff.sh
+	;;
+  restart|force-reload)
+	#
+	#	If the "reload" option is implemented, move the "force-reload"
+	#	option to the "reload" entry above. If not, "force-reload" is
+	#	just the same as "restart".
+	#
+	$0 stop
+	$0 start
+	;;
+  status)
+	if LC_MESSAGES=C $on -ap | grep -q "is on"; then
+		log_success_msg "quota is on"
+		exit 0
+	else
+		log_failure_msg "quota is off"
+		exit 3
+	fi
+	;;
+  *)
+	echo "Usage: $0 {start|stop|restart|force-reload|status}" >&2
+	exit 1
+	;;
+esac
+
+exit 0

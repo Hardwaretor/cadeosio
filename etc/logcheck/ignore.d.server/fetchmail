@@ -1,0 +1,15 @@
+fetchmail\[[0-9]+\]: +reading
+fetchmail\[[0-9]+\]: +(not )?flushed
+fetchmail\[[0-9]+\]: +[0-9]+ +messages? (\([0-9]+ seen\) )?for
+fetchmail\[[0-9]+\]: +skipping poll
+fetchmail\[[0-9]+\]: +Polling
+fetchmail\[[0-9]+\]: +Queuing for
+fetchmail\[[0-9]+\]: +awakened by
+fetchmail\[[0-9]+\]: +awakened at
+fetchmail\[[0-9]+\]: +sleeping
+fetchmail\[[0-9]+\]: .* key fingerprint:
+fetchmail\[[0-9]+\]: +\(.* body octets\)
+fetchmail\[[0-9]+\]: +could not decode BASE64 challenge
+fetchmail\[[0-9]+\]: +You have no mail\.
+fetchmail\[[0-9]+\]: +Turnaround now\.\.\.
+fetchmail\[[0-9]+\]: +receiving message data
