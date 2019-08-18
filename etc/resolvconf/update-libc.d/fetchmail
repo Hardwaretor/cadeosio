@@ -1,5 +1,0 @@
-#!/bin/sh
-
-if [ -x /etc/init.d/fetchmail ] && [ -n "$(pidof fetchmail)" ]; then
-	/etc/init.d/fetchmail awaken
-fi
