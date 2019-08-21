@@ -10,15 +10,10 @@ ScatterJS.scatter.connect("CADEOS.io").then(connected => {
     // User does not have Scatter Desktop, Mobile or Classic installed.
     if(!connected) return false;
 
-    const scatter = ScatterJS.scatter;
-    -----------------------
-    ^^^ See the section below about storing this in state.
-    -----------------------
-
+	const scatter = ScatterJS.scatter;
+	
     window.ScatterJS = null;
-    -----------------------
-    ^^^ See the section below about nulling out the window reference
-    -----------------------
+ 
 });
 
 ScatterService.setScatter(ScatterJS.scatter);
