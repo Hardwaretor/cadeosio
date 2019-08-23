@@ -27,32 +27,32 @@
     "@types/core-js": "^2.5.2",
     "angular": "^1.7.8",
     "angular-polyfills": "^1.0.1",
-<<<<<<< HEAD
+
     "appkey": "^1.1.1",
     "cipher-base": "^1.0.4",
     "core-js": "^3.2.1",
     "eos-scatter": "^1.0.0",
-=======
+
     "cipher-base": "^1.0.4",
     "core-js": "^3.2.1",
->>>>>>> 87f0281ef4e1b11cb4b621972564219b143f0701
+
     "eosjs": "^20.0.0",
     "eosjs-ecc": "^4.0.4",
     "eosjs-node": "^0.1.1",
     "hash-base": "^3.0.4",
     "isomorphic-fetch": "^2.2.1",
     "material-design-icons": "^3.0.1",
-<<<<<<< HEAD
+
     "open-request-js": "^1.0.35",
     "polyfills": "^2.1.1",
     "promise": "^8.0.3",
     "request-promise": "^4.2.4",
     "rxjs": "^6.4.0",
     "scatter-js": "^2.5.2",
-=======
+
     "polyfills": "^2.1.1",
     "rxjs": "^6.4.0",
->>>>>>> 87f0281ef4e1b11cb4b621972564219b143f0701
+
     "scatterjs-core": "^2.7.18",
     "scatterjs-plugin-eosjs": "^1.5.1",
     "scatterjs-plugin-eosjs2": "^1.5.0",
@@ -60,10 +60,10 @@
     "scatterjs-plugin-web3": "^1.5.4",
     "tronweb": "^2.6.8",
     "tslib": "^1.10.0",
-<<<<<<< HEAD
+
     "yarn": "^1.17.3",
-=======
->>>>>>> 87f0281ef4e1b11cb4b621972564219b143f0701
+
+
     "zone.js": "^0.9.1"
   },
   "devDependencies": {
@@ -74,11 +74,11 @@
     "@babel/runtime": "^7.5.5",
     "@types/jasmine": "~3.3.8",
     "@types/jasminewd2": "~2.0.3",
-<<<<<<< HEAD
+
     "@types/node": "^8.10.51",
-=======
+
     "@types/node": "^8.9.5",
->>>>>>> 87f0281ef4e1b11cb4b621972564219b143f0701
+
     "codelyzer": "^5.0.0",
     "jasmine-core": "~3.4.0",
     "jasmine-spec-reporter": "~4.2.1",
