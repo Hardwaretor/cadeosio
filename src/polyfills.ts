@@ -28,7 +28,7 @@
  * are required for JIT compilation.  StackBlitz examples are
  * compiled using JIT.
  */
-import 'node_modules/core-js/es/reflect';
+import '../node_modules/core-js/es/reflect';
 
 
 /**
@@ -65,8 +65,8 @@ import 'node_modules/core-js/es/reflect';
 /***************************************************************************************************
  * Zone JS is required by default for Angular itself.
  */
-import 'node_modules/zone.js/dist/zone';  // Included with Angular CLI.
-import 'node_modules/zone.js/dist/zone-patch-canvas';
+import '../node_modules/zone.js/dist/zone';  // Included with Angular CLI.
+import '../node_modules/zone.js/dist/zone-patch-canvas';
 
 /***************************************************************************************************
  * APPLICATION IMPORTS

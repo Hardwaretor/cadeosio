@@ -1,23 +1,28 @@
 {
-  "compileOnSave": false,
+  "compileOnSave": true,
   "compilerOptions": {
-    "baseUrl": "./",
-    "outDir": "./",
+    "baseUrl": "./cadeosio/",
+    "outDir": "./cadeosio/",
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
-    "module": "esnext",
+    "module": "es6",
     "moduleResolution": "node",
     "importHelpers": true,
-    "target": "es2015",
+    "target": "es5",
     "typeRoots": [
-      "node_modules/@types"
+      "node_modules/@types",
+      "node"
     ],
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": true,
+    "allowJs": true
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

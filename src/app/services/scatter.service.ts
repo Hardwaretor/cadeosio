@@ -1,7 +1,5 @@
 
 import { Injectable } from '@angular/core';
-import ScatterJS from 'scatterjs-core';
-import ScatterEOS from 'scatterjs-plugin-eosjs'
 import Eos from 'eosjs';
 import { Subject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
@@ -215,7 +213,7 @@ export interface ScatterJSDef {
 }
 
 
-@Injectable()
+Injectable()
 export class ScatterService {
     
     public error: string;
@@ -272,7 +270,7 @@ export class ScatterService {
         this.symbol = "EOS";
         //this.waitReady.then(() => console.log("ScatterService.setReady()"));
         // console.error("scatter interrumpido --------------------------------");
-        this.http.get<any>("assets/endpoints.json").toPromise().then((response) => {
+        this.http.get<any>("assets/endpoints.json").toPromise().then((response: { [key: string]: Network; }) => {
             this._networks = response;
             for (var i in this._networks) {
                 this._networks_slugs.push(i);
@@ -285,7 +283,7 @@ export class ScatterService {
     get account(): Account {
         if (!this._account || !this._account.name) {
             if (this.lib && this.lib.identity && this.lib.identity.accounts) {
-                this._account = this.lib.identity.accounts.find(x => x.blockchain === "eos" || x.blockchain === "tlos");
+                this._account = this.lib.identity.accounts.find((x: { blockchain: string; }) => x.blockchain === "eos" || x.blockchain === "tlos");
             }            
         }        
         return this._account;
@@ -305,25 +303,6 @@ export class ScatterService {
         }
     }    
 
-    setNetwork(name:string, index: number = 0) {
-        console.log("ScatterService.setNetwork("+name+","+index+")");
-        return this.waitEndpoints.then(() => {
-            var n = this.getNetwork(name, index);
-            if (n) {
-                if (this._network.name != n.name) {
-                    this._network = n;
-                    this.resetIdentity();
-                    this.initScatter();
-                    this.onNetworkChange.next(this.getNetwork(name));
-                }
-            } else {
-                console.error("ERROR: Scatter.setNetwork() unknown network name-index. Got ("
-                    + name + ", " + index + "). Availables are:", this._networks);
-                console.error("Falling back to eos mainnet");
-                return this.setNetwork("eos");
-            }    
-        });
-    }
 
     getNetwork(slug:string, index: number = 0): Network {
         if (this._networks[slug]) {
@@ -426,25 +405,8 @@ export class ScatterService {
         this.setEosjs("eosjs");
     }
 
-    reconnectTimer;
+    reconnectTimer: number;
     reconnectTime = 100;
-    retryConnectingApp() {
-        clearInterval(this.reconnectTimer);
-        this.reconnectTimer = setInterval(_ => {
-            // console.log("ScatterService.reconnectTimer()");
-            if (this._connected) {
-                // console.error("ScatterService.retryConnectingApp() limpio el intervalo");
-                clearInterval(this.reconnectTimer);
-            } else {
-                if (this.account) {
-                    // console.error("ScatterService.retryConnectingApp()  existe account pero no está conectado");
-                    this.connectApp();
-                }
-            }
-        },this.reconnectTime);
-        this.reconnectTime += 1000*Math.random();
-        if (this.reconnectTime > 4000) this.reconnectTime = 4000;
-    }
 
     // connect_count: number = 0;
     connectApp(appTitle:string = "") {
@@ -459,7 +421,7 @@ export class ScatterService {
             if (this._connected) return; // <---- avoids a loop
             this.waitEosjs.then(() => {
                 console.log("ScatterService.waitEosjs() eos OK");
-                this.lib.connect(this.appTitle, connectionOptions).then(connected => {
+                this.lib.connect(this.appTitle, connectionOptions).then((connected: boolean) => {
                     // si está logueado this.lib.identity se carga sólo y ya está disponible
                     console.log("ScatterService.lib.connect()", connected);
                     this._connected = connected;
@@ -480,13 +442,16 @@ export class ScatterService {
                         console.log("ScatterService.setReady()");
                         this.setReady("ready");
                     }
-                }).catch(e => {
+                }).catch((e: any) => {
                     console.error(e);
                     throw e;
                 });    
             });    
         });
         return promise;
+    }
+    retryConnectingApp() {
+        throw new Error("Method not implemented.");
     }
 
     private setIdentity(identity:any) {
@@ -495,7 +460,7 @@ export class ScatterService {
         this.error = "";
         this.lib.identity = identity;
         this.lib.forgotten = false;
-        this._account = this.lib.identity.accounts.find(x => x.blockchain === "eos" || x.blockchain === "tlos");
+        this._account = this.lib.identity.accounts.find((x: { blockchain: string; }) => x.blockchain === "eos" || x.blockchain === "tlos");
         if (!this.account) {
             console.error("ScatterService.setIdentity()", [identity]);
         }
@@ -511,7 +476,7 @@ export class ScatterService {
 
     // ----- account data (resources, staking, refunding) -------
     // extract the float part of an valid asset string representation like: "123.2424 EOS" -> returns 123.2424
-    private extractNumber (balance) {
+    private extractNumber (balance: string) {
         if(typeof balance != "string") {
             // console.log("extractNumber() " , balance);
             return 0;
@@ -539,7 +504,7 @@ export class ScatterService {
 
 
 
-    calculateResourceLimit(limit) {
+    calculateResourceLimit(limit: { percentStr?: any; used: any; available?: number; max: any; percent?: any; }) {
         limit = Object.assign({
             max: 0, used: 0
         }, limit);
@@ -573,7 +538,7 @@ export class ScatterService {
             // console.log("PASO 1 ------", [this._account_queries])
             this.waitEosjs.then(() => {
                 // console.log("PASO 2 (eosjs) ------");
-                this.eos.getAccount({account_name: name}).then((response) => {
+                this.eos.getAccount({account_name: name}).then((response: AccountData) => {
                     // console.log("PASO 3 (eosjs.getAccount) ------", response);
                     var accountdata: AccountData = <AccountData>response;
 
@@ -609,14 +574,13 @@ export class ScatterService {
                         cpu_weight: "0.0000 " + this.symbol
                     }
                     
-                    accountdata.cpu_limit = this.calculateResourceLimit(accountdata.cpu_limit);
-                    accountdata.net_limit = this.calculateResourceLimit(accountdata.net_limit);
+
                     accountdata.ram_limit = this.calculateResourceLimit({
                         max: accountdata.ram_quota, used: accountdata.ram_usage
                     });
 
                     resolve(accountdata);
-                }).catch((err) => {
+                }).catch((err: any) => {
                     reject(err);
                 });
             }).catch((error) => {
@@ -635,19 +599,19 @@ export class ScatterService {
         return promise;
     }
 
-    getContract(account_name): Promise<any> {
+    getContract(account_name: any): Promise<any> {
         console.log(`ScatterService.getContract(${account_name})`);
         return new Promise((resolve, reject) => {
             this.login().then((a) => {
                 console.log("this.login().then((a) => { -->", a );
                 this.waitReady.then(() => {
-                    this.eos.contract(account_name).then(contract => {
+                    this.eos.contract(account_name).then((contract: { [x: string]: any; }) => {
                         console.log(`-- contract ${account_name} --`);
                         for (var i in contract) {
                             if(typeof contract[i] == "function") console.log("contract."+i+"()", [contract[i]]);
                         }
                         resolve(contract);
-                    }).catch(error => {
+                    }).catch((error: any) => {
                         console.error(error);
                     });
                 });
@@ -663,12 +627,12 @@ export class ScatterService {
         return new Promise((resolve, reject) => {
             this.waitEosjs.then(() => {
                 console.log("Scatter.transfer():", from, to, amount, memo, this.authorization);
-                this.eos.transfer(from, to, amount, memo, this.authorization).then(trx => {
+                this.eos.transfer(from, to, amount, memo, this.authorization).then((trx: {} | PromiseLike<{}>) => {
                     // That's it!
-                    console.log(`Transaction ID: ${trx.transaction_id}`, trx);
+
                     // en Notas está el json que describe el objeto trx
                     resolve(trx);
-                }).catch(error => {
+                }).catch((error: any) => {
                     console.error(error);
                 }); 
             }).catch((error) => {
@@ -686,12 +650,12 @@ export class ScatterService {
                 this.setIdentity(this.lib.identity);
                 resolve(this.lib.identity);
             } else {
-                var loginTimer = setTimeout( _ => {
+                var loginTimer = setTimeout( (_: any) => {
                     reject("connection timeout");
                 }, 3000);
                 this.connectApp().then(() => {
                     this.lib.getIdentity({"accounts":[this.network.eosconf]})
-                        .then( (identity)  => {
+                        .then( (identity: any)  => {
                             clearTimeout(loginTimer);
                             this.setIdentity(identity);
                             this.setLogged();
@@ -709,7 +673,7 @@ export class ScatterService {
             this.connectApp().then(() => {
                 this.lib.forgotten = true;
                 this.lib.forgetIdentity()
-                    .then( (err)  => {
+                    .then( (err: any)  => {
                         console.log("disconnect", err);
                         this.resetIdentity();
                         resolve("logout");
@@ -743,14 +707,14 @@ export class ScatterService {
         return this._connected;
     }
 
-    getTableRows(contract, scope, table, tkey, lowerb, upperb, limit, ktype, ipos): Promise<any> {
+    getTableRows(contract: any, scope: any, table: any, tkey: any, lowerb: any, upperb: any, limit: any, ktype: any, ipos: any): Promise<any> {
         // console.log("ScatterService.getTableRows()");
         // https://github.com/EOSIO/eosjs-api/blob/master/docs/api.md#eos.getTableRows
         return new Promise<any>((resolve, reject) => {
             this.waitEosjs.then(() => {
-                this.eos.getTableRows(true, contract, scope, table, tkey, lowerb, upperb, limit, ktype, ipos).then(function (_data) {
+                this.eos.getTableRows(true, contract, scope, table, tkey, lowerb, upperb, limit, ktype, ipos).then(function (_data: any) {
                     resolve(_data);
-                }).catch(error => {
+                }).catch((error: any) => {
                     console.error(error);
                 });
             }).catch((error) => {
@@ -779,24 +743,24 @@ export class ScatterService {
         this.eos = this.ScatterJS.scatter.eos(network, Eos, { expireInSeconds:60 });
         
         
-        this.ScatterJS.scatter.connect("Cards & Tokens", {initTimeout:3000}).then(connected => {
+        this.ScatterJS.scatter.connect("Cards & Tokens", {initTimeout:3000}).then((connected: any) => {
             if(!connected) return console.error(this.error);
 
-            return this.ScatterJS.scatter.getIdentity({"accounts":[network]}).then( (identity)  => {
+            return this.ScatterJS.scatter.getIdentity({"accounts":[network]}).then( (identity: { accounts: any[]; })  => {
                 var account = identity.accounts[0];
                 
                 const transactionOptions = { authorization:[`${account.name}@${account.authority}`] };
                 console.log("Scatter.transfer() authority:", transactionOptions);
-                this.eos.transfer(account.name, "bob", "0.0000 SYS", "memo", transactionOptions).then(trx => {
+                this.eos.transfer(account.name, "bob", "0.0000 SYS", "memo", transactionOptions).then((trx: { transaction_id: any; }) => {
                     // That's it!
                     console.log(`Transaction ID: ${trx.transaction_id}`, trx);
                     // en Notas está el json que describe el objeto trx
                     
-                }).catch(error => {
+                }).catch((error: any) => {
                     console.error(error);
                 });
                 
-            }).catch( err => { console.error(err); });            
+            }).catch( (err: any) => { console.error(err); });            
 
         });        
     }
