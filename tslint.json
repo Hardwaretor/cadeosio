@@ -1,11 +1,14 @@
 {
-  "extends": "tslint:recommended",
+  "extends": [
+    "@phenomnomnominal/angular-lazy-routes-fix"
+  ],
   "rules": {
-    "array-type": false,
-    "arrow-parens": false,
-    "deprecation": {
-      "severity": "warning"
+    "no-lazy-module-paths": [true],
+    "//": "or",
+    "no-lazy-module-paths": [true, "async"]
+    
     },
+
     "component-class-suffix": true,
     "contextual-lifecycle": true,
     "directive-class-suffix": true,
@@ -89,4 +92,15 @@
   "rulesDirectory": [
     "codelyzer"
   ]
+}
+
+{
+  "extends": [
+    "@phenomnomnominal/angular-lazy-routes-fix"
+  ],
+  "rules": {
+    "no-lazy-module-paths": [true],
+    "//": "or",
+    "no-lazy-module-paths": [true, "async"]
+  }
 }

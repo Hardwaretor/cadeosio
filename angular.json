@@ -30,8 +30,8 @@
             ],
             "scripts": [
 
-              "../cadeosio/node_modules/@webcomponents/custom-elements/custom-elements.min.js",
-              "../cadeosio/node_modules/@clr/icons/clr-icons.min.js"
+              "./node_modules/@webcomponents/custom-elements/custom-elements.min.js",
+              "./node_modules/@clr/icons/clr-icons.min.js"
           
             ]
           },
