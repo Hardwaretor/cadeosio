@@ -30,13 +30,11 @@
             ],
             "scripts": [
 
-<<<<<<< HEAD
               "./node_modules/@webcomponents/custom-elements/custom-elements.min.js",
               "./node_modules/@clr/icons/clr-icons.min.js"
-=======
+
               "../cadeosio/node_modules/@webcomponents/custom-elements/custom-elements.min.js",
               "../cadeosio/node_modules/@clr/icons/clr-icons.min.js"
->>>>>>> a7b31aceb4ddc307e3f34add65827144958bf111
           
             ]
           },
