@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+<<<<<<< HEAD
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -23,3 +24,18 @@ import { ProductListComponent } from './product-list/product-list.component';
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
+=======
+import { ClarityModule } from '@clr/angular';
+import { AppComponent } from './app.component';
+
+@NgModule({
+    imports: [
+        BrowserModule,
+        ClarityModule,
+     ],
+
+     declarations: [ AppComponent ],
+     bootstrap: [ AppComponent ]
+})
+export class AppModule {    }
+>>>>>>> a7b31aceb4ddc307e3f34add65827144958bf111

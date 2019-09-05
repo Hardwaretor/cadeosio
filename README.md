@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # CADEOS.io
 
 We are developing a real time processing Computer Aided Design (CAD) and a Product Lifecycle Management (PLM) platform based on EOS blockchain architecture. It provides the best real time design tools to the community, including data sharing, video calls, instant messenger and screen sharing for the best collaborative experience, showing progress of the project management work and helping to grow your network. 
@@ -53,3 +54,7 @@ DPoS is built on the idea that the barrier of entry block producers need to get 
 
 # CADEOS.io
 # cadeosio
+=======
+# cadeosio
+DECENTRALIZED CAD.FILES &amp; PROJECT MANAGEMENT PLATFORM
+>>>>>>> a7b31aceb4ddc307e3f34add65827144958bf111
