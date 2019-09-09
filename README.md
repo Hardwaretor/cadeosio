@@ -11,7 +11,7 @@ CADEOS.io will support the following extensions in the first release: .stp, .igs
 The next releases in our roadmap will be mainly focused on adding new design modules and galleries to the existing platform.
 As added value to the community we want to create a job network where companies will be able to post their job offers to professionals seeking job in all the areas involved such as CAD, 3D printers parts, software development, etc. Being part of this network will be free for the jobseekers creating a huge benefit to the EOS ecosystem.
 Companies will just have to pay a fee for the service they will use or the duration. All invoices will be linked to a smart contract associated to their corresponding wallet. Data protection and security are guaranteed by Block.one/EOS reliability
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.
+
 
 ## ELIMINATING OBSTACLES FOR CREATORS
 
@@ -56,3 +56,5 @@ DPoS is built on the idea that the barrier of entry block producers need to get 
 
 # CADEOS.io
 https://cadeos.io
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.
