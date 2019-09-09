@@ -53,7 +53,4 @@ DPoS is built on the idea that the barrier of entry block producers need to get 
 
 
 # CADEOS.io
-# cadeosio
-=======
-# cadeosio
-DECENTRALIZED CAD.FILES &amp; PROJECT MANAGEMENT PLATFORM
+DECENTRALIZED CAD.FILES & PROJECT MANAGEMENT PLATFORM
