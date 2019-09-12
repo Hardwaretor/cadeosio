@@ -1,5 +1,5 @@
 {
-  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "$schema": "/node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -31,10 +31,17 @@
             "scripts": [
 
               "./node_modules/@webcomponents/custom-elements/custom-elements.min.js",
+<<<<<<< HEAD
               "./node_modules/@clr/icons/clr-icons.min.js",
 
               "./node_modules/@webcomponents/custom-elements/custom-elements.min.js",
               "./node_modules/@clr/icons/clr-icons.min.js"
+=======
+              "./node_modules/@clr/icons/clr-icons.min.js"
+
+              "../cadeosio/node_modules/@webcomponents/custom-elements/custom-elements.min.js",
+              "../cadeosio/node_modules/@clr/icons/clr-icons.min.js"
+>>>>>>> 167d54065cc019452d2090f7d0fa228cd8c1291f
           
             ]
           },

@@ -1,7 +1,10 @@
 {
   "compileOnSave": true,
   "compilerOptions": {
+<<<<<<< HEAD
       "paths": { "*": ["types/*"] },
+=======
+>>>>>>> 167d54065cc019452d2090f7d0fa228cd8c1291f
     "baseUrl": "./cadeosio/",
     "outDir": "./cadeosio/",
     "sourceMap": true,
