@@ -1,35 +1,19 @@
 {
-  "compileOnSave": true,
+  "compileOnSave": false,
   "compilerOptions": {
-<<<<<<< HEAD
-      "paths": { "*": ["types/*"] },
-=======
->>>>>>> 167d54065cc019452d2090f7d0fa228cd8c1291f
-    "baseUrl": "./cadeosio/",
-    "outDir": "./cadeosio/",
+    "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
-    "downlevelIteration": true,
-    "experimentalDecorators": true,
-    "module": "es6",
     "moduleResolution": "node",
-    "importHelpers": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
     "target": "es5",
     "typeRoots": [
-      "node_modules/@types",
-      "node"
+      "node_modules/@types"
     ],
     "lib": [
-      "es2018",
+      "es2017",
       "dom"
-    ],
-
-    "allowSyntheticDefaultImports": true,
-    "noImplicitAny": true,
-    "allowJs": true
-  },
-  "angularCompilerOptions": {
-    "fullTemplateTypeCheck": true,
-    "strictInjectionParameters": true
+    ]
   }
 }

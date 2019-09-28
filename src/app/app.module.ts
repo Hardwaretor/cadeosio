@@ -1,51 +1,69 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
-import { ReactiveFormsModule } from '@angular/forms';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-<<<<<<< HEAD
-=======
-import { AppComponent } from './app.component';
->>>>>>> 167d54065cc019452d2090f7d0fa228cd8c1291f
-import { TopBarComponent } from './top-bar/top-bar.component';
-import { ProductListComponent } from './product-list/product-list.component';
+
+import {AppComponent} from './app.component';
+import {RouterModule, Routes} from '@angular/router';
+import {DashboardComponent} from './components/dashboard/dashboard.component';
+import {PageComponent} from './components/shared/page/page.component';
+import {NavbarComponent} from './components/shared/page/navbar/navbar.component';
+import {SidebarComponent} from './components/shared/page/sidebar/sidebar.component';
+import {DashboardService} from './services/dashboard.service';
+import {FormsModule} from '@angular/forms';
+import {LoadingComponent} from './components/shared/page/loading/loading.component';
+import {HttpClientModule} from '@angular/common/http';
+import {PrettyJsonModule, SafeJsonPipe} from 'angular2-prettyjson';
+import {JsonPipe} from '@angular/common';
+import {Ng2Webstorage} from 'ngx-webstorage';
+import {LoginComponent} from './components/login/login.component';
+import {AuthGuard} from './guards/auth.guard';
+import { TransferComponent } from './components/transfer/transfer.component';
+import { ActionsComponent } from './components/actions/actions.component';
+import { CurrenciesComponent } from './components/currencies/currencies.component';
+import { SettingsComponent } from './components/settings/settings.component';
+import {ScatterService} from './services/scatter.service';
+import { CadeosioComponent } from './cadeosio/cadeosio.component';
+
+const appRoutes: Routes = [
+  {path: '', component: DashboardComponent, canActivate: [AuthGuard]},
+  {path: 'transfer', component: TransferComponent, canActivate: [AuthGuard]},
+  {path: 'actions', component: ActionsComponent, canActivate: [AuthGuard]},
+  {path: 'settings', component: SettingsComponent, canActivate: [AuthGuard]},
+  {path: 'login', component: LoginComponent},
+  {path: 'currencies', component: CurrenciesComponent, canActivate: [AuthGuard]}
+];
 
 @NgModule({
+  declarations: [
+    AppComponent,
+    DashboardComponent,
+    PageComponent,
+    NavbarComponent,
+    SidebarComponent,
+    LoginComponent,
+    LoadingComponent,
+    LoginComponent,
+    TransferComponent,
+    ActionsComponent,
+    CurrenciesComponent,
+    SettingsComponent,
+    CadeosioComponent
+  ],
   imports: [
     BrowserModule,
-    ReactiveFormsModule,
-    RouterModule.forRoot([
-      { path: '', component: ProductListComponent },
-    ])
+    FormsModule,
+    HttpClientModule,
+    PrettyJsonModule,
+    Ng2Webstorage,
+    RouterModule.forRoot(appRoutes)
   ],
-  declarations: [
-<<<<<<< HEAD
-    TopBarComponent,
-    ProductListComponent
+  providers: [
+    DashboardService,
+    ScatterService,
+    AuthGuard,
+    {provide: JsonPipe, useClass: SafeJsonPipe}
   ],
-  bootstrap: [ TopBarComponent ]
+  bootstrap: [AppComponent]
 })
-export class AppModule { }
-=======
-    AppComponent,
-    TopBarComponent,
-    ProductListComponent
-  ],
-  bootstrap: [ AppComponent ]
-})
-export class AppModule { }
-
-import { ClarityModule } from '@clr/angular';
-import { AppComponent } from './app.component';
-
-@NgModule({
-    imports: [
-        BrowserModule,
-        ClarityModule,
-     ],
-
-     declarations: [ AppComponent ],
-     bootstrap: [ AppComponent ]
-})
-export class AppModule {    }
->>>>>>> 167d54065cc019452d2090f7d0fa228cd8c1291f
+export class AppModule {
+}

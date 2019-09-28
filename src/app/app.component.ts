@@ -1,16 +1,23 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {NavigationEnd, Router} from '@angular/router';
 
+declare let ga: Function;
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: [ './app.component.css' ]
+  styleUrls: ['./app.component.css']
 })
-export class AppComponent  {}
 
+export class AppComponent {
+  title = 'CADEOS.io Wallet';
 
-/*
-Copyright Google LLC. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at http://angular.io/license
-*/
+  constructor(public router: Router) {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd && typeof ga === "function") {
+        ga('set', 'page', event.urlAfterRedirects);
+        ga('send', 'pageview');
+      }
+    });
+  }
+}
