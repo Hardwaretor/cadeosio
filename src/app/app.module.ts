@@ -26,6 +26,10 @@ import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {MarkdownModule} from 'ngx-markdown';
 import { defaultAuthFirebaseUIConfig } from 'ngx-auth-firebaseui/module/interfaces/config.interface';
 import { ExchangesComponent } from './exchanges/exchanges.component';
+import { Cadeosio3dComponent } from './cadeosio3d/cadeosio3d.component';
+import { ExchangesModule } from './exchanges/exchanges.module';
+import { Cadeosio3dModule } from './cadeosio3d/cadeosio3d.module';
+
 
 export function hljsLanguages() {
   return [
@@ -46,13 +50,12 @@ export function createTranslateLoader(http: HttpClient) {
 @NgModule({
   declarations: [
     AppComponent,
-    ExchangesComponent
   ],
   imports: [
     // Add .withServerTransition() to support Universal rendering.
     // The application ID can be any identifier which is unique on
     // the page.
-    BrowserModule.withServerTransition({appId: 'ngx-auth-firebaseui'}),
+    BrowserModule.withServerTransition({appId: '1:260992003477:web:912c91001d96d6053b9a9c'}),
     Angulartics2Module.forRoot(),
     ServiceWorkerModule.register('/ngsw-worker.js', {enabled: environment.production}),
     AngularFireModule.initializeApp(firebaseKey),
@@ -83,7 +86,8 @@ export function createTranslateLoader(http: HttpClient) {
     AppRoutingModule,
     AppSharedModule,
     HomeModule,
-    NgxAuthFirebaseUIModule.forRoot(firebaseKey)
+    ExchangesModule,
+    NgxAuthFirebaseUIModule.forRoot(firebaseKey),
   ],
   providers: [],
   bootstrap: [AppComponent]

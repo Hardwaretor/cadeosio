@@ -1,6 +1,6 @@
 {
   "ngxauthfirebaseui": {
-    "signInTabText": "se connecter",
+    "signInTabText": " ",
     "signInCardTitleText": "Connectez-vous",
     "loginButtonText": "S'identifier",
     "forgotPasswordButtonText": "Mot de passe oublié ?",

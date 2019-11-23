@@ -9,6 +9,11 @@ import {RouterOutletStubComponent} from '../testing/router-stubs';
 import 'rxjs/add/observable/of';
 import {Observable, of} from 'rxjs';
 
+import { ExchangesComponent } from './exchanges/exchanges.component';
+import { Cadeosio3dComponent } from './cadeosio3d/cadeosio3d.component';
+import { ExchangesModule } from './exchanges/exchanges.module';
+import { Cadeosio3dModule } from './cadeosio3d/cadeosio3d.module';
+
 @Component({selector: 'app-header', template: ''})
 class HeaderStubComponent {
 }
@@ -24,7 +29,9 @@ describe('AppComponent', () => {
         AppComponent,
         HeaderStubComponent,
         FooterComponent,
-        RouterOutletStubComponent
+        RouterOutletStubComponent,
+        ExchangesComponent,
+        Cadeosio3dComponent
       ],
       providers: [
         {provide: Router, useClass: RouterStub}

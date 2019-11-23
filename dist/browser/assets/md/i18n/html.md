@@ -1,6 +1,5 @@
 ```html
 <ngx-auth-firebaseui
-        [signInTabText]="'ngxauthfirebaseui.signInTabText' | translate"
         [signInCardTitleText]="'ngxauthfirebaseui.signInCardTitleText' | translate"
         [loginButtonText]="'ngxauthfirebaseui.loginButtonText' | translate"
         [forgotPasswordButtonText]="'ngxauthfirebaseui.forgotPasswordButtonText' | translate"
