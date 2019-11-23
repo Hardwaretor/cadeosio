@@ -38,18 +38,13 @@
             "styles": [
               "src/styles.scss",
               "node_modules/prismjs/themes/prism-okaidia.css",
-              "src/app/cadeosio3d/big.css",
-              "src/app/cadeosio3d/min.css",
-              "src/app/cadeosio3d/openjscad.css",
-              "src/app/cadeosio3d/style.css"
             
             ],
             "scripts": [
               "node_modules/marked/lib/marked.js",
               "node_modules/prismjs/prism.js",
               "node_modules/prismjs/components/prism-typescript.min.js",
-              "node_modules/prismjs/components/prism-css.min.js",
-              "src/app/cadeosio3d/dist/index.js"
+              "node_modules/prismjs/components/prism-css.min.js"
             ]
           },
           "configurations": {
