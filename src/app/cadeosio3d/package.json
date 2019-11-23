@@ -1,8 +1,11 @@
 {
-  "name": "@jscad/web",
-  "version": "1.10.0",
-  "description": "Web UI for OpenJsCAD",
-  "repository": "https://github.com/jscad/OpenJSCAD.org",
+  "name": "cadeosio",
+  "version": "1.0.0",
+  "description": "Decentralized Project MAnagement Platform",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CADEOS/cadeosio.git"
+  },
   "scripts": {
     "build-web": "browserify src/ui/index.js -o dist/index.js -t [babelify browserify minifyify]",
     "build-min": "browserify src/ui/min.js -o dist/min.js -t [babelify browserify minifyify]",
@@ -19,18 +22,7 @@
     "postinstall": "node postInstall.js && node -e \"console.log('\\u001b[35m\\u001b[1mLove OpenJSCAD? You can now donate to our open collective:\\u001b[22m\\u001b[39m\\n > \\u001b[34mhttps://opencollective.com/openjscad/donate\\u001b[0m')\""
   },
   "contributors": [
-    {
-      "name": "Rene K. Mueller",
-      "url": "http://renekmueller.com"
-    },
-    {
-      "name": "z3dev",
-      "url": "http://www.z3d.jp"
-    },
-    {
-      "name": "Mark 'kaosat-dev' Moissette",
-      "url": "http://kaosat.net"
-    }
+    "Guillermo Galindo (http://cadeos.io)"
   ],
   "license": "MIT",
   "main": "dist/openjscad.umd.js",
@@ -68,7 +60,12 @@
   "browserify-shim": {},
   "collective": {
     "type": "opencollective",
-    "url": "https://opencollective.com/openjscad",
-    "logo": "https://opencollective.com/openjscad/logo.txt"
-  }
+    "url": "https://cadeos.io",
+    "logo": "https://cadeosio"
+  },
+  "bugs": {
+    "url": "https://github.com/CADEOS/cadeosio/issues"
+  },
+  "homepage": "https://github.com/CADEOS/cadeosio#readme",
+  "author": "Guillermo Galindo"
 }
