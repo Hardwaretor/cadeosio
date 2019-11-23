@@ -1,35 +1,15 @@
-<!DOCTYPE html>
-<html  xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
-    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
-<!--
-== OpenJSCAD.org, Copyright (c) 2013-2017 by Rene K. Mueller <spiritdude@gmail.com>, Licensed under MIT License ==
-   with some code from OpenJsCad processfile.html by Joost Nieuwenhuijse
-   in conjunction with csg.js, openjscad.js, lightgl.js by various authors (see them listed in the individual files)
 
-Purpose:
-   More modern interface for OpenJsCad as published at http://joostn.github.com/OpenJsCad/
--->
-    <meta http-equiv=Pragma content=no-cache>
-    <meta http-equiv=Expires content=-1>
-    <meta http-equiv=CACHE-CONTROL content=NO-CACHE>
 
-    <title>CADEOS.io</title>
-    <link rel="shortcut icon" href="imgs/CADEOS Logo transparent background2.png" type="image/x-png">
-    <link rel="stylesheet" href="style.css" type="text/css">
-    <link rel="stylesheet" href="openjscad.css" type="text/css">
-  </head>
   <body>
-    <script src="dist/index.js"></script>
+    <script src="/dist/index.js"></script>
 <!-- top left header (logo and error message) -->
     <div id="header">
-      <a class="navbar-brand " routerLink="/"><img src="/imgs/cadeosico.png" />   CADEOS.io</a>
+      <a class="navbar-brand " routerLink="./"><img src="/imgs/cadeosico.png" />   CADEOS.io</a>
     </div>
 
 <!-- sliding tab (help, links, examples, options, etc) -->
     <div id="menu">
-      <img id="menuHandle" src="imgs/menuHandleVLIn.png">
+      <img id="menuHandle" src="/imgs/menuHandleVLIn.png">
       <nav>
         <div id="menuVersion"></div>
 
@@ -54,7 +34,7 @@ Purpose:
 
 <!-- about dialog -->
     <div id="about">
-      <img src="imgs/CADEOS Logo transparent background2.png" style=" width: 20%;">
+      <img src="/imgs/CADEOS Logo transparent background2.png" style=" width: 20%;">
       <div id="aboutVersion" ></div>
 
       <p>
@@ -85,7 +65,7 @@ Get your copy/clone/fork from <a href="https://github.com/CADEOS" target="_blank
         </div>
         <div id="filedropzone_input">
           <p>
-            <label class="input-control">Add Supported Files: <input type="file" id="files-input" accept="*/*" multiple="1"></input></label>
+            <label class="input-control">Add Supported Files: <input type="file" id="files-input" accept="*/*" multiple="1"></label>
           </p>
         </div>
         <div id="filedropzone_filled">
@@ -102,4 +82,4 @@ Get your copy/clone/fork from <a href="https://github.com/CADEOS" target="_blank
 
 
   </body>
-</html>
+
