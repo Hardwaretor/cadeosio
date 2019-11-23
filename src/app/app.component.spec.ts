@@ -11,8 +11,6 @@ import {Observable, of} from 'rxjs';
 
 import { ExchangesComponent } from './exchanges/exchanges.component';
 import { Cadeosio3dComponent } from './cadeosio3d/cadeosio3d.component';
-import { ExchangesModule } from './exchanges/exchanges.module';
-import { Cadeosio3dModule } from './cadeosio3d/cadeosio3d.module';
 
 @Component({selector: 'app-header', template: ''})
 class HeaderStubComponent {
