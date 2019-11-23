@@ -45,11 +45,8 @@
               "node_modules/marked/lib/marked.js",
               "node_modules/prismjs/prism.js",
               "node_modules/prismjs/components/prism-typescript.min.js",
-              "node_modules/prismjs/components/prism-css.min.js",
-              "src/app/cadeosio3d/dist/index.js",
-              "src/app/cadeosio3d/dist/min.js",
-              "src/app/cadeosio3d/dist/openjscad.umd.js",
-              "src/app/cadeosio3d/dist/opt.js"
+              "node_modules/prismjs/components/prism-css.min.js"
+
             ]
           },
           "configurations": {
