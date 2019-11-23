@@ -28,6 +28,7 @@
   "main": "dist/openjscad.umd.js",
   "module": "dist/openjscad.umd.js",
   "dependencies": {
+    "@angular/cli": "^8.3.19",
     "@jscad/core": "^0.4.0",
     "@jscad/csg": "0.7.0",
     "@jscad/examples": "^1.7.2",
@@ -67,5 +68,8 @@
     "url": "https://github.com/CADEOS/cadeosio/issues"
   },
   "homepage": "https://github.com/CADEOS/cadeosio#readme",
-  "author": "Guillermo Galindo"
+  "author": "Guillermo Galindo",
+  "keywords": [
+    "Blockchain"
+  ]
 }
