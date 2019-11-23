@@ -34,6 +34,11 @@ const routes: Routes = [
     path: 'exchanges',
     loadChildren: () => import('./exchanges/exchanges.module').then(m => m.ExchangesModule),
   },
+
+  {
+    path: 'cadeosio3d',
+    loadChildren: () => import('./cadeosio3d/cadeosio3d.module').then(m => m.Cadeosio3dModule),
+  },
   {
     path: 'secured',
     loadChildren: () => import('./faq/faq.module').then(m => m.FaqModule),
