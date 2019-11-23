@@ -1,6 +1,6 @@
 <p align="center">
-  <img alt="/assets/CADEOS Logo transparent background2.png" width="256px" style="text-align: center;" 
-  src="/assets/CADEOS Logo transparent background2.png">
+  <img alt="/src/assets/CADEOS Logo transparent background2.png" width="256px" style="text-align: center;" 
+  src="/src/assets/CADEOS Logo transparent background2.png">
 </p>
 
 CADEOS.io - DECENTRALIZED CAD.FILES & PROJECT MANAGEMENT PLATFORM
@@ -43,8 +43,8 @@ https://mydex.win/
 
 
 <p align="center">
-  <img alt="/assets/CADEOS Logo transparent background2.png" width="256px" style="text-align: center;" 
-  src="/assets/CADEOS Logo transparent background2.png">
+  <img alt="/src/assets/CADEOS Logo transparent background2.png" width="256px" style="text-align: center;" 
+  src="/src/assets/CADEOS Logo transparent background2.png">
 </p>
 
 CADEOS.io-去中心化的CAD.FILES和项目管理平台
