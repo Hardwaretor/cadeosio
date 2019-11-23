@@ -87,6 +87,7 @@ export function createTranslateLoader(http: HttpClient) {
     AppSharedModule,
     HomeModule,
     ExchangesModule,
+    Cadeosio3dModule,
     NgxAuthFirebaseUIModule.forRoot(firebaseKey),
   ],
   providers: [],
