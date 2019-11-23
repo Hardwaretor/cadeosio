@@ -1,14 +1,14 @@
-import { AppPage } from './app.po';
+import { NgxAuthFirebaseuiDemoPage } from './app.po';
 
-describe('eos-explorer App', () => {
-  let page: AppPage;
+describe('ngx-auth-firebaseui-demo App', () => {
+  let page: NgxAuthFirebaseuiDemoPage;
 
   beforeEach(() => {
-    page = new AppPage();
+    page = new NgxAuthFirebaseuiDemoPage ();
   });
 
-  it('should display welcome message', () => {
+  it('should display message saying app works', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!');
+    expect(page.getParagraphText()).toEqual('app works!');
   });
 });

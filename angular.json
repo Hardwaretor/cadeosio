@@ -1,58 +1,62 @@
 {
-  "$schema": "/node_modules/@angular/cli/lib/config/schema.json",
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "cadeosio": {
-      "projectType": "application",
-      "schematics": {},
+    "ngx-auth-firebaseui": {
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "projectType": "application",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/cadeosio",
+            "outputPath": "dist/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
+            "tsConfig": "src/tsconfig.app.json",
             "polyfills": "src/polyfills.ts",
-            "tsConfig": "tsconfig.app.json",
-            "aot": false,
             "assets": [
+              "src/assets",
               "src/favicon.ico",
-              "src/assets"
+              {
+                "glob": "**/*",
+                "input": "node_modules/ngx-auth-firebaseui/assets",
+                "output": "/assets"
+              },
+              {
+                "glob": "**/*",
+                "input": "node_modules/svg-country-flags/png100px",
+                "output": "/assets/images/flags"
+              },
+              {
+                "glob": "**/*",
+                "input": "node_modules/ngx-auth-firebaseui/assets/",
+                "output": "./assets/"
+              }
             ],
             "styles": [
-              "src/styles.css",
-              "./node_modules/@clr/icons/clr-icons.min.css",
-              "./node_modules/@clr/ui/clr-ui.min.css"
+              "src/styles.scss",
+              "node_modules/prismjs/themes/prism-okaidia.css"
+            
             ],
             "scripts": [
-
-              "./node_modules/@webcomponents/custom-elements/custom-elements.min.js",
-<<<<<<< HEAD
-              "./node_modules/@clr/icons/clr-icons.min.js",
-
-              "./node_modules/@webcomponents/custom-elements/custom-elements.min.js",
-              "./node_modules/@clr/icons/clr-icons.min.js"
-=======
-              "./node_modules/@clr/icons/clr-icons.min.js"
-
-              "../cadeosio/node_modules/@webcomponents/custom-elements/custom-elements.min.js",
-              "../cadeosio/node_modules/@clr/icons/clr-icons.min.js"
->>>>>>> 167d54065cc019452d2090f7d0fa228cd8c1291f
-          
+              "node_modules/marked/lib/marked.js",
+              "node_modules/prismjs/prism.js",
+              "node_modules/prismjs/components/prism-typescript.min.js",
+              "node_modules/prismjs/components/prism-css.min.js"
             ]
           },
           "configurations": {
-            "production": {
+            "hmr": {
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
+                  "with": "src/environments/environment.hmr.ts"
                 }
-              ],
+              ]
+            },
+            "production": {
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -62,16 +66,12 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "budgets": [
+              "serviceWorker": true,
+              "ngswConfigPath": "src/ngsw-config.json",
+              "fileReplacements": [
                 {
-                  "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "6kb",
-                  "maximumError": "10kb"
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
                 }
               ]
             }
@@ -80,63 +80,116 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "cadeosio:build"
+            "browserTarget": "ngx-auth-firebaseui:build"
           },
           "configurations": {
+            "hmr": {
+              "browserTarget": "ngx-auth-firebaseui:build:hmr"
+            },
             "production": {
-              "browserTarget": "cadeosio:build:production"
+              "browserTarget": "ngx-auth-firebaseui:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "cadeosio:build"
+            "browserTarget": "ngx-auth-firebaseui:build"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "main": "src/test.ts",
+            "karmaConfig": "./karma.conf.js",
             "polyfills": "src/polyfills.ts",
-            "tsConfig": "tsconfig.spec.json",
-            "karmaConfig": "karma.conf.js",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
+            "tsConfig": "src/tsconfig.spec.json",
+            "scripts": [],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss",
+              "src/ngx-auth-firebaseui_theme.scss"
+              
             ],
-            "scripts": []
+            "assets": [
+              "src/assets",
+              "src/favicon.ico",
+              {
+                "glob": "**/*",
+                "input": "node_modules/ngx-auth-firebaseui/assets",
+                "output": "/assets"
+              }
+            ]
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "tsconfig.app.json",
-              "tsconfig.spec.json",
-              "e2e/tsconfig.json"
+              "src/tsconfig.app.json",
+              "src/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
             ]
           }
         },
-        "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
           "options": {
-            "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "cadeosio:serve"
+            "outputPath": "dist/server",
+            "main": "src/main.server.ts",
+            "tsConfig": "src/tsconfig.server.json"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "cadeosio:serve:production"
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ]
             }
+          }
+        },
+        "deploy": {
+          "builder": "@zeit/ng-deploy:deploy"
+        }
+      }
+    },
+    "ngx-auth-firebaseui-e2e": {
+      "root": "e2e",
+      "sourceRoot": "",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "./protractor.conf.js",
+            "devServerTarget": "ngx-auth-firebaseui:serve"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         }
       }
-    }},
-  "defaultProject": "cadeosio"
+    }
+  },
+  "defaultProject": "cadeosio",
+  "schematics": {
+    "@schematics/angular:component": {
+      "prefix": "app",
+      "styleext": "scss"
+    },
+    "@schematics/angular:directive": {
+      "prefix": "app"
+    }
+  }
 }
