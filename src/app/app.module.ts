@@ -24,11 +24,11 @@ import {MatPagesModule} from '@angular-material-extensions/pages';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {MarkdownModule} from 'ngx-markdown';
-import { defaultAuthFirebaseUIConfig } from 'ngx-auth-firebaseui/module/interfaces/config.interface';
-import { ExchangesComponent } from './exchanges/exchanges.component';
-import { Cadeosio3dComponent } from './cadeosio3d/cadeosio3d.component';
+
 import { ExchangesModule } from './exchanges/exchanges.module';
 import { Cadeosio3dModule } from './cadeosio3d/cadeosio3d.module';
+
+import {ScatterService} from './services/scatter.service';
 
 
 export function hljsLanguages() {
@@ -90,7 +90,11 @@ export function createTranslateLoader(http: HttpClient) {
     Cadeosio3dModule,
     NgxAuthFirebaseUIModule.forRoot(firebaseKey),
   ],
-  providers: [],
+  providers: [
+
+   ScatterService,
+   
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
