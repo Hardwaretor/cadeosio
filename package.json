@@ -74,6 +74,7 @@
     "node-fetch": "^2.6.0",
     "popper.js": "^1.16.0",
     "rxjs": "^6.5.3",
+    "scatterjs-core": "^2.7.18",
     "scatterjs-plugin-eosjs": "^1.5.1",
     "scatterjs-plugin-lynx": "^1.6.6",
     "svg-country-flags": "^1.2.6",

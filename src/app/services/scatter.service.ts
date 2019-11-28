@@ -1,12 +1,18 @@
 import {Injectable} from '@angular/core';
 import * as Eos from 'eosjs';
+import { Api, JsonRpc, RpcError } from 'eosjs';
+import { JsSignatureProvider } from 'eosjs/dist/eosjs-jssig';
 import {LocalStorage} from 'ngx-webstorage';
 import {environment} from '../../environments/environment';
 import ScatterJS from 'scatterjs-core';
 import ScatterEOS from 'scatterjs-plugin-eosjs';
 import ScatterLynx from '@scatterjs/lynx';
-import Api from 'scatterjs-plugin-eosjs';
-import JsonRpc from 'scatterjs-plugin-eosjs';
+
+const defaultPrivateKey = '5JtUScZK2XEp3g9gh7F8bwtPTRAkASmNrrftmx4AxDKD5K4zDnr'; // bob
+const signatureProvider = new JsSignatureProvider([defaultPrivateKey]);
+const rpc = new JsonRpc('http://127.0.0.1:8888', { fetch });
+const api = new Api({ rpc, signatureProvider, textDecoder: new TextDecoder(), textEncoder: new TextEncoder() });
+
 
 
 // Don't forget to tell ScatterJS which plugins you are using.
@@ -86,6 +92,7 @@ ScatterJS.scatter.connect('CADEOS.io').then(connected => {
   const scatter = ScatterJS.scatter;
 
 });
+
 
 
 @Injectable()
