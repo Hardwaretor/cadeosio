@@ -15,6 +15,10 @@ const api = new Api({ rpc, signatureProvider, textDecoder: new TextDecoder(), te
 
 
 
+const result = api.transact({});
+
+
+
 // Don't forget to tell ScatterJS which plugins you are using.
 
 ScatterJS.plugins( new ScatterEOS(), new ScatterLynx(Eos || {Api, JsonRpc}) );
