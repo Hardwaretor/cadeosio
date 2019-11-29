@@ -10,7 +10,7 @@ import 'rxjs/add/observable/of';
 import {Observable, of} from 'rxjs';
 
 import { ExchangesComponent } from './exchanges/exchanges.component';
-import { Cadeosio3dComponent } from './cadeosio3d/cadeosio3d.component';
+
 
 @Component({selector: 'app-header', })
 class HeaderStubComponent {
@@ -28,8 +28,7 @@ describe('AppComponent', () => {
         HeaderStubComponent,
         FooterComponent,
         RouterOutletStubComponent,
-        ExchangesComponent,
-        Cadeosio3dComponent
+        ExchangesComponent
       ],
       providers: [
         {provide: Router, useClass: RouterStub}

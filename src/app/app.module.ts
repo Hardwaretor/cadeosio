@@ -93,7 +93,6 @@ export function createTranslateLoader(http: HttpClient) {
   providers: [
 
    ScatterService,
-   
   ],
   bootstrap: [AppComponent]
 })

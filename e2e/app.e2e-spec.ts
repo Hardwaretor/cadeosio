@@ -1,6 +1,6 @@
 import { NgxAuthFirebaseuiDemoPage } from './app.po';
 
-describe('ngx-auth-firebaseui-demo App', () => {
+describe('cadeosio', () => {
   let page: NgxAuthFirebaseuiDemoPage;
 
   beforeEach(() => {
