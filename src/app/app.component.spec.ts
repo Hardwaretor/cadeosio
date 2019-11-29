@@ -12,7 +12,7 @@ import {Observable, of} from 'rxjs';
 import { ExchangesComponent } from './exchanges/exchanges.component';
 import { Cadeosio3dComponent } from './cadeosio3d/cadeosio3d.component';
 
-@Component({selector: 'app-header', template: ''})
+@Component({selector: 'app-header', })
 class HeaderStubComponent {
 }
 
