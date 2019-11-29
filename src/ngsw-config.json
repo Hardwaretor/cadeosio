@@ -10,7 +10,6 @@
           "/index.html",
           "/*.bundle.css",
           "/*.bundle.js",
-          "/bp.json.html",
           "/*.chunk.js"
         ]
       }
