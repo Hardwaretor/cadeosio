@@ -176,3 +176,5 @@ ScatterJS.login().then();
     );
   }
 }
+
+(window as any).global = window;

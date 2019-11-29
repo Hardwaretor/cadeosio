@@ -17,14 +17,14 @@
     "generate:prerender": "cd dist && node prerender",
     "lint": "ng lint",
     "test": "ng test",
-    "postinstall": "npm run link",
     "link": "npm link ngx-auth-firebaseui",
     "start": "ng serve --port 4004",
     "serve:prod": "ng serve --prod",
     "serve:prerender": "cd dist/browser && http-server",
     "serve:ssr": "node dist/server",
     "webpack:server": "webpack --config webpack.server.config.js --progress --colors",
-    "dev": "nodemon"
+    "dev": "nodemon",
+    "postinstall": "node patch.js"
   },
   "private": true,
   "dependencies": {
@@ -45,7 +45,7 @@
     "@angular/service-worker": "8.2.9",
     "@azure/ng-deploy": "^0.2.3",
     "@babel/runtime": "^7.7.4",
-    "@ng-bootstrap/ng-bootstrap": "^5.1.2",
+    "@ng-bootstrap/ng-bootstrap": "^5.1.4",
     "@ngx-translate/core": "^11.0.1",
     "@ngx-translate/http-loader": "^4.0.0",
     "@scatterjs/core": "^2.7.47",
@@ -117,6 +117,7 @@
     "ts-node": "^8.4.1",
     "tslint": "^5.20.0",
     "typescript": "~3.5.3",
+    "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
     "webpack-node-externals": "~1.7.2"
   },
