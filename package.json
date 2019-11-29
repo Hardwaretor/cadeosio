@@ -79,6 +79,7 @@
     "scatterjs-plugin-lynx": "^1.6.6",
     "svg-country-flags": "^1.2.6",
     "tslib": "^1.10.0",
+    "ws": "^7.2.0",
     "zone.js": "~0.9.1"
   },
   "devDependencies": {
