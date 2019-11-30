@@ -108,32 +108,58 @@ $breakpoints: $grid-breakpoints;
     }
 
     .btn {
-      color: black;
-      border-bottom-color: black;
+      color: black !important;
+      border-bottom-color: black !important;
       border-color: black;
-      margin-top: 0% !important;
-      margin-bottom: 0% !important;
-      width: 150px ;
-      height: 30px ;
+      margin-top: 2% !important;
+      margin-bottom: 2% !important;
+      width: 13% !important;
+      height: 8% !important;
       text-align: center !important;
-      
+      font-size: 80%;
+      margin: 1%;
+    
+    }
+
+    .btn-group-sm>.btn, .btn-sm {
+      padding: 1% !important;
+      font-size: 80% !important;
+      line-height: 10% !important;
+      color: black !important;
+      border-bottom-color: black !important;
+      border-color: black;
+    }
+
+    .btn-outline-primary {
+      color: #380046 !important;
+      border-color: #2e004d !important;
+  }
+
+
+    .container-fluid {
+      width: 100%!important;
+      padding-right: 0px!important;
+      padding-left: 0px!important;
+      margin-right: auto;
+      margin-left: auto;
     }
 
     .jumbotron-fluid {
 
       flex: 1 1 auto !important;
-      height: 50px !important;
       display: flex !important;
       flex-direction: column !important;
       justify-content: center !important;
       align-items: center !important;
       text-align: center !important;
       min-height: 0vh !important;
-      background-color: rgb(242, 166, 252);
-      padding: 3%;
+      background-color: !important;
       width: 100% !important;
-      margin-bottom: 0%;
       z-index: 1;
+      padding: 0% !important;
+      padding-right: 0 !important;
+      padding-left: 0 !important;
+      border-radius: 0 !important;
       
       }
 
@@ -147,7 +173,6 @@ $breakpoints: $grid-breakpoints;
         text-align: center !important;
         min-height: 0vh !important;
         background-color: rgb(242, 166, 252);
-        padding: 3%;
         width: 100% !important;
         margin-bottom: 0%;
         z-index: 1;
@@ -205,6 +230,8 @@ $breakpoints: $grid-breakpoints;
         z-index: 0;
         -webkit-animation: filter-animation 10s infinite;
         animation: filter-animation 10s infinite;
+        width: 100%;
+        height: 100%;
       }
       
       img:hover {
@@ -625,10 +652,11 @@ $breakpoints: $grid-breakpoints;
   align-items: center !important;
   text-align: center !important;
   min-height: 0vh !important;
-  background-color: rgb(242, 166, 252);
-  padding: 3%;
+  background-size: 100%;
+  padding: 0%;
   width: 100% !important;
   margin-bottom: 0%;
+  margin: 3%;
   
   }
   
@@ -642,9 +670,7 @@ $breakpoints: $grid-breakpoints;
     text-align: center !important;
     min-height: 0vh !important;
     background-color: rgb(242, 166, 252);
-    padding: 3%;
     width: 100% !important;
-    margin-bottom: 0%;
   }
   
   .btn {
@@ -655,8 +681,8 @@ $breakpoints: $grid-breakpoints;
     margin-top: 0% !important;
     margin-bottom: 0% !important;
     text-align: center;
-    width: 90px;
-    font-size: 7px;
+    width: 20% !important;
+    font-size: 5% !important;
     
      }
   
@@ -909,10 +935,3 @@ element.style {
 }
 
 
-.container-fluid {
-  width: 100%;
-  padding-right: 0px;
-  padding-left: 0px;
-  margin-right: auto;
-  margin-left: auto;
-}
