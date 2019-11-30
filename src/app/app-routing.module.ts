@@ -40,6 +40,10 @@ const routes: Routes = [
     loadChildren: () => import('./cadeosio3d/cadeosio3d.module').then(m => m.Cadeosio3dModule),
   },
   {
+    path: 'wallet',
+    loadChildren: () => import('./wallet/wallet.module').then(m => m.WalletModule),
+  },
+  {
     path: 'secured',
     loadChildren: () => import('./faq/faq.module').then(m => m.FaqModule),
     canActivate: [LoggedInGuard]

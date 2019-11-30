@@ -10,6 +10,7 @@ import 'rxjs/add/observable/of';
 import {Observable, of} from 'rxjs';
 
 import { ExchangesComponent } from './exchanges/exchanges.component';
+import { WalletComponent } from './wallet/wallet.component';
 
 
 @Component({selector: 'app-header', })
@@ -28,7 +29,8 @@ describe('AppComponent', () => {
         HeaderStubComponent,
         FooterComponent,
         RouterOutletStubComponent,
-        ExchangesComponent
+        ExchangesComponent,
+        WalletComponent
       ],
       providers: [
         {provide: Router, useClass: RouterStub}

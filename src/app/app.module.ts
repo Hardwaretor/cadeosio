@@ -25,10 +25,15 @@ import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {MarkdownModule} from 'ngx-markdown';
 
-import { ExchangesModule } from './exchanges/exchanges.module';
-import { Cadeosio3dModule } from './cadeosio3d/cadeosio3d.module';
+
 
 import {ScatterService} from './services/scatter.service';
+import { WalletComponent } from './wallet/wallet.component';
+import { WalletModule } from './wallet/wallet.module';
+import { Cadeosio3dComponent } from './cadeosio3d/cadeosio3d.component';
+import { ExchangesComponent } from './exchanges/exchanges.component';
+import { ExchangesModule } from './exchanges/exchanges.module';
+import { Cadeosio3dModule } from './cadeosio3d/cadeosio3d.module';
 
 
 export function hljsLanguages() {
@@ -50,6 +55,7 @@ export function createTranslateLoader(http: HttpClient) {
 @NgModule({
   declarations: [
     AppComponent,
+
   ],
   imports: [
     // Add .withServerTransition() to support Universal rendering.
@@ -88,7 +94,9 @@ export function createTranslateLoader(http: HttpClient) {
     HomeModule,
     ExchangesModule,
     Cadeosio3dModule,
+    WalletModule,
     NgxAuthFirebaseUIModule.forRoot(firebaseKey),
+
   ],
   providers: [
 
