@@ -12,7 +12,7 @@ import {AngularFireAuthModule} from '@angular/fire/auth';
     CommonModule,
     WalletRoutingModule,
     AppSharedModule,
-    AngularFireAuthModule,
+    AngularFireAuthModule
   ],
   declarations: [WalletComponent]
 })

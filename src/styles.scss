@@ -50,15 +50,14 @@ $breakpoints: $grid-breakpoints;
     }
 
     h2 {
-      font-family: 'Anton', sans-serif;
-      font-size: 19px; 
-      font-style: normal; 
-      font-variant: normal;  
-      line-height: 26.4px;
-      flex: 1 1 auto;
-      font-style: normal; 
-      font-variant: normal; 
-      font-weight: 300; 
+      font-family: 'Anton', sans-serif !important;
+      font-size: 150% !important; 
+      font-style: normal !important; 
+      font-variant: normal !important;  
+      line-height: 150% !important;
+      font-style: normal !important; 
+      font-variant: normal !important; 
+      font-weight: 150% !important; 
       width: 80% !important;
       display: flex !important;
       flex-direction: column !important;
@@ -67,23 +66,23 @@ $breakpoints: $grid-breakpoints;
       text-align: left !important;
       min-height: 0vh !important;
       margin-top: 0% !important;
-      margin-right: 10%;
-      margin-left: 10%;
-      color: rgb(0, 0, 0);
+      margin-right: 10% !important;
+      margin-left: 10% !important;
+      color: rgb(0, 0, 0) !important;
       z-index: 1;
     }
 
     h3 {
-      font-family: 'Anton', sans-serif;
-      font-size: 13px; 
-      font-style: normal; 
-      font-variant: normal; 
-      font-weight: 80px; 
-      line-height: 26.4px;
+      font-family: 'Anton', sans-serif !important;
+      font-size: 90% !important; 
+      font-style: normal !important; 
+      font-variant: normal !important; 
+      font-weight: 100% !important; 
+      line-height: 100% !important;
       flex: 1 1 auto;
       font-style: normal; 
       font-variant: normal; 
-      font-weight: 200; 
+      font-weight: 100%; 
       width: 80% !important;
       display: flex !important;
       flex-direction: column !important;
@@ -135,6 +134,16 @@ $breakpoints: $grid-breakpoints;
       border-color: #2e004d !important;
   }
 
+   element.style {
+    background-color: rgba(242, 166, 252, 0) !important;
+    margin-top: 0% !important;
+    margin-left: 0% !important;
+    text-align: center !important;
+    margin-bottom: 10% !important;
+    color: black !important;
+    width: 60% !important;
+    border-radius: 50% !important;
+  }
 
     .container-fluid {
       width: 100%!important;
@@ -235,14 +244,20 @@ $breakpoints: $grid-breakpoints;
       }
       
       img:hover {
-        /* Start the shake animation and make the animation last for 0.5 seconds */
-        animation: shake 0.5s;
-      
-        /* When the animation is finished, start again */
-        animation-iteration-count: 0.5s;
 
+        animation: shake 0.5s;
+        animation-iteration-count: 0.5s;
+        overflow: hidden;
+        width: 100%;
+        align-content: center;
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        align-items: center !important;
+        text-align: center !important;
         z-index: 1;
       }
+
 
 
       #slider {
@@ -521,65 +536,6 @@ $breakpoints: $grid-breakpoints;
 
 }
 
-@media screen and (min-width: 768px) {
-  .carousel-control .glyphicon-chevron-left,
-  .carousel-control .glyphicon-chevron-right,
-  .carousel-control .icon-prev,
-  .carousel-control .icon-next {
-    width: 30px;
-    height: 30px;
-    margin-top: 0px;
-    font-size: 30px;
-  }
-  .carousel-control .glyphicon-chevron-left,
-  .carousel-control .icon-prev {
-    margin-left: -10px;
-  }
-  .carousel-control .glyphicon-chevron-right,
-  .carousel-control .icon-next {
-    margin-right: -10px;
-  }
-  .carousel-caption {
-    right: 20%;
-    left: 20%;
-    padding-bottom: 0px;
-  }
-  .carousel-indicators {
-    bottom: 0px;
-  }
-}
-
-@media all and (transform-3d),
-(-webkit-transform-3d) {
-  .carousel-inner>.item {
-    -webkit-transition: -webkit-transform 2s ease-in-out;
-    -o-transition: -o-transform 2s ease-in-out;
-    transition: transform 2s ease-in-out;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -webkit-perspective: 100%;
-    perspective: 100%;
-  }
-  .carousel-inner>.item.next,
-  .carousel-inner>.item.active.right {
-    left: 0;
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
-  }
-  .carousel-inner>.item.prev,
-  .carousel-inner>.item.active.left {
-    left: 0;
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-  }
-  .carousel-inner>.item.next.left,
-  .carousel-inner>.item.prev.right,
-  .carousel-inner>.item.active {
-    left: 0;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
 
 @media screen and (max-width: 600px) {
   li {
@@ -636,9 +592,6 @@ $breakpoints: $grid-breakpoints;
         text-align: left !important;
         min-height: 0vh !important;
         margin-top: 0% !important;
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
-        -webkit-filter: hue-rotate(100deg);
   }
 
   
@@ -731,6 +684,38 @@ body,
     url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
     url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
     url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+@media all and (transform-3d),
+(-webkit-transform-3d) {
+  .carousel-inner>.item {
+    -webkit-transition: -webkit-transform 2s ease-in-out;
+    -o-transition: -o-transform 2s ease-in-out;
+    transition: transform 2s ease-in-out;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 100%;
+    perspective: 100%;
+  }
+  .carousel-inner>.item.next,
+  .carousel-inner>.item.active.right {
+    left: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+  .carousel-inner>.item.prev,
+  .carousel-inner>.item.active.left {
+    left: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+  .carousel-inner>.item.next.left,
+  .carousel-inner>.item.prev.right,
+  .carousel-inner>.item.active {
+    left: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 
@@ -842,15 +827,6 @@ body,
 .mat-menu-item:hover:not([disabled]), .mat-menu-item.cdk-program-focused:not([disabled]), .mat-menu-item.cdk-keyboard-focused:not([disabled]), .mat-menu-item-highlighted:not([disabled]) {
   background: #8717ff;
   font-family: 'Anton', sans-serif !important;
-}
-
-
-.element.style {
-  background-color: rgba(242, 166, 252, 0) !important;
-}
-
-element.style {
-  background-color: rgba(242, 166, 252, 0) !important;
 }
 
 .mat-menu-item {

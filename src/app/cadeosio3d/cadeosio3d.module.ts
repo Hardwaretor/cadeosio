@@ -12,7 +12,7 @@ import {AngularFireAuthModule} from '@angular/fire/auth';
     CommonModule,
     Cadeosio3dRoutingModule,
     AppSharedModule,
-    AngularFireAuthModule,
+    AngularFireAuthModule
   ],
   declarations: [Cadeosio3dComponent]
 })
