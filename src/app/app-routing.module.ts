@@ -47,7 +47,9 @@ const routes: Routes = [
     path: 'secured',
     loadChildren: () => import('./faq/faq.module').then(m => m.FaqModule),
     canActivate: [LoggedInGuard]
-  }
+  },
+  { path: 'user-list', loadChildren: () => import('./campus/campus.module').then(m => m.CampusModule) },
+  { path: 'user-list', loadChildren: () => import('./plm/plm.module').then(m => m.PlmModule) }
 ];
 
 @NgModule({

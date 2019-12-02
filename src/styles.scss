@@ -249,13 +249,6 @@ $breakpoints: $grid-breakpoints;
         animation: shake 0.5s;
         animation-iteration-count: 0.5s;
         overflow: hidden;
-        width: 100%;
-        align-content: center;
-        display: flex !important;
-        flex-direction: row !important;
-        justify-content: center !important;
-        align-items: center !important;
-        text-align: center !important;
         z-index: 1;
       }
 
