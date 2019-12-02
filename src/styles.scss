@@ -134,15 +134,16 @@ $breakpoints: $grid-breakpoints;
       border-color: #2e004d !important;
   }
 
-   element.style {
+  .element.style {
     background-color: rgba(242, 166, 252, 0) !important;
     margin-top: 0% !important;
     margin-left: 0% !important;
     text-align: center !important;
     margin-bottom: 10% !important;
     color: black !important;
-    width: 60% !important;
+    width: 100% !important;
     border-radius: 50% !important;
+  
   }
 
     .container-fluid {
