@@ -1,5 +1,7 @@
 
-
+<p align="center">
+  <img src="/src/assets/flags/uk.png" width="100%" style="text-align: center;">
+</p>
 
 <p align="center">
   <img src="/src/assets/Pagina principal - nuevo estilo 3.jpg" width="100%" style="text-align: center;">
