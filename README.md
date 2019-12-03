@@ -51,7 +51,7 @@ https://mydex.win/
 
 <h1>CADEOS.io</h1>
   
-<h2>去中心化的CAD.FILES和项目管理平台</h2>
+<h2>去中心化的 CAD 文件 和项目管理平台</h2>
 
 <h3>官方公告
 
