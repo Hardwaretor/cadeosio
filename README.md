@@ -1,4 +1,4 @@
-<div class="flag flag-us flag-es"></div>
+<div class="flag flag-us "></div>
 
 <p align="center">
   <img src="/src/assets/Pagina principal - nuevo estilo 3.jpg" width="100%" style="text-align: center;">
