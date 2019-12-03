@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="/src/assets/flags/uk.png" style="text-align: center;"> <img src="/src/assets/flags/ko.png" style="text-align: center;"> <img src="/src/assets/flags/ch.png" style="text-align: center;"> <img src="/src/assets/flags/ru.png" style="text-align: center;">
+  <img src="/src/assets/flags/uk.png" style="text-align: center;"> <img src="/src/assets/flags/kr.png" style="text-align: center;"> <img src="/src/assets/flags/cn.png" style="text-align: center;"> <img src="/src/assets/flags/ru.png" style="text-align: center;">
 </p>
 </p>
 </p>
