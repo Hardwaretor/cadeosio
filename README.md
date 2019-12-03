@@ -43,6 +43,11 @@ https://mydex.win/
 
 </h3>
 
+<p align="center">
+  <img alt="/src/assets/CADEOS Logo transparent background2.png" width="256px" style="text-align: center;" 
+  src="/src/assets/CADEOS Logo transparent background2.png">
+</p>
+
 <h1> CADEOS.io </ h1>
 <h2> 감소 된 CAD 파일 및 프로젝트 관리 플랫폼 </ h2>
 
@@ -80,8 +85,9 @@ https://token.store/eos/trade/cadeositoken-ade-eos
 https://newdex.io/trade/cadeositoken-ade-eos
 https://findex.pro/trade/cadeositoken_ADE-eosio.token_EOS
 https://eosdaq.com/exchange/ADE_EOS
-https://mydex.win/</h3>
+https://mydex.win/
 
+</h3>
 
 <p align="center">
   <img alt="/src/assets/CADEOS Logo transparent background2.png" width="256px" style="text-align: center;" 
