@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="/src/assets/CADEOS Logo transparent background2.png" width="256px" style="text-align: center;" 
+  <img alt="/src/assets/Pagina principal - nuevo estilo 3.jpg" width="100%" style="text-align: center;" 
   src="/src/assets/CADEOS Logo transparent background2.png">
 </p>
 
