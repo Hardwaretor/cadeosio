@@ -1,6 +1,5 @@
 <p align="center">
-  <img alt="/src/assets/Pagina principal - nuevo estilo 3.jpg" width="100%" style="text-align: center;" 
-  src="/src/assets/CADEOS Logo transparent background2.png">
+  <img asrc="/src/assets/Pagina principal - nuevo estilo 3.jpg" width="100%" style="text-align: center;">
 </p>
 
 CADEOS.io - DECENTRALIZED CAD.FILES & PROJECT MANAGEMENT PLATFORM
