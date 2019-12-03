@@ -43,6 +43,47 @@ https://mydex.win/
 
 </h3>
 
+<h1> CADEOS.io </ h1>
+<h2> 감소 된 CAD 파일 및 프로젝트 관리 플랫폼 </ h2>
+
+<h3> 공식 발표 :
+
+https://twitter.com/CadeosI/status/1068175488659714048
+
+프로젝트 팀 배경 :
+
+https://www.linkedin.com/in/guillermo-galindo-saeta-749a2557
+https://www.linkedin.com/in/jes%C3%BAs-moya-galindo-bb24861a
+https://www.linkedin.com/in/javier-saeta-hidalgo
+
+프로젝트 기본 정보 :
+
+오늘날 기업가와 제작자에게 가장 큰 제약 중 하나는 고가의 소프트웨어 라이센스이며, CADEOS.io에서는 분산 소프트웨어의 문제를 제거하여 모든 사람에게이 프로세스를 용이하게하고 싶습니다. 직관적이고 사용자 친화적 인 환경에서 제작 프로세스와 제품 출시를 저렴하고 매우 쉽게 만들 것입니다.
+모든 종류의 프로젝트를 토큰 화함으로써 사용자는 자신의 아이디어와 노력이 성공적으로 구현 된 것을 볼 수 있습니다. 우리의 플랫폼은 시장 장벽에 멈춰있는 훌륭한 마음에 기회를 가져올 것입니다.
+첫 번째 스케치에서 제조 프로세스에 이르기까지 사용자는 PLM (Product Lifecycle Manager) 플랫폼에서 설계 상태를 모니터링 할 수 있습니다. 관심이있는 공장, 공급 업체 및 모든 제 3자는 당사 플랫폼에서 견적 요청 (RFQ)을 검토하고 각 구성 요소의 제조 가격을 보낼 수 있습니다.
+CADEOS.io를 사용하면 분산 CAD 소프트웨어를 사용하여 모든 기계 및 전자 부품을 설계하고 커뮤니티에서 최고의 아이디어를 찾고있는 수천 명의 투자자의 관심 아래이를 홍보 할 수 있습니다.
+CADEOS.io 플랫폼은 수천 개의 서로 다른 브랜드의 대규모 구성 요소 갤러리를 호스팅하며 쉬운 제품 구성을 위해 최대한 광범위한 리소스를 제공 할 책임이 있습니다.
+공급 업체 포트폴리오를 만들면 전 세계 모든 업계의 최고 전문가와 최고의 조언과 직접적인 의사 소통을 할 수 있습니다. 각 지역에는 자체 커뮤니케이션 채널과 대화방이 있습니다.
+동적 사용자 프로필 내에서 생성 할 때마다 모든 제품, 3D 모델, 3D 프린터 부품, 전자 구성표 등에 가치를 추가하여 CADEOS.io 플랫폼에서 성공할 입찰 및 판매에 유리합니다. 귀하의 작업은 절대 잃어 버리거나 잊혀지지 않으며 토큰 ADE로 수시로 재평가됩니다.
+
+미디어 출판물 :
+
+https://koreos.io/News/412220
+https://medium.com/cadeos-io
+https://www.stateofthedapps.com/dapps/cadeos
+https://t.me/cadeos
+https://marketcap.one/es/m/ADE
+
+거래 가능한 거래소 :
+
+https://token.store/eos/trade/cadeositoken-ade-eos
+https://newdex.io/trade/cadeositoken-ade-eos
+https://findex.pro/trade/cadeositoken_ADE-eosio.token_EOS
+https://eosdaq.com/exchange/ADE_EOS
+https://mydex.win/
+
+</ h3>
+
 
 <p align="center">
   <img alt="/src/assets/CADEOS Logo transparent background2.png" width="256px" style="text-align: center;" 
