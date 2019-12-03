@@ -80,9 +80,7 @@ https://token.store/eos/trade/cadeositoken-ade-eos
 https://newdex.io/trade/cadeositoken-ade-eos
 https://findex.pro/trade/cadeositoken_ADE-eosio.token_EOS
 https://eosdaq.com/exchange/ADE_EOS
-https://mydex.win/
-
-</ h3>
+https://mydex.win/</h3>
 
 
 <p align="center">
