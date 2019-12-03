@@ -1,10 +1,9 @@
-<ul class="list-group">
+
     <li class="list-group-item"><span class="flag flag-es"></span> <a href="#">Spain</a></li>
     <li class="list-group-item"><span class="flag flag-fr"></span> <a href="#">France</a></li>
     <li class="list-group-item"><span class="flag flag-us"></span> <a href="#">United States</a></li>
     <li class="list-group-item"><span class="flag flag-ph"></span> <a href="#">Philippines</a></li>
     <li class="list-group-item"><span class="flag flag-cz"></span> <a href="#">Czech Republic</a></li>
-</ul>
 
 <p align="center">
   <img src="/src/assets/Pagina principal - nuevo estilo 3.jpg" width="100%" style="text-align: center;">
