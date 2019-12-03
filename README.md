@@ -5,7 +5,7 @@
 <h1> CADEOS.io</h1>  
 <h2>DECENTRALIZED CAD.FILES & PROJECT MANAGEMENT PLATFORM </h2>
 
-<h3>Official announcement:
+<h3>Official announcement: 
 
 https://twitter.com/CadeosI/status/1068175488659714048
 
