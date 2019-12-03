@@ -2,7 +2,8 @@
   <img src="/src/assets/Pagina principal - nuevo estilo 3.jpg" width="100%" style="text-align: center;">
 </p>
 
-<h1> CADEOS.io - DECENTRALIZED CAD.FILES & PROJECT MANAGEMENT PLATFORM </h1>
+<h1> CADEOS.io</h1>  
+<h2>DECENTRALIZED CAD.FILES & PROJECT MANAGEMENT PLATFORM </h2>
 
 Official announcement:
 
