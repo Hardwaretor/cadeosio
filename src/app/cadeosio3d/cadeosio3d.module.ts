@@ -14,6 +14,7 @@ import {AngularFireAuthModule} from '@angular/fire/auth';
     AppSharedModule,
     AngularFireAuthModule
   ],
-  declarations: [Cadeosio3dComponent]
+  declarations: [Cadeosio3dComponent],
+  bootstrap: [Cadeosio3dComponent]
 })
 export class Cadeosio3dModule { }

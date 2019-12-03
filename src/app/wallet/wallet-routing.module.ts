@@ -4,7 +4,7 @@ import {WalletComponent} from './wallet.component';
 
 @NgModule({
   imports: [RouterModule.forChild([
-    {path: 'wallet', component: WalletComponent }
+    {path: '', component: WalletComponent }
   ])],
   exports: [RouterModule]
 })

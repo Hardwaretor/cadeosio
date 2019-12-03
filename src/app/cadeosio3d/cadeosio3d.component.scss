@@ -89,20 +89,6 @@
    background: rgba(255,255,255,0.15);
  }
  
- #viewerContext {
-    margin: 0px;             /* not inherited */
-    border: 0px none rgb(75, 0, 110);  /* not inherited */
-    padding: 0px;            /* not inherited */
- 
-    /* ensure that the canvas uses the whole width and height of the document */
-    background: rgb(229, 185, 253);
-    height: 100%;
-    width: 100%;
- 
-    top: 0px;
-    bottom: 0px;
- }
- 
  canvas {
     margin: 0px;            /* not inherited */
     border: 0px none rgb(92, 0, 90); /* not inherited */
@@ -163,7 +149,7 @@
     bottom: 1em;
     margin: 1em;
     user-select: none;
-    width: 95%;
+    width: 98%;
  }
  
  #busy {
@@ -214,11 +200,6 @@
     top: 50px;
  }
  
- #menu nav .navlink {
- }
- 
- #menu nav .navlink:hover {
- }
  
  #menu #examples {
     font-size: 0.6em;
@@ -306,8 +287,6 @@
     z-index: 10;
  }
  
- .examplesSeparator {
- }
  
  #options {
     width: auto;
@@ -422,16 +401,10 @@
   }
   
   #viewerContext {
-    margin: 5px; /* not inherited */
-    border: thin solid gray; /* not inherited */
-    padding: 0px; /* not inherited */
-  
-    background: white;
-    width: 400px;
-    height: 300px;
-  
-    top: 0px;
-    bottom: 0px;
+    border: thin solid rgb(72, 0, 82); /* not inherited */
+    background: rgba(234, 190, 255, 0);
+    width: 100%;
+    height: 800px;
   }
   
   canvas { 
@@ -500,10 +473,6 @@
     background: white;
   
     margin-left: 1em;
-  }
-  
-  #tail { 
-    margin: 5px; /* not inherited */
   }
   
   #busy {
@@ -617,8 +586,6 @@
      font-size: 0.9em;
   }
   
-  #statusdiv {
-  }
   #statusspan {
      margin-right: 2em;
   }

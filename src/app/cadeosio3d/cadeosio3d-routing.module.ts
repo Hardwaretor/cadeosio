@@ -4,7 +4,7 @@ import {Cadeosio3dComponent} from './cadeosio3d.component';
 
 @NgModule({
   imports: [RouterModule.forChild([
-    {path: 'cadeosio3d', component: Cadeosio3dComponent }
+    {path: '', component: Cadeosio3dComponent }
   ])],
   exports: [RouterModule]
 })
