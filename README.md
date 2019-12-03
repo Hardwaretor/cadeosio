@@ -2,7 +2,6 @@
   <img src="/src/assets/Pagina principal - nuevo estilo 3.jpg" width="100%" style="text-align: center;">
 </p>
 
-<h1 style="text-align: center;" </h1>
 <h1> CADEOS.io </h1>  
 <h2>DECENTRALIZED CAD.FILES & PROJECT MANAGEMENT PLATFORM </h2>
 
@@ -50,11 +49,11 @@ https://mydex.win/
   src="/src/assets/CADEOS Logo transparent background2.png">
 </p>
 
-CADEOS.io-去中心化的CAD.FILES和项目管理平台
+<h1>CADEOS.io-去中心化的CAD.FILES和项目管理平台</h1>
 
-官方公告：
+<h2>官方公告：</h2>
 
-https://twitter.com/CadeosI/status/1068175488659714048
+<h3>https://twitter.com/CadeosI/status/1068175488659714048
 
 项目团队背景：
 
@@ -87,3 +86,5 @@ https://newdex.io/trade/cadeositoken-ade-eos
 https://findex.pro/trade/cadeositoken_ADE-eosio.token_EOS
 https://eosdaq.com/exchange/ADE_EOS
 https://mydex.win/
+
+</h3>
