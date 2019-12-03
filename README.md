@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="/src/assets/flags/uk.png" style="text-align: center;">
+  <img src="/src/assets/flags/uk.png" style="text-align: center;"> <img src="/src/assets/flags/uk.png" style="text-align: center;">
 </p>
 
 <p align="center">
