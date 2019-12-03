@@ -5,7 +5,7 @@
 <h1> CADEOS.io</h1>  
 <h2>DECENTRALIZED CAD.FILES & PROJECT MANAGEMENT PLATFORM </h2>
 
-Official announcement:
+<h3>Official announcement:
 
 https://twitter.com/CadeosI/status/1068175488659714048
 
@@ -40,6 +40,8 @@ https://newdex.io/trade/cadeositoken-ade-eos
 https://findex.pro/trade/cadeositoken_ADE-eosio.token_EOS
 https://eosdaq.com/exchange/ADE_EOS
 https://mydex.win/
+
+</h3>
 
 
 <p align="center">
