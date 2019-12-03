@@ -1,3 +1,4 @@
+[![EOSIO Labs](https://img.shields.io/badge/EOSIO-Labs-5cb3ff.svg)](#about-eosio-labs)
 
 <p align="center">
   <img src="/src/assets/flags/uk.png" style="text-align: center;"> <img src="/src/assets/flags/kr.png" style="text-align: center;"> <img src="/src/assets/flags/cn.png" style="text-align: center;"> <img src="/src/assets/flags/es.png" style="text-align: center;"> <img src="/src/assets/flags/fr.png" style="text-align: center;"> <img src="/src/assets/flags/sa.png" style="text-align: center;"> <img src="/src/assets/flags/de.png" style="text-align: center;"> <img src="/src/assets/flags/ru.png" style="text-align: center;">
