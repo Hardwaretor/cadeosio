@@ -49,11 +49,13 @@ https://mydex.win/
   src="/src/assets/CADEOS Logo transparent background2.png">
 </p>
 
-<h1>CADEOS.io-去中心化的CAD.FILES和项目管理平台</h1>
+<h1>CADEOS.io</h1>
+  
+<h2>去中心化的CAD.FILES和项目管理平台</h2>
 
-<h2>官方公告：</h2>
+<h3>官方公告
 
-<h3>https://twitter.com/CadeosI/status/1068175488659714048
+https://twitter.com/CadeosI/status/1068175488659714048
 
 项目团队背景：
 
