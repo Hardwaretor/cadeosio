@@ -19,15 +19,14 @@
     "lint": "ng lint",
     "test": "ng test --watch=false --browsers=ChromeHeadlessCustom",
     "link": "npm link ngx-auth-firebaseui",
-    "start": "ng serve --port 4004",
+    "start": "ng serve",
     "serve:prod": "ng serve --prod",
     "serve:prerender": "cd dist/browser && http-server",
     "serve:ssr": "node dist/server",
     "webpack:server": "webpack --config webpack.server.config.js --progress --colors",
     "dev": "nodemon",
     "postinstall": "node patch.js",
-    "clean": "rimraf ./dist",
-    "start": "ng serve"
+    "clean": "rimraf ./dist"
   },
   "private": true,
   "dependencies": {
@@ -117,6 +116,7 @@
     "karma-jasmine-html-reporter": "^1.4.2",
     "nodemon": "^1.19.4",
     "protractor": "~5.4.1",
+    "puppeteer": "^2.0.0",
     "reflect-metadata": "~0.1.10",
     "ts-loader": "^5.4.5",
     "ts-node": "^8.4.1",
