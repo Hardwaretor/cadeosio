@@ -1,17 +1,17 @@
 
+<p align="center">
+  <img src="/src/assets/flags/uk.png" style="text-align: center;"> <img src="/src/assets/flags/kr.png" style="text-align: center;"> <img src="/src/assets/flags/cn.png" style="text-align: center;"> <img src="/src/assets/flags/es.png" style="text-align: center;"> <img src="/src/assets/flags/fr.png" style="text-align: center;"> <img src="/src/assets/flags/sa.png" style="text-align: center;"> <img src="/src/assets/flags/de.png" style="text-align: center;"> <img src="/src/assets/flags/ru.png" style="text-align: center;">
+</p>
+</p>
+</p>
+
+
 [![npm version](https://badge.fury.io/js/ngx-auth-firebaseui.svg)](https://badge.fury.io/js/ngx-auth-firebaseui)
 [![docs: typedoc](https://img.shields.io/badge/docs-typedoc-4D0080.svg)](https://ngx-auth-firebaseui.firebaseapp.com/doc/index.html)
 [![CircleCI branch](https://img.shields.io/circleci/project/github/AnthonyNahas/ngx-auth-firebaseui/master.svg?label=circleci)](https://circleci.com/gh/AnthonyNahas/ngx-auth-firebaseui)
 [![Build Status](https://travis-ci.org/AnthonyNahas/ngx-auth-firebaseui.svg?branch=master)](https://travis-ci.org/AnthonyNahas/ngx-auth-firebaseui)
 [![license](https://img.shields.io/github/license/anthonynahas/ngx-auth-firebaseui.svg?style=flat-square)](https://github.com/AnthonyNahas/ngx-auth-firebaseui/blob/master/LICENSE)
 [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/gdi2290/awesome-angular)
-
-
-<p align="center">
-  <img src="/src/assets/flags/uk.png" style="text-align: center;"> <img src="/src/assets/flags/kr.png" style="text-align: center;"> <img src="/src/assets/flags/cn.png" style="text-align: center;"> <img src="/src/assets/flags/es.png" style="text-align: center;"> <img src="/src/assets/flags/fr.png" style="text-align: center;"> <img src="/src/assets/flags/sa.png" style="text-align: center;"> <img src="/src/assets/flags/de.png" style="text-align: center;"> <img src="/src/assets/flags/ru.png" style="text-align: center;">
-</p>
-</p>
-</p>
 
 <p align="center">
   <img src="/src/assets/Pagina principal - nuevo estilo 3.jpg" width="100%" style="text-align: center;">
