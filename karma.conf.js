@@ -1,37 +1,70 @@
-// Karma configuration file, see link for more information
-// https://karma-runner.github.io/1.0/config/configuration-file.html
+import webpackTestConfig from './webpack-test.config';
+import { ConfigOptions } from 'karma';
 
-module.exports = function (config) {
+export default (config) => {
   config.set({
-    basePath: '',
-    frameworks: ['jasmine', '@angular-devkit/build-angular'],
-    plugins: [
-      require('karma-jasmine'),
-      require('karma-chrome-launcher'),
-      require('karma-jasmine-html-reporter'),
-      require('karma-coverage-istanbul-reporter'),
-      require('@angular-devkit/build-angular/plugins/karma')
-      require('./karma.conf.ts');
+    // Base path that will be used to resolve all patterns (eg. files, exclude).
+    basePath: './',
+
+    // Frameworks to use.
+    // Available frameworks: https://npmjs.org/browse/keyword/karma-adapter
+    frameworks: ['jasmine'],
+
+    // List of files to load in the browser.
+    files: [
+      'karma-test-entry.ts'
     ],
-    client:{
-      clearContext: false // leave Jasmine Spec Runner output visible in browser
+
+    // Preprocess matching files before serving them to the browser.
+    // Available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
+    preprocessors: {
+      'karma-test-entry.ts': ['webpack', 'sourcemap']
     },
+
+    webpack: webpackTestConfig,
+
+    // Webpack please don't spam the console when running in karma!
+    webpackMiddleware: {
+      noInfo: true,
+      // Use stats to turn off verbose output.
+      stats: {
+        chunks: false
+      }
+    },
+
+    mime: {
+      'text/x-typescript': [ 'ts' ]
+    },
+
     coverageIstanbulReporter: {
-      dir: require('path').join(__dirname, 'coverage'), reports: [ 'html', 'lcovonly' ],
+      reports: ['text-summary', 'html', 'lcovonly'],
       fixWebpackSourcePaths: true
     },
-    angularCli: {
-      environment: 'dev'
-    },
-    reporters: ['progress', 'kjhtml'],
-    port: 9876,
-    colors: true,
-    logLevel: config.LOG_INFO,
-    autoWatch: true,
-    browsers: ['Chrome'],
-    singleRun: false
-  });
-};
 
-  
-  
+    // Test results reporter to use.
+    // Possible values: 'dots', 'progress'.
+    // Available reporters: https://npmjs.org/browse/keyword/karma-reporter
+    reporters: ['mocha', 'coverage-istanbul'],
+
+    // Level of logging
+    // Possible values:
+    // - config.LOG_DISABLE
+    // - config.LOG_ERROR
+    // - config.LOG_WARN
+    // - config.LOG_INFO
+    // - config.LOG_DEBUG
+    logLevel: config.LOG_WARN,
+
+    // Start these browsers.
+    // Available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
+    browsers: ['Chrome'],
+
+    browserConsoleLogOptions: {
+      terminal: true,
+      level: 'log'
+    },
+
+    singleRun: true,
+    colors: true
+  } as ConfigOptions);
+};
