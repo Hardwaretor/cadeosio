@@ -1,4 +1,4 @@
-import * as karma from 'karma';
+
 
 module.exports = function (config: karma.Config) {
 
