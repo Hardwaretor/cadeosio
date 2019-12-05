@@ -1,70 +1,50 @@
-import webpackTestConfig from './webpack-test.config';
-import { ConfigOptions } from 'karma';
+import * as karma from 'karma';
 
-export default (config) => {
-  config.set({
-    // Base path that will be used to resolve all patterns (eg. files, exclude).
-    basePath: './',
+module.exports = function (config: karma.Config) {
 
-    // Frameworks to use.
-    // Available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['jasmine'],
-
-    // List of files to load in the browser.
-    files: [
-      'karma-test-entry.ts'
+  // This extra variable is required because some configuration values (like 'mime') 
+  // aren't registered in karma.Config and Typescript will complain about it
+  const configuration: any = {
+    basePath: '',
+    frameworks: ['mocha', '@angular/cli'],
+    plugins: [
+      require('karma-mocha'),
+      require('karma-mocha-reporter'),
+      require('karma-chrome-launcher'),
+      require('karma-coverage-istanbul-reporter'),
+      require('@angular/cli/plugins/karma')
     ],
-
-    // Preprocess matching files before serving them to the browser.
-    // Available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
+    files: [
+      {pattern: './src/test.ts', watched: false}
+    ],
     preprocessors: {
-      'karma-test-entry.ts': ['webpack', 'sourcemap']
+      './src/test.ts': ['@angular/cli']
     },
-
-    webpack: webpackTestConfig,
-
-    // Webpack please don't spam the console when running in karma!
-    webpackMiddleware: {
-      noInfo: true,
-      // Use stats to turn off verbose output.
-      stats: {
-        chunks: false
+    mime: {
+      'text/x-typescript': ['ts', 'tsx']
+    },
+    remapIstanbulReporter: {
+      reports: {
+        html: 'coverage',
+        lcovonly: './coverage/coverage.lcov'
       }
     },
-
-    mime: {
-      'text/x-typescript': [ 'ts' ]
+    angularCli: {
+      environment: 'dev'
     },
-
-    coverageIstanbulReporter: {
-      reports: ['text-summary', 'html', 'lcovonly'],
-      fixWebpackSourcePaths: true
+    reporters: config['angularCli'] && config['angularCli'].codeCoverage
+      ? ['coverage-istanbul', 'mocha']
+      : ['mocha'],
+    mochaReporter: {
+      showDiff: true
     },
-
-    // Test results reporter to use.
-    // Possible values: 'dots', 'progress'.
-    // Available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['mocha', 'coverage-istanbul'],
-
-    // Level of logging
-    // Possible values:
-    // - config.LOG_DISABLE
-    // - config.LOG_ERROR
-    // - config.LOG_WARN
-    // - config.LOG_INFO
-    // - config.LOG_DEBUG
-    logLevel: config.LOG_WARN,
-
-    // Start these browsers.
-    // Available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
+    port: 9876,
+    colors: true,
+    logLevel: config.LOG_INFO,
+    autoWatch: true,
+    singleRun: false
     browsers: ['Chrome'],
+  };
 
-    browserConsoleLogOptions: {
-      terminal: true,
-      level: 'log'
-    },
-
-    singleRun: true,
-    colors: true
-  } as ConfigOptions);
+  config.set(configuration);
 };
