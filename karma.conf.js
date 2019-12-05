@@ -11,13 +11,6 @@ module.exports = function (config) {
       require('karma-jasmine-html-reporter'),
       require('karma-coverage-istanbul-reporter'),
       require('@angular-devkit/build-angular/plugins/karma')
-      compilerOptions: { 
-      module: 'commonjs' 
-      restartOnFileChange: true,
-      customLaunchers: {
-      ChromeHeadlessCustom: {
-      base: 'ChromeHeadless',
-      flags: ['--no-sandbox', '--disable-gpu']
       
   } 
 });
