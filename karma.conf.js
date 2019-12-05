@@ -13,7 +13,6 @@ module.exports = function (config) {
       require('@angular-devkit/build-angular/plugins/karma')
       ]
       
-  } 
 });
 require('./karma.conf.ts');
     ],
