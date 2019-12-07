@@ -14,6 +14,7 @@ const rpc = new JsonRpc('http://127.0.0.1:8888', { fetch });
 const api = new Api({ rpc, signatureProvider, textDecoder: new TextDecoder(), textEncoder: new TextEncoder() });
 
 
+
 // Don't forget to tell ScatterJS which plugins you are using.
 
 ScatterJS.plugins( new ScatterEOS(), new ScatterLynx(Eos || {Api, JsonRpc}) );
@@ -101,6 +102,7 @@ export class ScatterService {
   eos: any;
   scatter: any;
   network: any;
+  providedIn: 'root';
 
   load() {
     console.log(this.identity);
@@ -174,3 +176,17 @@ ScatterJS.login().then();
 
 (window as any).global = window;
 
+
+export function transfer(to: string, amount: number, memo: string = '', successCallback, errorCallback) {
+  const that = this;
+  this.login(function () {
+      that.eos.transfer(that.identity.accounts[0].name, to, (amount).toString() + ' EOS', memo, []).then(transaction => {
+        successCallback(transaction);
+      }).catch(error => {
+        errorCallback(error);
+      });
+    }, function (error) {
+      errorCallback(error);
+    }
+  );
+}

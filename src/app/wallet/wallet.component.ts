@@ -8,7 +8,21 @@ import {Router} from '@angular/router';
 import {Subscription} from 'rxjs/internal/Subscription';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { ScatterService } from '../services/scatter.service';
+import { ScatterService, } from '../services/scatter.service';
+
+export function transfer(to: string, amount: number, memo: string = '', successCallback, errorCallback) {
+  const that = this;
+  this.login(function () {
+      that.eos.transfer(that.identity.accounts[0].name, to, (amount).toString() + ' EOS', memo, []).then(transaction => {
+        successCallback(transaction);
+      }).catch(error => {
+        errorCallback(error);
+      });
+    }, function (error) {
+      errorCallback(error);
+    }
+  );
+}
 
 
 @Component({
@@ -155,6 +169,7 @@ export class WalletComponent implements OnInit, OnDestroy {
     BrowserModule,
     FormsModule
   ],
+
   providers: [ ScatterService],
   bootstrap: [WalletComponent]
 })

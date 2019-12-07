@@ -1,0 +1,205 @@
+<button (click)="transfer()">Click me!</button>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Tester</title>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vConsole/3.3.4/vconsole.min.js'></script>
+    <script src='assets/eosjs-api.js'></script>
+    <script src='assets/eosjs-jsonrpc.js'></script>
+    <script src='assets/eosjs-jssig.js'></script>
+    <script src="../../bundles/scatterjs-core.min.js"></script>
+
+    <!--<script>-->
+	    <!--window.lynxMobile = {-->
+		    <!--requestSetAccount:() => {-->
+	            <!--const accounts = [{-->
+		            <!--name:'testaccount1',-->
+		            <!--authority:'active',-->
+		            <!--publicKey:'EOS5Jzkpde9pDNTPjyWqcHwvNkrXQma8VPV9qZ3fNu5dvZkiLEKxG',-->
+		            <!--blockchain:'eos',-->
+		            <!--isHardware:false,-->
+		            <!--chainId:'EOS5Jzkpde9pDNTPjyWqcHwvNkrXQma8VPV9qZ3fNu5dvZkiLEKxG'-->
+	            <!--}];-->
+
+	            <!--const identity = {-->
+		            <!--name:accounts[0].name,-->
+		            <!--accounts,-->
+		            <!--publicKey:'EOS8RFgis6KAbChv89L3ibPmSH9raqN3iaFWbyLrDgmAuV3rsZ9SM'-->
+	            <!--};-->
+
+	            <!--ScatterJS.scatter.identity = identity;-->
+	            <!--console.log(ScatterJS.scatter.identity);-->
+	            <!--return identity;-->
+            <!--},-->
+            <!--requestArbitrarySignature:x => { console.log(x); },-->
+		    <!--requestSignature:x => { console.log(x); }-->
+	    <!--};-->
+    <!--</script>-->
+
+    <script src="../../bundles/scatterjs-plugin-eosjs2.min.js"></script>
+    <script src="../../bundles/scatterjs-plugin-lynx.min.js"></script>
+</head>
+<body>
+<div id="status"></div>
+<br>
+<br>
+
+<button onclick="login()">Get Identity</button>
+<button onclick="logout()">Forget Identity</button>
+<button onclick="transfer()">Transfer</button>
+<button onclick="hookTransfer()">Hook Transfer</button>
+<button onclick="transferDualSign()">Multi Hook Transfer</button>
+<button onclick="authenticate()">Authenticate</button>
+
+<script>
+	const vConsole = new VConsole({});
+	ScatterJS.plugins( new ScatterEOS(), new ScatterLynx({Api:eosjs_api.default, JsonRpc:eosjs_jsonrpc.default, textEncoder:() => {}}) );
+	const network = ScatterJS.Network.fromJson({
+		blockchain:'eos',
+		chainId:'aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906',
+		host:'nodes.get-scatter.com',
+		port:443,
+		protocol:'https'
+	});
+    // const network = ScatterJS.Network.fromJson({
+    //     blockchain:'eos',
+    //     chainId:'cf057bbfb72640471fd910bcb67639c22df9f92470936cddc1ade0e2f2e7dc4f',
+    //     host:'192.168.1.6',
+    //     port:8888,
+    //     protocol:'http'
+    // });
+	// const network = ScatterJS.Network.fromJson({
+    //     blockchain:'eos',
+    //     chainId:'e70aaab8997e1dfce58fbfac80cbbb8fecec7b99cf982a9444273cbc64c41473',
+    //     host:'dev.cryptolions.io',
+    //     port:18888,
+    //     protocol:'http'
+	// });
+	let scatter = null;
+	const rpc = new eosjs_jsonrpc.default(network.fullhost());
+	const getApi = (signatureProvider) => new eosjs_api.default({ rpc, signatureProvider });
+	const getScatterEos = () => scatter.eos(network, eosjs_api.default, {rpc});
+	const setStatus = () => {
+		const status = document.getElementById('status');
+		if(!scatter) return status.innerText = 'No Scatter';
+		if(!scatter.identity) return status.innerText = 'No Identity';
+		status.innerText = scatter.identity.name;
+	};
+	setStatus();
+	setInterval(() => {
+		setStatus();
+	}, 50);
+	ScatterJS.scatter.connect('eosjs2-test', {network}).then(connected => {
+		console.log('connect', connected);
+		if(!connected) return false;
+		scatter = ScatterJS.scatter;
+		console.log('scatter', ScatterJS);
+	});
+	window.login = async () => {
+		console.log('login', await scatter.login());
+		console.log('scatter', ScatterJS);
+	}
+	window.logout = () => scatter.logout();
+	window.transfer = async () => {
+		const api = getScatterEos();
+		tryTransfer(api);
+	};
+	window.transferDualSign = async () => {
+		const SECONDARY_ACCOUNT_NAME = '';
+		// DON'T EVER DO THIS FROM A FRONT END! YOU WILL LOSE YOUR KEYS!
+        // Check out the API signer flow below.
+		const localSigner = new eosjs_jssig.default([
+			'SOME_PRIVATE_KEY',
+        ]);
+		const signatureProvider = scatter.eosMultiHook(network, [localSigner]);
+		const api = new eosjs_api.default({ rpc, signatureProvider });
+		const from = scatter.identity.accounts[0];
+		try {
+			const from = scatter.account('eos');
+			const result = await api.transact({
+				actions: [{
+					account: 'eosio.token',
+					name: 'transfer',
+					authorization: [{
+						// Account which pays for resources must be first!
+						actor: SECONDARY_ACCOUNT_NAME,
+						permission: 'active',
+					},{
+						actor: from.name,
+						permission: from.authority,
+					}],
+					data: {
+						from: from.name,
+						to: 'safetransfer',
+						quantity: '0.0001 EOS',
+						memo: from.name,
+					},
+				}]
+			}, {
+				blocksBehind: 3,
+				expireSeconds: 30,
+			});
+			console.log('result', result);
+		} catch (e) {
+			console.error(e);
+		}
+        // EXAMPLE OF AN API BASED SIGNER FOR THE FRONT END
+        // This simply forwards requests from the front end to your filtering API.
+        /*
+        const apiSigner = {
+            getAvailableKeys:async () => fetch('https://your.api/keys'),
+            sign:async (signargs) => fetch('https://your.api/sign', {
+                   method:"POST",
+                body:JSON.stringify(signargs)
+            }),
+        };
+        */
+		// SEE HERE FOR SECURITY CONCERNS AND BACKEND API SIGNING EXAMPLE CODE:
+        // https://gist.github.com/nsjames/44d9c18879342449a211c49e53c74ccb
+	};
+	window.hookTransfer = async () => {
+		const api = getApi(scatter.eosHook(network));
+		tryTransfer(api);
+	};
+	window.authenticate = async () => {
+		const getRandom = () => Math.round(Math.random() * 8 + 1).toString();
+		let randomString = '';
+		for(let i = 0; i < 12; i++) randomString += getRandom();
+		console.log('randomString', randomString);
+		await scatter.authenticate(randomString).then(res => console.log(res));
+	};
+	const tryTransfer = async api => {
+		try {
+			const from = scatter.account('eos');
+			const result = await api.transact({
+				actions: [{
+					account: 'eosio.token',
+					name: 'transfer',
+					authorization: [{
+						actor: from.name,
+						permission: from.authority,
+					}],
+					data: {
+						from: from.name,
+						to: 'safetransfer',
+						quantity: '0.0001 EOS',
+						memo: from.name,
+					},
+				}]
+			}, {
+				blocksBehind: 3,
+				expireSeconds: 30,
+			});
+			console.log('result', result);
+		} catch (e) {
+			console.error(e);
+		}
+	}
+</script>
+</body>
+</html>
