@@ -113,7 +113,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container\">\n\t<div class=\"row\">\n\t\t<div class=\"col-md-4 col-md-offset-4\">\n\t\t\t<div class=\"login-panel panel panel-default\">\n\t\t\t\t<div align=\"center\" style=\"margin: 5px\"><img src=\"/assets/cadeoslogo.png\" width=\"200\" height=\"200\" /></div>\n\t\t\t\t<div class=\"panel-heading\">\n\t\t\t\t\t<h1 class=\"panel-title\" align=\"center\">CADEOS.io WALLET</h1>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"panel-body\">\n\t\t\t\t\t<form>\n\t\t\t\t\t\t<fieldset>\n\t\t\t\t\t\t\t<button (click)=\"login()\" class=\"btn btn-lg btn-success btn-block \">SCATTER LOGIN</button>\n\t\t\t\t\t\t</fieldset>\n\t\t\t\t\t\t<br>\n\t\t\t\t\t\t<fieldset>\n\t\t\t\t\t\t\t<button class=\"btn btn-lg btn-success btn-block \">MEET.one LOGIN</button>\n\t\t\t\t\t\t</fieldset>\n\t\t\t\t\t\t<br>\n\t\t\t\t\t\t<fieldset>\n\t\t\t\t\t\t\t<button class=\"btn btn-lg btn-success btn-block \">LYNX LOGIN</button>\n\t\t\t\t\t\t</fieldset>\n\t\t\t\t\t\t<br>\n\t\t\t\t\t\t<fieldset>\n\t\t\t\t\t\t\t<button class=\"btn btn-lg btn-default btn-block disabled\">Create Wallet</button>\n\t\t\t\t\t\t</fieldset>\n\t\t\t\t\t</form>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>\n\n<div class=\"modal fade\" id=\"unlockScatter\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\" aria-hidden=\"true\">\n\t<div class=\"modal-dialog\">\n\t\t<div class=\"modal-content\">\n\t\t\t<div class=\"modal-header\">\n\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>\n\t\t\t\t<h4 class=\"modal-title\" id=\"myModalLabel\">Unlock Scatter</h4>\n\t\t\t</div>\n\t\t\t<div class=\"modal-body\">\n\t\t\t\tYou need to have Scatter installed and unlocked\n\t\t\t</div>\n\t\t\t<div class=\"modal-footer\">\n\t\t\t\t<button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("");
 
 /***/ }),
 
@@ -2059,11 +2059,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const defaultPrivateKey = '5JtUScZK2XEp3g9gh7F8bwtPTRAkASmNrrftmx4AxDKD5K4zDnr'; // bob
+const defaultPrivateKey = '5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3'; // bob
 const signatureProvider = new eosjs_dist_eosjs_jssig__WEBPACK_IMPORTED_MODULE_3__["JsSignatureProvider"]([defaultPrivateKey]);
 const rpc = new eosjs__WEBPACK_IMPORTED_MODULE_2__["JsonRpc"]('http://127.0.0.1:8888', { fetch });
 const api = new eosjs__WEBPACK_IMPORTED_MODULE_2__["Api"]({ rpc, signatureProvider, textDecoder: new TextDecoder(), textEncoder: new TextEncoder() });
-const result = api.transact({});
 // Don't forget to tell ScatterJS which plugins you are using.
 scatterjs_core__WEBPACK_IMPORTED_MODULE_6___default.a.plugins(new scatterjs_plugin_eosjs__WEBPACK_IMPORTED_MODULE_7___default.a(), new _scatterjs_lynx__WEBPACK_IMPORTED_MODULE_8___default.a(eosjs__WEBPACK_IMPORTED_MODULE_2__ || { Api: eosjs__WEBPACK_IMPORTED_MODULE_2__["Api"], JsonRpc: eosjs__WEBPACK_IMPORTED_MODULE_2__["JsonRpc"] }));
 // Networks are used to reference certain blockchains.
@@ -2552,12 +2551,13 @@ __webpack_require__.r(__webpack_exports__);
 /*!********************************************!*\
   !*** ./src/app/wallet/wallet.component.ts ***!
   \********************************************/
-/*! exports provided: WalletComponent */
+/*! exports provided: WalletComponent, WalletModule */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WalletComponent", function() { return WalletComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WalletModule", function() { return WalletModule; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
@@ -2565,6 +2565,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var ngx_auth_firebaseui__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ngx-auth-firebaseui */ "./node_modules/ngx-auth-firebaseui/esm2015/ngx-auth-firebaseui.js");
 /* harmony import */ var _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material/snack-bar */ "./node_modules/@angular/material/esm2015/snack-bar.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
+/* harmony import */ var _services_scatter_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../services/scatter.service */ "./src/app/services/scatter.service.ts");
+
+
+
 
 
 
@@ -2689,6 +2694,22 @@ WalletComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         _angular_router__WEBPACK_IMPORTED_MODULE_6__["Router"],
         _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_5__["MatSnackBar"]])
 ], WalletComponent);
+
+let WalletModule = class WalletModule {
+};
+WalletModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+        declarations: [
+            WalletComponent
+        ],
+        imports: [
+            _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_7__["FormsModule"]
+        ],
+        providers: [_services_scatter_service__WEBPACK_IMPORTED_MODULE_8__["ScatterService"]],
+        bootstrap: [WalletComponent]
+    })
+], WalletModule);
 
 
 
