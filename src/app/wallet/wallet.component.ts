@@ -1,4 +1,4 @@
-import {Component, OnDestroy, OnInit, ViewEncapsulation} from '@angular/core';
+import {Component, OnDestroy, OnInit, ViewEncapsulation, NgModule, } from '@angular/core';
 import {Title} from '@angular/platform-browser';
 import {AngularFireAuth} from '@angular/fire/auth';
 import {AuthProvider, Theme} from 'ngx-auth-firebaseui';
@@ -6,6 +6,9 @@ import {MatSnackBar} from '@angular/material/snack-bar';
 import {MatTabChangeEvent} from '@angular/material/tabs';
 import {Router} from '@angular/router';
 import {Subscription} from 'rxjs/internal/Subscription';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { ScatterService } from '../services/scatter.service';
 
 
 @Component({
@@ -143,3 +146,17 @@ export class WalletComponent implements OnInit, OnDestroy {
     console.log('create account has beeen requested');
   }
 }
+
+@NgModule({
+  declarations: [
+    WalletComponent
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule
+  ],
+  providers: [ ScatterService],
+  bootstrap: [WalletComponent]
+})
+
+export class WalletModule { }

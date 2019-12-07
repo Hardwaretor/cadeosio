@@ -14,11 +14,6 @@ const rpc = new JsonRpc('http://127.0.0.1:8888', { fetch });
 const api = new Api({ rpc, signatureProvider, textDecoder: new TextDecoder(), textEncoder: new TextEncoder() });
 
 
-
-const result = api.transact({});
-
-
-
 // Don't forget to tell ScatterJS which plugins you are using.
 
 ScatterJS.plugins( new ScatterEOS(), new ScatterLynx(Eos || {Api, JsonRpc}) );
@@ -178,3 +173,4 @@ ScatterJS.login().then();
 }
 
 (window as any).global = window;
+
