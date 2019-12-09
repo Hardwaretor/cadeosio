@@ -1,4 +1,10 @@
-<button (click)="transfer()">Click me!</button>
+
+<button onclick="login()">Get Identity</button>
+<button onclick="logout()">Forget Identity</button>
+<button onclick="transfer()">Transfer</button>
+<button onclick="hookTransfer()">Hook Transfer</button>
+<button onclick="transferDualSign()">Multi Hook Transfer</button>
+<button onclick="authenticate()">Authenticate</button>
 
 
 <!DOCTYPE html>
@@ -9,37 +15,37 @@
 
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <script src='https://cdnjs.cloudflare.com/ajax/libs/vConsole/3.3.4/vconsole.min.js'></script>
-    <script src='assets/eosjs-api.js'></script>
-    <script src='assets/eosjs-jsonrpc.js'></script>
-    <script src='assets/eosjs-jssig.js'></script>
+    <script src='/src/assets/eosjs-api.js'></script>
+    <script src='/srcassets/eosjs-jsonrpc.js'></script>
+    <script src='/srcassets/eosjs-jssig.js'></script>
     <script src="../../bundles/scatterjs-core.min.js"></script>
 
-    <!--<script>-->
-	    <!--window.lynxMobile = {-->
-		    <!--requestSetAccount:() => {-->
-	            <!--const accounts = [{-->
-		            <!--name:'testaccount1',-->
-		            <!--authority:'active',-->
-		            <!--publicKey:'EOS5Jzkpde9pDNTPjyWqcHwvNkrXQma8VPV9qZ3fNu5dvZkiLEKxG',-->
-		            <!--blockchain:'eos',-->
-		            <!--isHardware:false,-->
-		            <!--chainId:'EOS5Jzkpde9pDNTPjyWqcHwvNkrXQma8VPV9qZ3fNu5dvZkiLEKxG'-->
-	            <!--}];-->
+    <script>
+	    window.lynxMobile = {
+		    requestSetAccount:() => {
+	            const accounts = [{
+		            name:'testaccount1',
+		            authority:'active',
+		            publicKey:'EOS5Jzkpde9pDNTPjyWqcHwvNkrXQma8VPV9qZ3fNu5dvZkiLEKxG',
+		            blockchain:'eos',
+		            isHardware:false,
+		            chainId:'EOS5Jzkpde9pDNTPjyWqcHwvNkrXQma8VPV9qZ3fNu5dvZkiLEKxG'
+	            }];
 
-	            <!--const identity = {-->
-		            <!--name:accounts[0].name,-->
-		            <!--accounts,-->
-		            <!--publicKey:'EOS8RFgis6KAbChv89L3ibPmSH9raqN3iaFWbyLrDgmAuV3rsZ9SM'-->
-	            <!--};-->
+	            const identity = {
+		            name:accounts[0].name,
+		            accounts,
+		            publicKey:'EOS8RFgis6KAbChv89L3ibPmSH9raqN3iaFWbyLrDgmAuV3rsZ9SM'
+	            };
 
-	            <!--ScatterJS.scatter.identity = identity;-->
-	            <!--console.log(ScatterJS.scatter.identity);-->
-	            <!--return identity;-->
-            <!--},-->
-            <!--requestArbitrarySignature:x => { console.log(x); },-->
-		    <!--requestSignature:x => { console.log(x); }-->
-	    <!--};-->
-    <!--</script>-->
+	            ScatterJS.scatter.identity = identity;
+	            console.log(ScatterJS.scatter.identity);
+	            return identity;
+            },
+            requestArbitrarySignature:x => { console.log(x); },
+		    requestSignature:x => { console.log(x); }
+	    }
+    </script>
 
     <script src="../../bundles/scatterjs-plugin-eosjs2.min.js"></script>
     <script src="../../bundles/scatterjs-plugin-lynx.min.js"></script>
@@ -66,20 +72,20 @@
 		port:443,
 		protocol:'https'
 	});
-    // const network = ScatterJS.Network.fromJson({
-    //     blockchain:'eos',
-    //     chainId:'cf057bbfb72640471fd910bcb67639c22df9f92470936cddc1ade0e2f2e7dc4f',
-    //     host:'192.168.1.6',
-    //     port:8888,
-    //     protocol:'http'
-    // });
-	// const network = ScatterJS.Network.fromJson({
-    //     blockchain:'eos',
-    //     chainId:'e70aaab8997e1dfce58fbfac80cbbb8fecec7b99cf982a9444273cbc64c41473',
-    //     host:'dev.cryptolions.io',
-    //     port:18888,
-    //     protocol:'http'
-	// });
+    const network = ScatterJS.Network.fromJson({
+       blockchain:'eos',
+      chainId:'cf057bbfb72640471fd910bcb67639c22df9f92470936cddc1ade0e2f2e7dc4f',
+      host:'192.168.1.6',
+      port:8888,
+       protocol:'http'
+     });
+	 const network = ScatterJS.Network.fromJson({
+       blockchain:'eos',
+        chainId:'e70aaab8997e1dfce58fbfac80cbbb8fecec7b99cf982a9444273cbc64c41473',
+      host:'dev.cryptolions.io',
+      port:18888,
+      protocol:'http'
+	 });
 	let scatter = null;
 	const rpc = new eosjs_jsonrpc.default(network.fullhost());
 	const getApi = (signatureProvider) => new eosjs_api.default({ rpc, signatureProvider });
@@ -150,15 +156,15 @@
 		}
         // EXAMPLE OF AN API BASED SIGNER FOR THE FRONT END
         // This simply forwards requests from the front end to your filtering API.
-        /*
+        
         const apiSigner = {
-            getAvailableKeys:async () => fetch('https://your.api/keys'),
-            sign:async (signargs) => fetch('https://your.api/sign', {
+            getAvailableKeys:async () => fetch('https://localhost:4200/keys'),
+            sign:async (signargs) => fetch('https://localhost:4200/sign', {
                    method:"POST",
                 body:JSON.stringify(signargs)
             }),
         };
-        */
+        
 		// SEE HERE FOR SECURITY CONCERNS AND BACKEND API SIGNING EXAMPLE CODE:
         // https://gist.github.com/nsjames/44d9c18879342449a211c49e53c74ccb
 	};

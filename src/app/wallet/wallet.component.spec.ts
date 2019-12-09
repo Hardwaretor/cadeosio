@@ -37,5 +37,4 @@ describe('WalletComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  
 });

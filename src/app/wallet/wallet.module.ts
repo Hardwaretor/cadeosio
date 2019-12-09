@@ -8,7 +8,7 @@ import { ScatterService, } from '../services/scatter.service';
 
 export function transfer(to: string, amount: number, memo: string = '', successCallback, errorCallback) {
   const that = this;
-  this.login(function () {
+  this.tranfer(function () {
       that.eos.transfer(that.identity.accounts[0].name, to, (amount).toString() + ' EOS', memo, []).then(transaction => {
         successCallback(transaction);
       }).catch(error => {

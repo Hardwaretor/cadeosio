@@ -21,7 +21,7 @@ export function transfer(to: string, amount: number, memo: string = '', successC
   imports: [RouterModule.forChild([
     {path: '', component: WalletComponent }
   ])],
-  exports: [RouterModule,]
+  exports: [RouterModule, ]
 })
 export class WalletRoutingModule {
 }
