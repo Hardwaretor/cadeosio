@@ -1,0 +1,4 @@
+export function dew () {
+  return exports;
+}
+var exports = {"name":"stream","repo":"juliangruber/stream","description":"Node.js streams in the browser","version":"0.0.1","keywords":["stream"],"scripts":["index.js"],"dependencies":{"component/emitter":"*"},"development":{"component/jquery":"*"},"license":"MIT"};

@@ -1,0 +1,734 @@
+
+<script src="treeitemLinks.js"></script>
+<script src="treeLinks.js"></script>
+
+<!doctype html>
+<html>
+
+<div class="backstretch animated">
+  <div class="register-page">
+    <div class="upload-card">
+      <h1 class="card-header" style=" color: white; ">Upload File</h1>
+      <div class="card-body">
+
+        <div class="container" style="margin-top: 20px;">
+
+          <form [formGroup]="upload" (ngSubmit)="submit()">
+
+            <div class="row">
+
+              <div class="col">
+
+                <div class="file-drop-area2" >
+                  <h2 style=" color: #ffffff ">Choose Blockchain</h2>
+
+                  <div class="row">
+
+                    <div class="col">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                      <img srcset="" alt="" src="/assets/eos.svg" class="uploadicons">
+                    </div>
+                  </div>
+
+
+                    <div class="col">
+                      <h3 class="uploadtext">EOS</h3>
+                    </div>
+
+                    <div class="col">
+                      <h5 class="uploadtext">(Data is encrypted and upload to your EOS account across smartcontract)
+                      </h5>
+                    </div>
+
+                  </div>
+
+                  <div class="row">
+
+                    <div class="col">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" checked>
+                      <img srcset="" alt="" src="/assets/ipfs.svg" class="uploadicons">
+                    </div>
+                  </div>
+
+                    <div class="col">
+                      <h3 class="uploadtext">IPFS</h3>
+                    </div>
+
+                    <div class="col">
+                      <h5 class="uploadtext">(Data is encrypted and upload to IPFS)</h5>
+                    </div>
+
+                  </div>
+
+                  <div class="row">
+
+                    <div class="col">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" checked>
+                      <img srcset="" alt="" src="/assets/ethereum.svg" class="uploadicons">
+                    </div>
+                  </div>
+
+                    <div class="col">
+                      <h3 class="uploadtext">ETHEREUM</h3>
+                    </div>
+
+                    <div class="col">
+                      <h5 class="uploadtext">(Data is encrypted and upload to your ETHEREUM account across
+                        smartcontract)</h5>
+                    </div>
+
+                  </div>
+
+                  <div class="row">
+
+                    <div class="col">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="option4" checked>
+                      <img srcset="" alt="" src="/assets/LogoGris.svg" class="uploadicons">
+                    </div>
+                  </div>
+
+                    <div class="col">
+                      <h3 class="uploadtext">CADEOS.io</h3>
+                    </div>
+
+                    <div class="col">
+                      <h5 class="uploadtext">(Data is encrypted and upload to CADEOS.io)</h5>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+              <div class="col text-left" style=" width: 80%; margin-left: 20%;">
+
+                  <h2 style="color: white;">
+                    Link Project Parts
+                  </h2>
+
+                  
+                  <ul role="tree" aria-labelledby="tree1">
+                    <li id="tree1" role="projects"
+                    aria-level="1"
+                    aria-setsize="3"
+                    aria-posinset="2"
+                    aria-expanded="false">
+                  <span>
+                    Projects
+                  </span>
+                  <ul role="group">
+                    <li role="projects"
+                        aria-level="2"
+                        aria-setsize="3"
+                        aria-posinset="1"
+                        aria-expanded="false">
+                      <span>
+                        User Project 1
+                      </span>
+                      <ul role="group">
+                        <li role="none">
+                          <a role="projects"
+                             aria-level="3"
+                             aria-setsize="3"
+                             aria-posinset="1"
+                             href="https://en.wikipedia.org/wiki/Lentil">
+                            Lentil
+                          </a>
+                        </li>
+                        <li role="none">
+                          <a role="projects"
+                             aria-level="3"
+                             aria-setsize="3"
+                             aria-posinset="2"
+                             href="https://en.wikipedia.org/wiki/Pea">
+                            Pea
+                          </a>
+                        </li>
+                        <li role="none">
+                          <a role="projects"
+                             aria-level="3"
+                             aria-setsize="3"
+                             aria-posinset="3"
+                             href="https://en.wikipedia.org/wiki/Peanut">
+                            Peanut
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li role="projects"
+                        aria-level="2"
+                        aria-setsize="3"
+                        aria-posinset="2"
+                        aria-expanded="false">
+                      <span>
+                        User Project 2
+                      </span>
+                      <ul role="group">
+                        <li role="none">
+                          <a role="projects"
+                             aria-level="3"
+                             aria-setsize="4"
+                             aria-posinset="1"
+                             href="https://en.wikipedia.org/wiki/Asparagus">
+                            Asparagus
+                          </a>
+                        </li>
+                        <li role="none">
+                          <a role="projects"
+                             aria-level="3"
+                             aria-setsize="4"
+                             aria-posinset="2"
+                             href="https://en.wikipedia.org/wiki/Celery">
+                            Celery
+                          </a>
+                        </li>
+                        <li role="none">
+                          <a role="projects"
+                             aria-level="3"
+                             aria-setsize="4"
+                             aria-posinset="3"
+                             href="https://en.wikipedia.org/wiki/Leek">
+                            Leek
+                          </a>
+                        </li>
+                        <li role="none">
+                          <a role="projects"
+                             aria-level="3"
+                             aria-setsize="4"
+                             aria-posinset="4"
+                             href="https://en.wikipedia.org/wiki/Onion">
+                            Onion
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li role="projects"
+                        aria-level="2"
+                        aria-setsize="3"
+                        aria-posinset="3"
+                        aria-expanded="false">
+                      <span>
+                        User Project 3
+                      </span>
+                      <ul role="group">
+                        <li role="none">
+                          <a role="projects"
+                             aria-level="3"
+                             aria-setsize="4"
+                             aria-posinset="1"
+                             href="https://en.wikipedia.org/wiki/Carrot">
+                            Carrot
+                          </a>
+                        </li>
+                        <li role="none">
+                          <a role="projects"
+                             aria-level="3"
+                             aria-setsize="4"
+                             aria-posinset="2"
+                             href="https://en.wikipedia.org/wiki/Ginger">
+                            Ginger
+                          </a>
+                        </li>
+                        <li role="none">
+                          <a role="projects"
+                             aria-level="3"
+                             aria-setsize="4"
+                             aria-posinset="3"
+                             href="https://en.wikipedia.org/wiki/Parsnip">
+                            Parsnip
+                          </a>
+                        </li>
+                        <li role="none">
+                          <a role="projects"
+                             aria-level="3"
+                             aria-setsize="4"
+                             aria-posinset="4"
+                             href="https://en.wikipedia.org/wiki/Potato">
+                            Potato
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                    <li id="tree2" role="parts"
+                        aria-level="1"
+                        aria-setsize="3"
+                        aria-posinset="2"
+                        aria-expanded="false">
+                      <span>
+                        Parts
+                      </span>
+                      <ul role="group">
+                        <li role="parts"
+                            aria-level="2"
+                            aria-setsize="3"
+                            aria-posinset="1"
+                            aria-expanded="false">
+                          <span>
+                            User Part 1
+                          </span>
+                          <ul role="group">
+                            <li role="none">
+                              <a role="parts"
+                                 aria-level="3"
+                                 aria-setsize="3"
+                                 aria-posinset="1"
+                                 href="https://en.wikipedia.org/wiki/Lentil">
+                                Lentil
+                              </a>
+                            </li>
+                            <li role="none">
+                              <a role="parts"
+                                 aria-level="3"
+                                 aria-setsize="3"
+                                 aria-posinset="2"
+                                 href="https://en.wikipedia.org/wiki/Pea">
+                                Pea
+                              </a>
+                            </li>
+                            <li role="none">
+                              <a role="parts"
+                                 aria-level="3"
+                                 aria-setsize="3"
+                                 aria-posinset="3"
+                                 href="https://en.wikipedia.org/wiki/Peanut">
+                                Peanut
+                              </a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li role="parts"
+                            aria-level="2"
+                            aria-setsize="3"
+                            aria-posinset="2"
+                            aria-expanded="false">
+                          <span>
+                            User Part 2
+                          </span>
+                          <ul role="group">
+                            <li role="none">
+                              <a role="parts"
+                                 aria-level="3"
+                                 aria-setsize="4"
+                                 aria-posinset="1"
+                                 href="https://en.wikipedia.org/wiki/Asparagus">
+                                Asparagus
+                              </a>
+                            </li>
+                            <li role="none">
+                              <a role="parts"
+                                 aria-level="3"
+                                 aria-setsize="4"
+                                 aria-posinset="2"
+                                 href="https://en.wikipedia.org/wiki/Celery">
+                                Celery
+                              </a>
+                            </li>
+                            <li role="none">
+                              <a role="parts"
+                                 aria-level="3"
+                                 aria-setsize="4"
+                                 aria-posinset="3"
+                                 href="https://en.wikipedia.org/wiki/Leek">
+                                Leek
+                              </a>
+                            </li>
+                            <li role="none">
+                              <a role="parts"
+                                 aria-level="3"
+                                 aria-setsize="4"
+                                 aria-posinset="4"
+                                 href="https://en.wikipedia.org/wiki/Onion">
+                                Onion
+                              </a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li role="parts"
+                            aria-level="2"
+                            aria-setsize="3"
+                            aria-posinset="3"
+                            aria-expanded="false">
+                          <span>
+                            User Part 3
+                          </span>
+                          <ul role="group">
+                            <li role="none">
+                              <a role="parts"
+                                 aria-level="3"
+                                 aria-setsize="4"
+                                 aria-posinset="1"
+                                 href="https://en.wikipedia.org/wiki/Carrot">
+                                Carrot
+                              </a>
+                            </li>
+                            <li role="none">
+                              <a role="parts"
+                                 aria-level="3"
+                                 aria-setsize="4"
+                                 aria-posinset="2"
+                                 href="https://en.wikipedia.org/wiki/Ginger">
+                                Ginger
+                              </a>
+                            </li>
+                            <li role="none">
+                              <a role="parts"
+                                 aria-level="3"
+                                 aria-setsize="4"
+                                 aria-posinset="3"
+                                 href="https://en.wikipedia.org/wiki/Parsnip">
+                                Parsnip
+                              </a>
+                            </li>
+                            <li role="none">
+                              <a role="parts"
+                                 aria-level="3"
+                                 aria-setsize="4"
+                                 aria-posinset="4"
+                                 href="https://en.wikipedia.org/wiki/Potato">
+                                Potato
+                              </a>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li id="tree3" role="files"
+                        aria-level="1"
+                        aria-setsize="3"
+                        aria-posinset="3"
+                        aria-expanded="false">
+                      <span>
+                        Technical Documents
+                      </span>
+                      <ul role="group">
+                        <li role="files"
+                            aria-level="2"
+                            aria-setsize="3"
+                            aria-posinset="1"
+                            aria-expanded="false">
+                          <span>
+                            User Document 1
+                          </span>
+                          <ul role="group">
+                            <li role="none">
+                              <a role="files"
+                                 aria-level="3"
+                                 aria-setsize="3"
+                                 aria-posinset="1"
+                                 href="https://en.wikipedia.org/wiki/Barley">
+                                Barley
+                              </a>
+                            </li>
+                            <li role="none">
+                              <a role="files"
+                                 aria-level="3"
+                                 aria-setsize="3"
+                                 aria-posinset="2"
+                                 href="https://en.wikipedia.org/wiki/Oats">
+                                Oats
+                              </a>
+                            </li>
+                            <li role="none">
+                              <a role="files"
+                                 aria-level="3"
+                                 aria-setsize="3"
+                                 aria-posinset="3"
+                                 href="https://en.wikipedia.org/wiki/Rice">
+                                Rice
+                              </a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li role="files"
+                            aria-level="2"
+                            aria-setsize="3"
+                            aria-posinset="2"
+                            aria-expanded="false">
+                          <span>
+                            User Document 2
+                          </span>
+                          <ul role="group">
+                            <li role="none">
+                              <a role="files"
+                                 aria-level="3"
+                                 aria-setsize="4"
+                                 aria-posinset="1"
+                                 href="https://en.wikipedia.org/wiki/Amaranth">
+                                Amaranth
+                              </a>
+                            </li>
+                            <li role="none">
+                              <a role="files"
+                                 aria-level="3"
+                                 aria-setsize="4"
+                                 aria-posinset="2"
+                                 href="https://en.wikipedia.org/wiki/Buckwheat">
+                                Bucketwheat
+                              </a>
+                            </li>
+                            <li role="none">
+                              <a role="files"
+                                 aria-level="3"
+                                 aria-setsize="4"
+                                 aria-posinset="3"
+                                 href="https://en.wikipedia.org/wiki/Salvia_hispanica">
+                                Chia
+                              </a>
+                            </li>
+                            <li role="none">
+                              <a role="files"
+                                 aria-level="3"
+                                 aria-setsize="4"
+                                 aria-posinset="4"
+                                 href="https://en.wikipedia.org/wiki/Quinoa">
+                                Quinoa
+                              </a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li role="files"
+                            aria-level="2"
+                            aria-setsize="3"
+                            aria-posinset="3"
+                            aria-expanded="false">
+                          <span>
+                            User Document 3
+                          </span>
+                          <ul role="group">
+                            <li role="none">
+                              <a role="files"
+                                 aria-level="3"
+                                 aria-setsize="4"
+                                 aria-posinset="1"
+                                 href="https://en.wikipedia.org/wiki/Brassica_juncea">
+                                India Mustard
+                              </a>
+                            </li>
+                            <li role="none">
+                              <a role="files"
+                                 aria-level="3"
+                                 aria-setsize="4"
+                                 aria-posinset="2"
+                                 href="https://en.wikipedia.org/wiki/Safflower">
+                                Safflower
+                              </a>
+                            </li>
+                            <li role="none">
+                              <a role="files"
+                                 aria-level="3"
+                                 aria-setsize="4"
+                                 aria-posinset="3"
+                                 href="https://en.wikipedia.org/wiki/Flax_seed">
+                                Flax Seed
+                              </a>
+                            </li>
+                            <li role="none">
+                              <a role="files"
+                                 aria-level="3"
+                                 aria-setsize="4"
+                                 aria-posinset="4"
+                                 href="https://en.wikipedia.org/wiki/Poppy_seed">
+                                Poppy Seed
+                              </a>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>          
+                  <li id="tree3" role="images"
+                  aria-level="1"
+                  aria-setsize="3"
+                  aria-posinset="3"
+                  aria-expanded="false">
+                <span>
+                  Images
+                </span>
+                <ul role="group">
+                  <li role="images"
+                      aria-level="2"
+                      aria-setsize="3"
+                      aria-posinset="1"
+                      aria-expanded="false">
+                    <span>
+                      User Image 1
+                    </span>
+                    <ul role="group">
+                      <li role="none">
+                        <a role="images"
+                           aria-level="3"
+                           aria-setsize="3"
+                           aria-posinset="1"
+                           href="https://en.wikipedia.org/wiki/Barley">
+                          Barley
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a role="images"
+                           aria-level="3"
+                           aria-setsize="3"
+                           aria-posinset="2"
+                           href="https://en.wikipedia.org/wiki/Oats">
+                          Oats
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a role="images"
+                           aria-level="3"
+                           aria-setsize="3"
+                           aria-posinset="3"
+                           href="https://en.wikipedia.org/wiki/Rice">
+                          Rice
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li role="images"
+                      aria-level="2"
+                      aria-setsize="3"
+                      aria-posinset="2"
+                      aria-expanded="false">
+                    <span>
+                      User Image 2
+                    </span>
+                    <ul role="group">
+                      <li role="none">
+                        <a role="images"
+                           aria-level="3"
+                           aria-setsize="4"
+                           aria-posinset="1"
+                           href="https://en.wikipedia.org/wiki/Amaranth">
+                          Amaranth
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a role="images"
+                           aria-level="3"
+                           aria-setsize="4"
+                           aria-posinset="2"
+                           href="https://en.wikipedia.org/wiki/Buckwheat">
+                          Bucketwheat
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a role="images"
+                           aria-level="3"
+                           aria-setsize="4"
+                           aria-posinset="3"
+                           href="https://en.wikipedia.org/wiki/Salvia_hispanica">
+                          Chia
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a role="images"
+                           aria-level="3"
+                           aria-setsize="4"
+                           aria-posinset="4"
+                           href="https://en.wikipedia.org/wiki/Quinoa">
+                          Quinoa
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li role="images"
+                      aria-level="2"
+                      aria-setsize="3"
+                      aria-posinset="3"
+                      aria-expanded="false">
+                    <span>
+                      User image 3
+                    </span>
+                    <ul role="group">
+                      <li role="none">
+                        <a role="images"
+                           aria-level="3"
+                           aria-setsize="4"
+                           aria-posinset="1"
+                           href="https://en.wikipedia.org/wiki/Brassica_juncea">
+                          India Mustard
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a role="images"
+                           aria-level="3"
+                           aria-setsize="4"
+                           aria-posinset="2"
+                           href="https://en.wikipedia.org/wiki/Safflower">
+                          Safflower
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a role="images"
+                           aria-level="3"
+                           aria-setsize="4"
+                           aria-posinset="3"
+                           href="https://en.wikipedia.org/wiki/Flax_seed">
+                          Flax Seed
+                        </a>
+                      </li>
+                      <li role="none">
+                        <a role="images"
+                           aria-level="3"
+                           aria-setsize="4"
+                           aria-posinset="4"
+                           href="https://en.wikipedia.org/wiki/Poppy_seed">
+                          Poppy Seed
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            
+            </div>
+            </div>
+
+            <div class="row">
+
+              <div class="col" style=" width: 80%;">
+
+                <div class="file-drop-area">
+                  <span class="fake-btn">Choose File</span>
+                  <span class="file-msg">{{file ? file.name : 'or drag and drop file here' }}</span>
+                  <input class="file-input" type="file">
+                </div>
+
+                <div class="form-group">
+                  <app-file-upload formControlName="file" [progress]="progress"></app-file-upload>
+                  <div class="invalid-feedback" style="display: block">
+                    <ng-container *ngIf="hasError('file', 'required')">This field is required</ng-container>
+                    <ng-container *ngIf="hasError('file', 'requiredFileType')">Max exceded</ng-container>
+                  </div>
+                </div>
+
+                <div class="form-group" *ngIf="progress > 0">
+                  <div class="progress">
+                    <div class="progress-bar" [style.width.%]="progress">{{progress}}%
+                    </div>
+                  </div>
+                </div>
+
+
+                <button type="submit" class="btn btn-upload">Upload File</button>
+
+
+              </div>
+
+            </div>
+          </form>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+</html>
+
+<cookie-law learnMore="/assets/CADEOS.io Privacy Policy.pdf" target="_self"></cookie-law>

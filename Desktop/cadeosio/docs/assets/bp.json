@@ -1,0 +1,65 @@
+﻿{
+"producer_account_name": "cadeosio1plm",
+"producer_public_key": "EOS65upk2S4fDwT6FBtcQCZKqwgePiZ5QnVJwapip4dVggH2D9ZFF",
+"org": {
+"candidate_name": "CADEOS.io",
+"website": "https://cadeos.io",
+"code_of_conduct": "https://cadeos.io/codeofconduct",
+"ownership_disclosure":"https://cadeos.io/disclosures",
+"email": "g.galindo@cadeos.io",
+"branding": {
+"logo_256": "https://cadeosio.io/assets/Logo250.svg",
+"logo_1024": "https://cadeos.io/assets/Logo1024.svg",
+"logo_svg": "https://cadeosio.io/assets/LogoHome.svg"
+},
+"location": {
+"name": "Jaen",
+"country": "ES",
+"latitude": 37.8258451,
+"longitude": 3.7331593
+},
+"social": {
+"steemit": "cadeosio",
+"twitter": "CadeosI",
+"youtube": "UCdQvNM2o1LH_u6tPv5J7wGA",
+"facebook": "cadeos.io",
+"github": "CADEOS",
+"reddit": "cadeosio",
+"keybase": "cadeosio",
+"telegram": "https://t.me/cadeos",
+"wechat": "wxid_jt7ivd3ldvg222"
+}
+},
+  "nodes": [
+    {
+      "location": {
+        "name": "Jaen",
+        "country": "ES",
+        "latitude": 37.8258451,
+        "longitude": 3.7331593
+      },
+      "node_type": "producer"
+    },
+    {
+      "location": {
+        "name": "Jaen",
+        "country": "ES",
+        "latitude": 37.8258451,
+        "longitude": 3.7331593
+      },
+      "node_type": "seed",
+      "p2p_endpoint": "https://p2p.cadeos.io/"
+    },
+    {
+      "location": {
+        "name": "City",
+        "country": "Country",
+        "latitude": 12.34567,
+        "longitude": -123.456789
+      },
+      "node_type": "full",
+      "api_endpoint": "https://api.cadeos.io/",
+      "ssl_endpoint": "https://p2p.cadeos.io/"
+    }
+  ]
+}

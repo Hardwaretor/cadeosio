@@ -1,0 +1,2 @@
+import { dew } from './FUNDING.yml.dew.js';
+export default dew();

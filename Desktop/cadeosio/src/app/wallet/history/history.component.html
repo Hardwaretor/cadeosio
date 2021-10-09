@@ -1,0 +1,82 @@
+<div class="backstretch animated">
+    <div class="wallet-page">
+  
+        <div id="wrapper"  [ngClass]="ref.click === true? 'toggled' :''" >
+            <div class="overlay" [ngStyle]="{disply:ref.click === true? 'block' :'none'}" ></div>
+  
+            <nav id="sidebar-wrapper" role="navigation">
+                <ul class="nav sidebar-nav">
+          
+                    <li>
+                        <a href="vote">Vote on EOS</a>
+                    </li>
+                    <li>
+                        <a href="stake-project">Stake Tokens Project</a>
+                    </li>
+                    <li>
+                        <a href="stake-campus">Stake Tokens Campus</a>
+                    </li>
+                    <li>
+                      <a href="stake-eos">Stake Tokens CPU/NET</a>
+                  </li>
+                  <li>
+                      <a href="supplier-payment">Suplier Payment</a>
+                  </li>
+                    <li>
+                        <a href="transfer-tokens">Transfer Tokens</a>
+                    </li>
+                    <li>
+                        <a href="buy/sell-ram">Buy/Sell RAM</a>
+                    </li>
+                    <li>
+                        <a href="create-account">Create EOS Account</a>
+                    </li>
+                    <li>
+                        <a href="keys-manager">Authority Keys</a>
+                    </li>
+                    <li>
+                      <a href="history-account">Account History</a>
+                  </li>
+                  <li>
+                      <a href="authentication">Authentication</a>
+                  </li>
+                </ul>
+            </nav>
+  
+    <!-- /#sidebar-wrapper -->
+  
+   
+    <!-- Page Content -->
+    <div class="wallet-card" style=" color: white;" id="page-content-wrapper">
+        <button appSidebar  #ref="appSidebar" type="button" class="hamburger is-closed" data-toggle="offcanvas" style=" margin-left: 2%;">
+            <span class="hamb-top"></span>
+      <span class="hamb-middle"></span>
+    <span class="hamb-bottom"></span>
+        </button>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                  <h1 class="card-header" style=" color: white">ACCOUNT HISTORY</h1>
+                  <div class="card-body">
+  
+                    <p>*STAKE TOKENS PROJECT- At the begin of your project can asing desired ADE tokens for works and provider payments, this quantity is modificable along project life cicle.</p>
+                    <p>*STAKE TOKENS CAMPUS- With your Staked ADE tokens you'll have full access to our Campus Programs. </p>
+                    <p>*STAKE TOKENS CPU/NET- Same funcionality than every wallets. Stake your EOS tokens and adquire resources into the Blockchain. </p>
+                    <p>*SUPPIER PAYMENT- Acording your saved and nominated suppliers, you can pay renerated bills with your ADE tokens. </p>
+                    <p>*TRANSFER TOKENS- Send whatever Token from EOS Blockchain. </p>
+                    <p>*BUY/SELL RAM- Same funcionality than every wallets. Buy RAM and adquire resources into the Blockchain. </p>
+                    <p>*CREATE EOS ACCOUNT- Same funcionality than every wallets. Create your account at EOS Blockchain. </p>
+                    <p>*AUTHORITY KEYS- Manage your account keys </p>
+                    <p>*AUTHENTICATION- Authenticate your account with Greymass Wallet </p>
+  
+                </div>
+            </div>
+        </div>
+      </div>
+    <!-- /#page-content-wrapper -->
+  
+  </div>
+  </div>
+  </div>
+
+  <!-- /#wrapper -->

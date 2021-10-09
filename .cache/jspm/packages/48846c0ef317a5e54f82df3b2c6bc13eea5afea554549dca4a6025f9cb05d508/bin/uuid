@@ -1,0 +1,3 @@
+#!/usr/bin/env jspm
+import { dew } from './uuid.dew.js';
+export default dew();

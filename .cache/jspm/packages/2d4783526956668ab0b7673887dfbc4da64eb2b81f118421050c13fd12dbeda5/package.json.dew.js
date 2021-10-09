@@ -1,0 +1,4 @@
+export function dew () {
+  return exports;
+}
+var exports = {"name":"@types/request","version":"2.0.3","description":"TypeScript definitions for request","license":"MIT","contributors":[{"name":"Carlos Ballesteros Velasco","url":"https://github.com/soywiz"},{"name":"bonnici","url":"https://github.com/bonnici"},{"name":"Bart van der Schoor","url":"https://github.com/Bartvds"},{"name":"Joe Skeen","url":"https://github.com/joeskeen"},{"name":"Christopher Currens","url":"https://github.com/ccurrens"},{"name":"Jon Stevens","url":"https://github.com/lookfirst"}],"main":"index.js","repository":{"type":"git","url":"https://www.github.com/DefinitelyTyped/DefinitelyTyped.git"},"scripts":{},"dependencies":{"@types/form-data":"*","@types/node":"*"},"typesPublisherContentHash":"776a665f52800ad4400aa5dcf96a46d926f5ecf64a0b0f7ebea0d95e9bebba51","typeScriptVersion":"2.0","peerDependencies":{"@jspm/core":"npm:jspm/core@^1.0.0"}};

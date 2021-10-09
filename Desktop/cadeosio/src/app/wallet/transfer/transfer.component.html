@@ -1,0 +1,151 @@
+<div class="backstretch animated">
+    <div class="wallet-page">
+
+        <div id="wrapper" [ngClass]="ref.click === true? 'toggled' :''">
+            <div class="overlay" [ngStyle]="{disply:ref.click === true? 'block' :'none'}"></div>
+
+            <nav id="sidebar-wrapper" role="navigation">
+                <ul class="nav sidebar-nav">
+
+                    <li>
+                        <a href="vote">Vote on EOS</a>
+                    </li>
+                    <li>
+                        <a href="stake-project">Stake Tokens Project</a>
+                    </li>
+                    <li>
+                        <a href="stake-campus">Stake Tokens Campus</a>
+                    </li>
+                    <li>
+                        <a href="stake-eos">Stake Tokens CPU/NET</a>
+                    </li>
+                    <li>
+                        <a href="supplier-payment">Suplier Payment</a>
+                    </li>
+                    <li>
+                        <a href="transfer-tokens">Transfer Tokens</a>
+                    </li>
+                    <li>
+                        <a href="buy/sell-ram">Buy/Sell RAM</a>
+                    </li>
+                    <li>
+                        <a href="create-account">Create EOS Account</a>
+                    </li>
+                    <li>
+                        <a href="keys-manager">Authority Keys</a>
+                    </li>
+                    <li>
+                        <a href="history-account">Account History</a>
+                    </li>
+                    <li>
+                        <a href="authentication">Authentication</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- /#sidebar-wrapper -->
+
+
+            <!-- Page Content -->
+            <div class="wallet-card" style=" color: white;" id="page-content-wrapper">
+                <button appSidebar #ref="appSidebar" type="button" class="hamburger is-closed" data-toggle="offcanvas"
+                    style=" margin-left: 2%;">
+                    <span class="hamb-top"></span>
+                    <span class="hamb-middle"></span>
+                    <span class="hamb-bottom"></span>
+                </button>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <h1 class="card-header" style=" color: white; ">TRANSFER TOKENS</h1>
+                            <div class="card-body">
+                                <p>*TRANSFER TOKENS- Send whatever Token from EOS Blockchain. </p>
+
+                                <form class="ant-form ant-form-vertical">
+                                    <div class="transfer-token-container">
+                                        <div class="ant-row ant-form-item">
+                                            <div class="ant-form-item-label"><label for="symbol" title="Token"
+                                                    class="ant-form-item-required">Token</label></div>
+                                            <div class="ant-form-item-control-wrapper">
+                                                <div class="ant-form-item-control has-success"><span
+                                                        class="ant-form-item-children"><input value="EOS" type="text"
+                                                            data-__meta="[object Object]" data-__field="[object Object]"
+                                                            id="symbol" class="ant-input"></span>
+                                                    <!---->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ant-row ant-form-item ml-30">
+                                            <div class="ant-form-item-label"><label for="contract"
+                                                    title="Contract that Token Belongs to"
+                                                    class="ant-form-item-required">Contract that Token Belongs
+                                                    to</label></div>
+                                            <div class="ant-form-item-control-wrapper">
+                                                <div class="ant-form-item-control has-success"><span
+                                                        class="ant-form-item-children"><input value="eosio.token"
+                                                            type="text" data-__meta="[object Object]"
+                                                            data-__field="[object Object]" id="contract"
+                                                            class="ant-input"></span>
+                                                    <!---->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ant-row ant-form-item">
+                                        <div class="ant-form-item-label"><label for="receiver" title="Recipient"
+                                                class="ant-form-item-required">Recipient</label></div>
+                                        <div class="ant-form-item-control-wrapper">
+                                            <div class="ant-form-item-control"><span
+                                                    class="ant-form-item-children"><input value=""
+                                                        placeholder="Please enter account" type="text"
+                                                        data-__meta="[object Object]" data-__field="[object Object]"
+                                                        id="receiver" class="ant-input"></span>
+                                                <!---->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ant-row ant-form-item">
+                                        <div class="ant-form-item-label"><label for="amount" title="Amount"
+                                                class="ant-form-item-required">Amount</label></div>
+                                        <div class="ant-form-item-control-wrapper">
+                                            <div class="ant-form-item-control has-success"><span
+                                                    class="ant-form-item-children"><span
+                                                        class="ant-input-group-wrapper"><span
+                                                            class="ant-input-wrapper ant-input-group"><input
+                                                                value="0.0001" type="number" min="0.0001" step="0.0001"
+                                                                data-__meta="[object Object]"
+                                                                data-__field="[object Object]" id="amount"
+                                                                class="ant-input"><span
+                                                                class="ant-input-group-addon">EOS</span></span></span></span>
+                                                <!---->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ant-row ant-form-item">
+                                        <div class="ant-form-item-label"><label for="memo" title="Memo"
+                                                class="">Memo</label></div>
+                                        <div class="ant-form-item-control-wrapper">
+                                            <div class="ant-form-item-control"><span
+                                                    class="ant-form-item-children"><input placeholder="Memo" type="text"
+                                                        data-__meta="[object Object]" data-__field="[object Object]"
+                                                        id="memo" class="ant-input"></span>
+                                                <!---->
+                                            </div>
+                                        </div>
+                                    </div><button type="submit"
+                                        class="ant-btn ant-btn-primary ant-btn-lg mt-20"><span>Transfer 0.0001
+                                            EOS</span></button>
+                                </form>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /#page-content-wrapper -->
+
+            </div>
+        </div>
+    </div>
+
+    <!-- /#wrapper -->

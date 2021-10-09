@@ -1,0 +1,38 @@
+{
+    "name": "@types/yeoman-generator",
+    "version": "2.0.3",
+    "description": "TypeScript definitions for yeoman-generator",
+    "license": "MIT",
+    "contributors": [
+        {
+            "name": "Kentaro Okuno",
+            "url": "https://github.com/armorik83",
+            "githubUsername": "armorik83"
+        },
+        {
+            "name": "Jay Anslow",
+            "url": "https://github.com/janslow",
+            "githubUsername": "janslow"
+        },
+        {
+            "name": "Ika",
+            "url": "https://github.com/ikatyang",
+            "githubUsername": "ikatyang"
+        }
+    ],
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "https://www.github.com/DefinitelyTyped/DefinitelyTyped.git"
+    },
+    "scripts": {},
+    "dependencies": {
+        "@types/events": "*",
+        "@types/inquirer": "*"
+    },
+    "typesPublisherContentHash": "861155854016ec680c0c5e00db215739c3ae6e5bfa5951ee77622a50bdab6814",
+    "typeScriptVersion": "2.3",
+    "peerDependencies": {
+        "@jspm/core": "npm:jspm/core@^1.0.0"
+    }
+}

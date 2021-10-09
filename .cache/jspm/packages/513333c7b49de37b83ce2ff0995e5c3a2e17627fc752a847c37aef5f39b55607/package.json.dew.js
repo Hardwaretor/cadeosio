@@ -1,0 +1,4 @@
+export function dew () {
+  return exports;
+}
+var exports = {"name":"@types/serve-static","version":"1.13.5","description":"TypeScript definitions for serve-static","license":"MIT","contributors":[{"name":"Uros Smolnik","url":"https://github.com/urossmolnik","githubUsername":"urossmolnik"},{"name":"Linus Unnebäck","url":"https://github.com/LinusU","githubUsername":"LinusU"}],"main":"index.js","types":"index.d.ts","repository":{"type":"git","url":"https://github.com/DefinitelyTyped/DefinitelyTyped.git","directory":"types/serve-static"},"scripts":{},"dependencies":{"@types/express-serve-static-core":"*","@types/mime":"*"},"typesPublisherContentHash":"be710541b956835e6ef2e8e82d2d69fe6c61944dd361fec322155ed3ea7344e2","typeScriptVersion":"3.0","peerDependencies":{"@jspm/core":"npm:jspm/core@^1.0.0"}};

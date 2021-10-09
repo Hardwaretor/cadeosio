@@ -1,0 +1,252 @@
+<div class="backstretch animated">
+    <div class="wallet-page">
+
+        <div id="wrapper" [ngClass]="ref.click === true? 'toggled' :''">
+            <div class="overlay" [ngStyle]="{disply:ref.click === true? 'block' :'none'}"></div>
+
+            <nav id="sidebar-wrapper" role="navigation">
+                <ul class="nav sidebar-nav">
+
+                    <li>
+                        <a href="vote">Vote on EOS</a>
+                    </li>
+                    <li>
+                        <a href="stake-project">Stake Tokens Project</a>
+                    </li>
+                    <li>
+                        <a href="stake-campus">Stake Tokens Campus</a>
+                    </li>
+                    <li>
+                        <a href="stake-eos">Stake Tokens CPU/NET</a>
+                    </li>
+                    <li>
+                        <a href="supplier-payment">Suplier Payment</a>
+                    </li>
+                    <li>
+                        <a href="transfer-tokens">Transfer Tokens</a>
+                    </li>
+                    <li>
+                        <a href="buy/sell-ram">Buy/Sell RAM</a>
+                    </li>
+                    <li>
+                        <a href="create-account">Create EOS Account</a>
+                    </li>
+                    <li>
+                        <a href="keys-manager">Authority Keys</a>
+                    </li>
+                    <li>
+                        <a href="history-account">Account History</a>
+                    </li>
+                    <li>
+                        <a href="authentication">Authentication</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- /#sidebar-wrapper -->
+
+
+            <!-- Page Content -->
+            <div class="wallet-card" style=" color: white;" id="page-content-wrapper">
+                <button appSidebar #ref="appSidebar" type="button" class="hamburger is-closed" data-toggle="offcanvas"
+                    style=" margin-left: 2%;">
+                    <span class="hamb-top"></span>
+                    <span class="hamb-middle"></span>
+                    <span class="hamb-bottom"></span>
+                </button>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <h1 class="card-header" style=" color: white;">STAKE EOS TOKEN FOR CPU/NET
+                            </h1>
+                            <div class="card-body">
+                                <p>*STAKE TOKENS CPU/NET- Same funcionality than every wallets. Stake your EOS tokens
+                                    and adquire resources into the Blockchain. </p>
+
+                                <div class="card-content">
+                                    <form class="ant-form ant-form-horizontal">
+                                        <div class="ant-row ant-form-item">
+                                            <div class="ant-form-item-label"><label for="from"
+                                                    title="Account Name of Stake Owner"
+                                                    class="ant-form-item-required">Account Name of Stake Owner</label>
+                                            </div>
+                                            <div class="ant-form-item-control-wrapper">
+                                                <div class="ant-form-item-control"><span
+                                                        class="ant-form-item-children"><input value="" type="text"
+                                                            disabled="disabled" data-__meta="[object Object]"
+                                                            data-__field="[object Object]" id="from"
+                                                            class="ant-input ant-input-disabled"></span>
+                                                    <!---->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ant-row ant-form-item">
+                                            <div class="ant-form-item-label"><label for="receiver"
+                                                    title="Account Name of Stake Holder"
+                                                    class="ant-form-item-required">Account Name of Stake Holder</label>
+                                            </div>
+                                            <div class="ant-form-item-control-wrapper">
+                                                <div class="ant-form-item-control"><span
+                                                        class="ant-form-item-children"><input value="" type="text"
+                                                            data-__meta="[object Object]" data-__field="[object Object]"
+                                                            id="receiver" class="ant-input"></span>
+                                                    <!---->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ant-row ant-form-item">
+                                            <div class="ant-form-item-label"><label for="stake_cpu_quantity"
+                                                    title="Stake CPU (EOS)" class="ant-form-item-required">Stake CPU
+                                                    (EOS)</label></div>
+                                            <div class="ant-form-item-control-wrapper">
+                                                <div class="ant-form-item-control has-success"><span
+                                                        class="ant-form-item-children"><input value="0" type="number"
+                                                            step="0.0001" data-__meta="[object Object]"
+                                                            data-__field="[object Object]" id="stake_cpu_quantity"
+                                                            class="ant-input"></span>
+                                                    <!---->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ant-row ant-form-item">
+                                            <div class="ant-form-item-label"><label for="stake_net_quantity"
+                                                    title="Stake Net (EOS)" class="ant-form-item-required">Stake Net
+                                                    (EOS)</label></div>
+                                            <div class="ant-form-item-control-wrapper">
+                                                <div class="ant-form-item-control has-success"><span
+                                                        class="ant-form-item-children"><input value="0" type="number"
+                                                            step="0.0001" data-__meta="[object Object]"
+                                                            data-__field="[object Object]" id="stake_net_quantity"
+                                                            class="ant-input"></span>
+                                                    <!---->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ant-row ant-form-item ant-form-item-switch">
+                                            <div class="ant-form-item-label"><label for="transfer"
+                                                    title="If transfer stake ownership to receiver or not." class="">If
+                                                    transfer stake ownership to receiver or not.</label></div>
+                                            <div class="ant-form-item-control-wrapper">
+                                                <div class="ant-form-item-control has-success"><span
+                                                        class="ant-form-item-children"><button type="button"
+                                                            role="switch" class="ant-switch"
+                                                            data-__meta="[object Object]" data-__field="[object Object]"
+                                                            id="transfer" value="false"><span
+                                                                class="ant-switch-inner"></span></button></span>
+                                                    <!---->
+                                                </div>
+                                            </div>
+                                        </div><button type="submit"
+                                            class="ant-btn ant-btn-primary ant-btn-lg mt-20"><span>Stake 0 EOS of Net
+                                                and 0 EOS of CPU for</span></button>
+                                    </form>
+                                </div>
+
+                                <div class="card wallet-unstake">
+                                    <h2 class="card-title _divider">Unstake CPU/Net</h2>
+                                    <div class="card-content">
+                                        <form class="ant-form ant-form-horizontal">
+                                            <div class="ant-row ant-form-item">
+                                                <div class="ant-form-item-label"><label for="from"
+                                                        title="Account Name of Stake Owner"
+                                                        class="ant-form-item-required">Account Name of Stake
+                                                        Owner</label></div>
+                                                <div class="ant-form-item-control-wrapper">
+                                                    <div class="ant-form-item-control"><span
+                                                            class="ant-form-item-children"><input value="" type="text"
+                                                                disabled="disabled" data-__meta="[object Object]"
+                                                                data-__field="[object Object]" id="from"
+                                                                class="ant-input ant-input-disabled"></span>
+                                                        <!---->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="ant-row ant-form-item">
+                                                <div class="ant-form-item-label"><label for="receiver"
+                                                        title="Account Name of Stake Holder"
+                                                        class="ant-form-item-required">Account Name of Stake
+                                                        Holder</label></div>
+                                                <div class="ant-form-item-control-wrapper">
+                                                    <div class="ant-form-item-control"><span
+                                                            class="ant-form-item-children"><input value="" type="text"
+                                                                data-__meta="[object Object]"
+                                                                data-__field="[object Object]" id="receiver"
+                                                                class="ant-input"></span>
+                                                        <!---->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="ant-row ant-form-item">
+                                                <div class="ant-form-item-label"><label for="stake_cpu_quantity"
+                                                        title="Unstake CPU (EOS)" class="ant-form-item-required">Unstake
+                                                        CPU (EOS)</label></div>
+                                                <div class="ant-form-item-control-wrapper">
+                                                    <div class="ant-form-item-control has-success"><span
+                                                            class="ant-form-item-children"><input value="0" type="text"
+                                                                data-__meta="[object Object]"
+                                                                data-__field="[object Object]" id="stake_cpu_quantity"
+                                                                class="ant-input"></span>
+                                                        <!---->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="ant-row ant-form-item">
+                                                <div class="ant-form-item-label"><label for="stake_net_quantity"
+                                                        title="Unstake Net (EOS)" class="ant-form-item-required">Unstake
+                                                        Net (EOS)</label></div>
+                                                <div class="ant-form-item-control-wrapper">
+                                                    <div class="ant-form-item-control has-success"><span
+                                                            class="ant-form-item-children"><input value="0" type="text"
+                                                                data-__meta="[object Object]"
+                                                                data-__field="[object Object]" id="stake_net_quantity"
+                                                                class="ant-input"></span>
+                                                        <!---->
+                                                    </div>
+                                                </div>
+                                            </div><button type="submit"
+                                                class="ant-btn ant-btn-primary ant-btn-lg mt-20"><span>Unstake 0 EOS of
+                                                    Net and 0 EOS of CPU from</span></button>
+                                        </form>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /#page-content-wrapper -->
+
+                <div class="card wallet-refund">
+                    <h2 class="card-title _divider">Manually Refund CPU/Net</h2>
+                    <div class="card-content">
+                        <form class="ant-form ant-form-horizontal">
+                            <div class="ant-row ant-form-item">
+                                <div class="ant-form-item-label"><label for="account" title="Account"
+                                        class="ant-form-item-required">Account</label></div>
+                                <div class="ant-form-item-control-wrapper">
+                                    <div class="ant-form-item-control"><span class="ant-form-item-children"><input
+                                                value="" type="text" data-__meta="[object Object]"
+                                                data-__field="[object Object]" id="account" class="ant-input"></span>
+                                        <!---->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ant-row ant-form-item">
+                                <div class="ant-form-item-control-wrapper">
+                                    <div class="ant-form-item-control"><span class="ant-form-item-children">You can only
+                                            manually refund EOS if you didn't receive your EOS 3 days after you
+                                            refunded.</span>
+                                        <!---->
+                                    </div>
+                                </div>
+                            </div><button type="submit" class="ant-btn ant-btn-primary ant-btn-lg mt-20"><span>Manually
+                                    Refund</span></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- /#wrapper -->

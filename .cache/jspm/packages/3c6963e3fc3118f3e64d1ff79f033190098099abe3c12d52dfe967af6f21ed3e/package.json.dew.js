@@ -1,0 +1,4 @@
+export function dew () {
+  return exports;
+}
+var exports = {"name":"@types/through","version":"0.0.30","description":"TypeScript definitions for through","license":"MIT","contributors":[{"name":"Andrew Gaspar","url":"https://github.com/AndrewGaspar","githubUsername":"AndrewGaspar"}],"main":"index.js","types":"index.d.ts","repository":{"type":"git","url":"https://github.com/DefinitelyTyped/DefinitelyTyped.git","directory":"types/through"},"scripts":{},"dependencies":{"@types/node":"*"},"typesPublisherContentHash":"3996b1a279d089a058a1a75920fe1ecede23bfe41d1bacd479e0fef6bd998c70","typeScriptVersion":"2.8","peerDependencies":{"@jspm/core":"npm:jspm/core@^1.0.0"}};

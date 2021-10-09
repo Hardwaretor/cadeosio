@@ -1,0 +1,218 @@
+<div class="backstretch animated">
+    <div class="wallet-page">
+
+        <div id="wrapper" [ngClass]="ref.click === true? 'toggled' :''">
+            <div class="overlay" [ngStyle]="{disply:ref.click === true? 'block' :'none'}"></div>
+
+            <nav id="sidebar-wrapper" role="navigation">
+                <ul class="nav sidebar-nav">
+
+                    <li>
+                        <a href="vote">Vote on EOS</a>
+                    </li>
+                    <li>
+                        <a href="stake-project">Stake Tokens Project</a>
+                    </li>
+                    <li>
+                        <a href="stake-campus">Stake Tokens Campus</a>
+                    </li>
+                    <li>
+                        <a href="stake-eos">Stake Tokens CPU/NET</a>
+                    </li>
+                    <li>
+                        <a href="supplier-payment">Suplier Payment</a>
+                    </li>
+                    <li>
+                        <a href="transfer-tokens">Transfer Tokens</a>
+                    </li>
+                    <li>
+                        <a href="buy/sell-ram">Buy/Sell RAM</a>
+                    </li>
+                    <li>
+                        <a href="create-account">Create EOS Account</a>
+                    </li>
+                    <li>
+                        <a href="keys-manager">Authority Keys</a>
+                    </li>
+                    <li>
+                        <a href="history-account">Account History</a>
+                    </li>
+                    <li>
+                        <a href="authentication">Authentication</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- /#sidebar-wrapper -->
+
+
+            <!-- Page Content -->
+            <div class="wallet-card" style=" color: white;" id="page-content-wrapper">
+                <button appSidebar #ref="appSidebar" type="button" class="hamburger is-closed" data-toggle="offcanvas"
+                    style=" margin-left: 2%; ">
+                    <span class="hamb-top"></span>
+                    <span class="hamb-middle"></span>
+                    <span class="hamb-bottom"></span>
+                </button>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <h1 class="card-header" style=" color: white;">CREATE ACCOUNT</h1>
+                            <div class="card-body">
+                                <p>*CREATE EOS ACCOUNT- Same funcionality than every wallets. Create your account at EOS
+                                    Blockchain. </p>
+
+                                <div class="card page-wallet-account-create">
+                                    <h2 class="card-title _divider">Create Account</h2>
+                                    <div class="card-content">
+                                        <form class="ant-form ant-form-horizontal">
+                                            <div class="ant-row ant-form-item">
+                                                <div class="ant-form-item-label"><label for="creator" title="Creator"
+                                                        class="">Creator</label></div>
+                                                <div class="ant-form-item-control-wrapper">
+                                                    <div class="ant-form-item-control"><span
+                                                            class="ant-form-item-children"><input value="" type="text"
+                                                                disabled="disabled" data-__meta="[object Object]"
+                                                                data-__field="[object Object]" id="creator"
+                                                                class="ant-input ant-input-disabled"></span>
+                                                        <!---->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="ant-row ant-form-item">
+                                                <div class="ant-form-item-label"><label for="name" title=""
+                                                        class="ant-form-item-required"><span
+                                                            class="component-language">New Account (To create an account
+                                                            shorter than 12 digits, you must first <a href="/bidaccount"
+                                                                class="">bid</a> on the account)</span></label></div>
+                                                <div class="ant-form-item-control-wrapper">
+                                                    <div class="ant-form-item-control"><span
+                                                            class="ant-form-item-children"><input value="" type="text"
+                                                                data-__meta="[object Object]"
+                                                                data-__field="[object Object]" id="name"
+                                                                class="ant-input"></span>
+                                                        <!---->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="ant-row ant-form-item">
+                                                <div class="ant-form-item-label"><label for="ownerKey"
+                                                        title="Public Owner Key of New Account"
+                                                        class="ant-form-item-required">Public Owner Key of New
+                                                        Account</label></div>
+                                                <div class="ant-form-item-control-wrapper">
+                                                    <div class="ant-form-item-control"><span
+                                                            class="ant-form-item-children"><input value="" type="text"
+                                                                data-__meta="[object Object]"
+                                                                data-__field="[object Object]" id="ownerKey"
+                                                                class="ant-input"></span>
+                                                        <!---->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="ant-row ant-form-item">
+                                                <div class="ant-form-item-label"><label for="activeKey"
+                                                        title="Public Active Key of New Account"
+                                                        class="ant-form-item-required">Public Active Key of New
+                                                        Account</label></div>
+                                                <div class="ant-form-item-control-wrapper">
+                                                    <div class="ant-form-item-control"><span
+                                                            class="ant-form-item-children"><input value="" type="text"
+                                                                data-__meta="[object Object]"
+                                                                data-__field="[object Object]" id="activeKey"
+                                                                class="ant-input"></span>
+                                                        <!---->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="ant-row ant-form-item">
+                                                <div class="ant-form-item-label"><label for="ramBytes"
+                                                        title="RAM to Stake for New Account(Bytes)"
+                                                        class="ant-form-item-required">RAM to Stake for New
+                                                        Account(Bytes)</label></div>
+                                                <div class="ant-form-item-control-wrapper">
+                                                    <div class="ant-form-item-control has-success"><span
+                                                            class="ant-form-item-children"><span
+                                                                class="ant-input-group-wrapper"><span
+                                                                    class="ant-input-wrapper ant-input-group"><input
+                                                                        value="3000" type="number"
+                                                                        data-__meta="[object Object]"
+                                                                        data-__field="[object Object]" id="ramBytes"
+                                                                        class="ant-input"><span
+                                                                        class="ant-input-group-addon">Bytes</span></span></span></span>
+                                                        <!---->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="ant-row ant-form-item">
+                                                <div class="ant-form-item-label"><label for="stake_cpu_quantity"
+                                                        title="CPU to Stake for New Account (EOS)"
+                                                        class="ant-form-item-required">CPU to Stake for New Account
+                                                        (EOS)</label></div>
+                                                <div class="ant-form-item-control-wrapper">
+                                                    <div class="ant-form-item-control has-success"><span
+                                                            class="ant-form-item-children"><span
+                                                                class="ant-input-group-wrapper"><span
+                                                                    class="ant-input-wrapper ant-input-group"><input
+                                                                        value="0.15" type="number"
+                                                                        data-__meta="[object Object]"
+                                                                        data-__field="[object Object]"
+                                                                        id="stake_cpu_quantity" class="ant-input"><span
+                                                                        class="ant-input-group-addon">EOS</span></span></span></span>
+                                                        <!---->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="ant-row ant-form-item">
+                                                <div class="ant-form-item-label"><label for="stake_net_quantity"
+                                                        title="Net to Stake for New Account (EOS)"
+                                                        class="ant-form-item-required">Net to Stake for New Account
+                                                        (EOS)</label></div>
+                                                <div class="ant-form-item-control-wrapper">
+                                                    <div class="ant-form-item-control has-success"><span
+                                                            class="ant-form-item-children"><span
+                                                                class="ant-input-group-wrapper"><span
+                                                                    class="ant-input-wrapper ant-input-group"><input
+                                                                        value="0.05" type="number"
+                                                                        data-__meta="[object Object]"
+                                                                        data-__field="[object Object]"
+                                                                        id="stake_net_quantity" class="ant-input"><span
+                                                                        class="ant-input-group-addon">EOS</span></span></span></span>
+                                                        <!---->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="ant-row ant-form-item create-account__transfer-switch">
+                                                <div class="ant-form-item-label"><label for="transfer"
+                                                        title="If transfer stake ownership to new account or not"
+                                                        class="">If transfer stake ownership to new account or
+                                                        not</label></div>
+                                                <div class="ant-form-item-control-wrapper">
+                                                    <div class="ant-form-item-control has-success"><span
+                                                            class="ant-form-item-children"><button type="button"
+                                                                role="switch" class="ant-switch"
+                                                                data-__meta="[object Object]"
+                                                                data-__field="[object Object]" id="transfer"
+                                                                value="false"><span
+                                                                    class="ant-switch-inner"></span></button></span>
+                                                        <!---->
+                                                    </div>
+                                                </div>
+                                            </div><button type="submit"
+                                                class="ant-btn ant-btn-primary ant-btn-lg mt-20"><span>Create
+                                                    Account</span></button>
+                                        </form>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /#page-content-wrapper -->
+
+            </div>
+        </div>
+    </div>
+
+    <!-- /#wrapper -->

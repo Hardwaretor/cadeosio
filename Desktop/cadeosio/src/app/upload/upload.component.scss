@@ -1,0 +1,369 @@
+
+/////////////////////Form/////////////
+
+.form-check-input {
+  position: absolute;
+  margin-top: 0.3rem;
+  margin-left: -1.25rem;
+  vertical-align: middle;
+  color: darkorange !important;
+  
+}
+
+.progress-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #dd6dff;
+  transition: width 0.6s ease;
+}
+
+input[type="radio"], input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+  color: darkorange !important;
+}
+
+
+.file-drop-area {
+  border: 2px solid #e874ff;
+  border-radius: 20px;
+  position: relative;
+  width: 600px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 26px 20px 30px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  margin-bottom: 2%;
+}
+
+.file-drop-area2 {
+  border: 2px solid #e874ff;
+  border-radius: 20px;
+  position: relative;
+  width: 130%;
+  margin: 0 auto;
+  padding: 26px 20px 30px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  margin-bottom: 2%;
+}
+
+.file-drop-area.is-active {
+  background-color: rgb(72, 0, 131);
+}
+
+.fake-btn {
+  background-color: #c200a8;
+  border: 1px solid #69007e;
+  border-radius: 10px;
+  padding: 8px 15px;
+  margin-right: 8px;
+  font-size: 17px;
+  text-transform: uppercase;
+  font-family: 'Anton', sans-serif;
+  
+  color: white;
+}
+
+.file-msg {
+  font-size: medium;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  max-width: calc(100% - 130px);
+  vertical-align: middle;
+  color: #ffffff;
+}
+
+.file-input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.file-input:focus {
+  outline: none;
+}
+
+/////////////tree////////////
+
+ul[role="tree"] {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+ul[role="tree"] li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: white;
+}
+
+ul[role="tree"] a {
+  text-decoration: underline;
+  border-color: transparent;
+  
+}
+
+////////////////////////////////////////////////////////////////
+
+[role="projects"] ul {
+  margin: 0;
+  padding: 0;
+  margin-left: 0.9em;
+  
+}
+
+[role="projects"][aria-expanded="false"] > ul {
+  display: none;
+  
+}
+
+[role="projects"][aria-expanded="true"] > ul {
+  display: block;
+
+}
+
+[role="projects"][aria-expanded="false"] > span::before {
+  content: url(../../assets/LogoMorado24x24.svg);
+  position: relative;
+  left: -0.25em;
+ 
+}
+
+[role="projects"][aria-expanded="true"] > span::before {
+  content: url(../../assets/LogoMorado24x24.svg);
+  position: relative;
+  left: -0.25em;
+  
+  
+}
+
+[role="projects"],
+[role="projects"] span {
+  
+  margin: 3px;
+  padding: 0.125em;
+  border: 2px transparent solid;
+  display: block;
+}
+
+/* disable default keyboard focus styling for treeitems
+   Keyboard focus is styled with the following CSS */
+[role="projects"]:focus {
+  outline: 0;
+}
+
+[role="projects"].focus,
+[role="projects"] span.focus {
+  border-color: black;
+  background-color: rgba(235, 80, 255, 0.151);
+  border-radius: 10px;
+}
+
+[role="projects"].hover,
+[role="projects"] span.hover {
+  background-color: rgba(235, 80, 255, 0.151);
+  border-radius: 10px;
+}
+
+///////////////////////////////////////////////////////////////////////////
+
+[role="parts"] ul {
+  margin: 0;
+  padding: 0;
+  margin-left: 0.9em;
+  
+}
+
+[role="parts"][aria-expanded="false"] > ul {
+  display: none;
+  
+}
+
+[role="parts"][aria-expanded="true"] > ul {
+  display: block;
+
+}
+
+[role="parts"][aria-expanded="false"] > span::before {
+  content: url(../../assets/LogoNaraja24x24.svg);
+  position: relative;
+  left: -0.25em;
+ 
+}
+
+[role="parts"][aria-expanded="true"] > span::before {
+  content: url(../../assets/LogoNaraja24x24.svg);
+  position: relative;
+  left: -0.25em;
+  ;
+  
+}
+
+[role="parts"],
+[role="parts"] span {
+
+  margin: 3px;
+  padding: 0.125em;
+  border: 2px transparent solid;
+  display: block;
+}
+
+/* disable default keyboard focus styling for treeitems
+   Keyboard focus is styled with the following CSS */
+[role="parts"]:focus {
+  outline: 0;
+}
+
+[role="parts"].focus,
+[role="parts"] span.focus {
+  border-color: black;
+  background-color: rgba(235, 80, 255, 0.151);
+  border-radius: 10px;
+}
+
+[role="parts"].hover,
+[role="parts"] span.hover {
+  background-color: rgba(235, 80, 255, 0.151);
+  border-radius: 10px;
+}
+
+//////////////////////////////////////////////////////////////////////////
+
+
+[role="files"] ul {
+  margin: 0;
+  padding: 0;
+  margin-left: 0.9em;
+  
+}
+
+[role="files"][aria-expanded="false"] > ul {
+  display: none;
+  
+}
+
+[role="files"][aria-expanded="true"] > ul {
+  display: block;
+
+}
+
+[role="files"][aria-expanded="false"] > span::before {
+  content: url(../../assets/LogoAmarillo24x24.svg);
+  position: relative;
+  left: -0.25em;
+ 
+}
+
+[role="files"][aria-expanded="true"] > span::before {
+  content: url(../../assets/LogoAmarillo24x24.svg);
+  position: relative;
+  left: -0.25em;
+  ;
+  
+}
+
+[role="files"],
+[role="files"] span {
+
+  margin: 3px;
+  padding: 0.125em;
+  border: 2px transparent solid;
+  display: block;
+}
+
+/* disable default keyboard focus styling for treeitems
+   Keyboard focus is styled with the following CSS */
+[role="files"]:focus {
+  outline: 0;
+}
+
+[role="files"].focus,
+[role="files"] span.focus {
+  border-color: black;
+  background-color: rgba(235, 80, 255, 0.151);
+  border-radius: 10px;
+}
+
+[role="files"].hover,
+[role="files"] span.hover {
+  background-color: rgba(235, 80, 255, 0.151);
+  border-radius: 10px;
+}
+
+//////////////////////////////////////////////////////////////////////////
+
+
+[role="images"] ul {
+  margin: 0;
+  padding: 0;
+  margin-left: 0.9em;
+  
+}
+
+[role="images"][aria-expanded="false"] > ul {
+  display: none;
+  
+}
+
+[role="images"][aria-expanded="true"] > ul {
+  display: block;
+
+}
+
+[role="images"][aria-expanded="false"] > span::before {
+  content: url(../../assets/LogoCian24x24.svg);
+  position: relative;
+  left: -0.25em;
+ 
+}
+
+[role="images"][aria-expanded="true"] > span::before {
+  content: url(../../assets/LogoCian24x24.svg);
+  position: relative;
+  left: -0.25em;
+  ;
+  
+}
+
+[role="images"],
+[role="images"] span {
+
+  margin: 3px;
+  padding: 0.125em;
+  border: 2px transparent solid;
+  display: block;
+}
+
+/* disable default keyboard focus styling for treeitems
+   Keyboard focus is styled with the following CSS */
+[role="images"]:focus {
+  outline: 0;
+}
+
+[role="images"].focus,
+[role="images"] span.focus {
+  border-color: black;
+  background-color: rgba(235, 80, 255, 0.151);
+  border-radius: 10px;
+}
+
+[role="images"].hover,
+[role="images"] span.hover {
+  background-color: rgba(235, 80, 255, 0.151);
+  border-radius: 10px;
+}

@@ -1,0 +1,38 @@
+{
+  "description": "Web Components for managing user data in web apps",
+  "homepage": "",
+  "name": "@polymer/app-storage",
+  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/PolymerElements/app-storage"
+  },
+  "devDependencies": {
+    "webmat": "^0.2.0",
+    "@polymer/font-roboto": "^3.0.1",
+    "@polymer/iron-flex-layout": "^3.0.0-pre.26",
+    "@polymer/iron-icon": "^3.0.0-pre.26",
+    "@polymer/iron-icons": "^3.0.0-pre.26",
+    "@polymer/paper-button": "^3.0.0-pre.26",
+    "@polymer/paper-fab": "^3.0.0-pre.26",
+    "@polymer/paper-input": "^3.0.0-pre.26",
+    "@polymer/paper-styles": "^3.0.0-pre.26",
+    "wct-browser-legacy": "^1.0.1",
+    "@webcomponents/webcomponentsjs": "^2.0.0",
+    "@polymer/gen-typescript-declarations": "^1.5.1"
+  },
+  "scripts": {
+    "format": "webmat",
+    "generate-types": "gen-typescript-declarations --deleteExisting --outDir . --verify",
+    "prepare": "npm run generate-types"
+  },
+  "version": "3.0.3",
+  "author": "The Polymer Authors",
+  "dependencies": {
+    "@polymer/polymer": "^3.0.0"
+  },
+  "peerDependencies": {
+    "@jspm/core": "npm:jspm/core@^1.0.0"
+  },
+  "main": "index.js"
+}

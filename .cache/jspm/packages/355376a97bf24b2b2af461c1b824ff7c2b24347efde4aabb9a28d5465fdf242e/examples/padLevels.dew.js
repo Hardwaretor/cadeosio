@@ -1,0 +1,53 @@
+import { dew as _indexDewDew } from "logform/index.dew.js";
+import { dew as _indexDew2Dew } from "triple-beam/index.dew.js";
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  const {
+    format
+  } = _indexDewDew();
+
+  const {
+    combine,
+    padLevels,
+    simple
+  } = format;
+
+  const {
+    MESSAGE
+  } = _indexDew2Dew();
+
+  const paddedFormat = combine(padLevels({
+    // Uncomment for a custom filler for the padding, defaults to ' '.
+    // filler: 'foo',
+    // Levels has to be defined, same as `winston.createLoggers({ levels })`.
+    levels: {
+      error: 0,
+      warn: 1,
+      info: 2,
+      http: 3,
+      verbose: 4,
+      debug: 5,
+      silly: 6
+    }
+  }), simple());
+  const info = paddedFormat.transform({
+    level: 'info',
+    message: 'This is an info level message.'
+  });
+  const error = paddedFormat.transform({
+    level: 'error',
+    message: 'This is an error level message.'
+  });
+  const verbose = paddedFormat.transform({
+    level: 'verbose',
+    message: 'This is a verbose level message.'
+  });
+  console.dir(info[MESSAGE]);
+  console.dir(error[MESSAGE]);
+  console.dir(verbose[MESSAGE]);
+  return exports;
+}

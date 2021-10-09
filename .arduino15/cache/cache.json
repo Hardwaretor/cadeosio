@@ -1,0 +1,55 @@
+{
+  "files" : [ {
+    "remoteURL" : "https://downloads.arduino.cc/libraries/library_index.json.gz",
+    "localPath" : "/home/guille/.arduino15/cache/downloads.arduino.cc/libraries/library_index.json.gz",
+    "eTag" : "c1df1010d9120a843f4d2c848a82a48e",
+    "md5" : "MD5:c1df1010d9120a843f4d2c848a82a48e",
+    "createdAt" : "2020-10-20T22:41:47.26",
+    "cacheControl" : {
+      "maxAge" : 14400,
+      "mustRevalidate" : false,
+      "noCache" : false,
+      "noStore" : false
+    },
+    "expires" : "2020-10-21T02:41:47.260"
+  }, {
+    "remoteURL" : "https://downloads.arduino.cc/libraries/library_index.json.sig",
+    "localPath" : "/home/guille/.arduino15/cache/downloads.arduino.cc/libraries/library_index.json.sig",
+    "eTag" : "8b250cc985f2ac0c23acea14738608b3",
+    "md5" : "MD5:8b250cc985f2ac0c23acea14738608b3",
+    "createdAt" : "2020-10-20T22:41:47.547",
+    "cacheControl" : {
+      "maxAge" : 14400,
+      "mustRevalidate" : false,
+      "noCache" : false,
+      "noStore" : false
+    },
+    "expires" : "2020-10-21T02:41:47.547"
+  }, {
+    "remoteURL" : "https://downloads.arduino.cc/packages/package_index.json.sig",
+    "localPath" : "/home/guille/.arduino15/cache/downloads.arduino.cc/packages/package_index.json.sig",
+    "eTag" : "936d404de6bed504bd011f2e942b29db",
+    "md5" : "MD5:936d404de6bed504bd011f2e942b29db",
+    "createdAt" : "2020-10-20T22:41:46.317",
+    "cacheControl" : {
+      "maxAge" : 3600,
+      "mustRevalidate" : false,
+      "noCache" : false,
+      "noStore" : false
+    },
+    "expires" : "2020-10-20T23:41:46.317"
+  }, {
+    "remoteURL" : "https://downloads.arduino.cc/packages/package_index.json",
+    "localPath" : "/home/guille/.arduino15/cache/downloads.arduino.cc/packages/package_index.json",
+    "eTag" : "d2b3fb5d809a501430d3c353c9f9e3ed",
+    "md5" : "MD5:d2b3fb5d809a501430d3c353c9f9e3ed",
+    "createdAt" : "2020-10-20T22:41:46.119",
+    "cacheControl" : {
+      "maxAge" : 3600,
+      "mustRevalidate" : false,
+      "noCache" : false,
+      "noStore" : false
+    },
+    "expires" : "2020-10-20T23:41:46.119"
+  } ]
+}

@@ -1,0 +1,2 @@
+import { dew } from './test.txt.dew.js';
+export default dew();

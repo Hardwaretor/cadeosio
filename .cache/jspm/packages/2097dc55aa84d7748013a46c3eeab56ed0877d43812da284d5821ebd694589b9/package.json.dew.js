@@ -1,0 +1,4 @@
+export function dew () {
+  return exports;
+}
+var exports = {"name":"invariant","version":"2.2.4","description":"invariant","keywords":["test","invariant"],"license":"MIT","author":"Andres Suarez <zertosh@gmail.com>","files":["browser.js","invariant.js","invariant.js.flow"],"repository":"https://github.com/zertosh/invariant","scripts":{"test":"NODE_ENV=production tap test/*.js && NODE_ENV=development tap test/*.js"},"dependencies":{"loose-envify":"^1.0.0"},"devDependencies":{"browserify":"^11.0.1","flow-bin":"^0.67.1","tap":"^1.4.0"},"main":"invariant.js","browser":"browser.js","browserify":{"transform":["loose-envify"]},"peerDependencies":{"@jspm/core":"npm:jspm/core@^1.0.0"},"map":{"./invariant.js":{"browser":"browser.js"},"./index.dew.js":{"browser":"browser.dew.js"},"./invariant.dew.js":{"browser":"browser.dew.js"}}};

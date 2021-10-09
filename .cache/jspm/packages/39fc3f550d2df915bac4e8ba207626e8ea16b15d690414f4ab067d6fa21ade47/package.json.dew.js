@@ -1,0 +1,4 @@
+export function dew () {
+  return exports;
+}
+var exports = {"name":"streamsearch","version":"0.1.2","author":"Brian White <mscdex@mscdex.net>","description":"Streaming Boyer-Moore-Horspool searching for node.js","main":"lib/sbmh","engines":{"node":">=0.8.0"},"keywords":["stream","horspool","boyer-moore-horspool","boyer-moore","search"],"licenses":[{"type":"MIT","url":"http://github.com/mscdex/streamsearch/raw/master/LICENSE"}],"repository":{"type":"git","url":"http://github.com/mscdex/streamsearch.git"},"peerDependencies":{"@jspm/core":"npm:jspm/core@^1.0.0"}};

@@ -1,0 +1,3 @@
+#!/usr/bin/env jspm
+import { dew } from './css-slam.dew.js';
+export default dew();

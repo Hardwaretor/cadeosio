@@ -1,0 +1,4 @@
+export function dew () {
+  return exports;
+}
+var exports = {"name":"ansi-align","version":"1.1.0","description":"align-text with ANSI support for CLIs","main":"index.js","scripts":{"pretest":"standard","test":"nyc ava","coverage":"nyc report --reporter=text-lcov | coveralls","release":"standard-version"},"files":["index.js"],"repository":{"type":"git","url":"git+https://github.com/nexdrew/ansi-align.git"},"keywords":["ansi","align","cli","center","pad"],"author":"nexdrew","license":"ISC","bugs":{"url":"https://github.com/nexdrew/ansi-align/issues"},"homepage":"https://github.com/nexdrew/ansi-align#readme","dependencies":{"string-width":"^1.0.1"},"devDependencies":{"ava":"^0.15.2","chalk":"^1.1.3","coveralls":"^2.11.9","nyc":"^6.4.4","standard":"^7.1.2","standard-version":"^2.3.0"},"peerDependencies":{"@jspm/core":"npm:jspm/core@^1.0.0"}};

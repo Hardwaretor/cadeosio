@@ -1,0 +1,21 @@
+var exports = {},
+    _dewExec = false;
+export function dew() {
+  if (_dewExec) return exports;
+  _dewExec = true;
+
+  // Returns true when the value is a regular Object and not a specialized Object
+  //
+  // This helps speeding up deepEqual cyclic checks
+  // The premise is that only Objects are stored in the visited array.
+  // So if this function returns false, we don't have to do the
+  // expensive operation of searching for the value in the the array of already
+  // visited objects
+  function isObject(value) {
+    return typeof value === "object" && value !== null && // none of these are collection objects, so we can return false
+    !(value instanceof Boolean) && !(value instanceof Date) && !(value instanceof Error) && !(value instanceof Number) && !(value instanceof RegExp) && !(value instanceof String);
+  }
+
+  exports = isObject;
+  return exports;
+}

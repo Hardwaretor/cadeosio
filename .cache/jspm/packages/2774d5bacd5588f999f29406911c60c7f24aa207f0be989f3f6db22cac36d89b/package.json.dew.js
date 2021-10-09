@@ -1,0 +1,4 @@
+export function dew () {
+  return exports;
+}
+var exports = {"name":"timed-out","version":"3.1.3","description":"Emit `ETIMEDOUT` or `ESOCKETTIMEDOUT` when ClientRequest is hanged","license":"MIT","repository":"floatdrop/timed-out","author":{"name":"Vsevolod Strukchinsky","email":"floatdrop@gmail.com"},"engines":{"node":">=0.10.0"},"scripts":{"test":"xo && mocha"},"files":["index.js"],"keywords":["http","https","get","got","url","uri","request","util","utility","simple"],"devDependencies":{"mocha":"*","xo":"^0.16.0"},"peerDependencies":{"@jspm/core":"npm:jspm/core@^1.0.0"},"main":"index.js"};
