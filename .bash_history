@@ -1,25 +1,3 @@
-pkill node
-npm
-sudo apt install npm
-node
-npm -v
-sudo apt-get install nodejs-dev node-gyp libssl1.0-dev
-sudo apt-get install npm
-sudo apt-get remove npm
-sudo apt-get install npm
-sudo apt-get install -f npm
-npm -v
-curl -sL https://deb.nodesource.com/setup_14.x 565 | sudo -E bash -
-sudo apt-get install -y nodejs
-npm -v
-sudo apt-get install gcc g++ make
-npm -v
-npm start
-pkill node
-npm rebuild
-npm install
-[sudo] npm explore npm -g -- npm install node-gyp@latest
-sudo npm explore npm -g -- npm install node-gyp@latest
 npm install
 node-gyp -v
 sudo apt install node-gyp
@@ -1998,3 +1976,25 @@ firebase use ShopInChain
 firebase deploy ShopInChain
 firebase init ShopInChain
 npm install
+ng build --prod
+git add . 
+git commit -m "Init app"
+git push 
+git push https://github.com/CNCienta/cadeosio
+git push https://github.com/CNCienta/cadeosio master
+ng build --prod
+git add https://github.com/CNCienta/cadeosio
+git add
+git add .
+git commit -m "Init app"
+git push git https://github.com/CNCienta/cadeosio
+git push https://github.com/CNCienta/cadeosio
+npm install
+ng build --prod
+git push https://github.com/CNCienta/cadeosio
+git pull https://github.com/CNCienta/cadeosio
+git prune
+git pull https://github.com/CNCienta/cadeosio
+git push https://github.com/CNCienta/cadeosio
+ng build --prod
+npm upgrade
