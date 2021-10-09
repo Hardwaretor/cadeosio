@@ -15,7 +15,7 @@
 [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/gdi2290/awesome-angular)
 
 <h1> CADEOS.io </h1>  
-<h2>DECENTRALIZED CAD.FILES & PROJECT MANAGEMENT PLATFORM </h2>
+<h2>DECENTRALIZED CAD.FILES & PROJECT MANAGEMENT PLATFORM</h2>
 
 <h3>Official announcement: 
 

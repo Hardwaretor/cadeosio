@@ -1,22 +1,24 @@
-import { Component, Inject, PLATFORM_ID } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
-import { isPlatformBrowser } from '@angular/common';
-import {filter} from 'rxjs/operators';
+﻿import { Component,OnInit  } from '@angular/core';
+import { AccountService } from './_services';
+import { User } from './_models';
 
 
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+@Component({ 
+    
+selector: 'app-root',
+templateUrl: './app.component.html',
+
 })
-export class AppComponent {
 
-  constructor(private router: Router, @Inject(PLATFORM_ID) private platformId: Object) {
+export class AppComponent implements OnInit{
+    user: User;
 
-    this.router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe(event => {
-      if (isPlatformBrowser(this.platformId)) {
-        window.scroll(0, 0);
-      }
-    });
-  }
+    constructor(private accountService: AccountService) {
+        this.accountService.user.subscribe(x => this.user = x);
+    }
+
+    ngOnInit(): void {
+    } 
+
 }
+

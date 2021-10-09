@@ -1,108 +1,78 @@
-import {NgModule} from '@angular/core';
-import {FormsModule} from '@angular/forms';
-import {BrowserModule} from '@angular/platform-browser';
-
-import {AppRoutingModule} from './app-routing.module';
-import {AppSharedModule} from './shared/shared.module';
-import {HomeModule} from './home/home.module';
-import {AppComponent} from './app.component';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {environment} from '../environments/environment';
-import {ServiceWorkerModule} from '@angular/service-worker';
-import {HttpClient, HttpClientModule} from '@angular/common/http';
-import {ClipboardModule} from 'ngx-clipboard';
-import {Angulartics2Module} from 'angulartics2';
-import {AngularFireModule, FirebaseOptionsToken} from '@angular/fire';
-import {HighlightModule} from 'ngx-highlightjs';
-import {NgxAuthFirebaseUIModule} from 'ngx-auth-firebaseui';
-import {firebaseKey} from './firebase.config';
-
-import typescript from 'highlight.js/lib/languages/typescript';
-import scss from 'highlight.js/lib/languages/scss';
-import xml from 'highlight.js/lib/languages/xml';
-import {MatPagesModule} from '@angular-material-extensions/pages';
-import {TranslateHttpLoader} from '@ngx-translate/http-loader';
-import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
-import {MarkdownModule} from 'ngx-markdown';
-
-
-
-import {ScatterService} from './services/scatter.service';
+﻿import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
+import { JwtInterceptor, ErrorInterceptor } from './_helpers';
+import { AppComponent } from './app.component';
+import { AlertComponent } from './_components';
+import { HomeComponent } from './home/home.component';
+import { P3dComponent } from './p3d/p3d.component';
+import { PlmComponent } from './plm/plm.component';
+import { JobsComponent } from './jobs/jobs.component';
+import { ToolsComponent } from './tools/tools.component';
 import { WalletComponent } from './wallet/wallet.component';
-import { WalletModule } from './wallet/wallet.module';
-import { Cadeosio3dComponent } from './cadeosio3d/cadeosio3d.component';
-import { ExchangesComponent } from './exchanges/exchanges.component';
-import { ExchangesModule } from './exchanges/exchanges.module';
-import { Cadeosio3dModule } from './cadeosio3d/cadeosio3d.module';
+import { HeaderComponent } from './header/header.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { CampusComponent } from './campus/campus.component';
+import { FooterComponent } from './footer/footer.component';
+import { LoginComponent } from './account/login.component';
+import { RegisterComponent } from './account/register.component';
+import { JwtModule } from '@auth0/angular-jwt';
+import { CookieLawModule } from 'angular2-cookie-law';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';;
+import { BannerComponent } from './banner/banner.component'
 
 
-export function hljsLanguages() {
-  return [
-    {name: 'typescript', func: typescript},
-    {name: 'scss', func: scss},
-    {name: 'xml', func: xml}
-  ];
-}
 
-export function firebaseAppNameFactory() {
-  return `cadeosio`;
-}
-
-export function createTranslateLoader(http: HttpClient) {
-  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
-}
 
 @NgModule({
-  declarations: [
-    AppComponent,
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        CookieLawModule,
+        ReactiveFormsModule,
+        HttpClientModule,
+        AppRoutingModule,
+        JwtModule.forRoot({
+            config: {
+              tokenGetter: function  tokenGetter() {
+                   return     localStorage.getItem('access_token');},
+              whitelistedDomains: ['cadeos.io'],
+              blacklistedRoutes: ['']
+            }
+          })
 
-  ],
-  imports: [
-    // Add .withServerTransition() to support Universal rendering.
-    // The application ID can be any identifier which is unique on
-    // the page.
-    BrowserModule.withServerTransition({appId: '1:260992003477:web:912c91001d96d6053b9a9c'}),
-    Angulartics2Module.forRoot(),
-    ServiceWorkerModule.register('/ngsw-worker.js', {enabled: environment.production}),
-    AngularFireModule.initializeApp(firebaseKey),
-    NgxAuthFirebaseUIModule.forRoot(firebaseKey, firebaseAppNameFactory,
-      {
-        enableFirestoreSync: true,
-        toastMessageOnAuthSuccess: true,
-        toastMessageOnAuthError: true,
-        authGuardFallbackURL: 'examples/logged-out',
-        authGuardLoggedInURL: 'examples/logged-in',
-      }),
-    TranslateModule.forRoot({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: (createTranslateLoader),
-        deps: [HttpClient]
-      }
-    }),
-    HighlightModule.forRoot({
-      languages: hljsLanguages
-    }),
-    MarkdownModule.forRoot({loader: HttpClient}),
-    MatPagesModule.forRoot(),
-    ClipboardModule,
-    BrowserAnimationsModule,
-    FormsModule,
-    HttpClientModule,
-    AppRoutingModule,
-    AppSharedModule,
-    HomeModule,
-    ExchangesModule,
-    Cadeosio3dModule,
-    WalletModule,
-    NgxAuthFirebaseUIModule.forRoot(firebaseKey),
+    ],
 
-  ],
-  providers: [
 
-   ScatterService,
-  ],
-  bootstrap: [AppComponent]
+ 
+    declarations: [
+        AppComponent,
+        AlertComponent,
+        HomeComponent,
+        P3dComponent,
+        PlmComponent,
+        JobsComponent,
+        ToolsComponent,
+        WalletComponent,
+        HeaderComponent,
+        DashboardComponent,
+        CampusComponent,
+        FooterComponent,
+        LoginComponent,
+        RegisterComponent,
+        BannerComponent
+
+
+    ],
+    providers: [
+        { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+        { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+
+    ],
+    bootstrap: [AppComponent],
+    schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
+
 })
-export class AppModule {
-}
+export class AppModule { };

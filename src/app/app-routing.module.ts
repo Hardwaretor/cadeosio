@@ -1,60 +1,42 @@
-import {NgModule} from '@angular/core';
-import {Routes, RouterModule} from '@angular/router';
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { P3dComponent } from './p3d/p3d.component';
+import { PlmComponent } from './plm/plm.component';
+import { JobsComponent } from './jobs/jobs.component';
+import { ToolsComponent } from './tools/tools.component';
+import { WalletComponent } from './wallet/wallet.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { CampusComponent } from './campus/campus.component';
+import { FooterComponent } from './footer/footer.component';
+import { LoginComponent } from './account/login.component';
+import { RegisterComponent } from './account/register.component';
+import { ListComponent } from './users/list.component';
+import { AddEditComponent } from './users/add-edit.component';
 
-import {LoggedInGuard} from 'ngx-auth-firebaseui';
+
 
 const routes: Routes = [
-  {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
-  },
-  {
-    path: 'getting-started',
-    loadChildren: () => import('./getting-started/getting-started.module').then(m => m.GettingStartedModule)
-  },
-  {
-    path: 'features',
-    loadChildren: () => import('./features/features.module').then(m => m.FeaturesModule)
-  },
-  {
-    path: 'i18n',
-    loadChildren: () => import('./i18n/i18n.module').then(m => m.I18nModule)
-  },
-  {
-    path: 'legal',
-    loadChildren: () => import('./legal/legal.module').then(m => m.LegalModule)
-  },
-  {
-    path: 'providers',
-    loadChildren: () => import('./faq/faq.module').then(m => m.FaqModule)
-  },
-
-  {
-    path: 'exchanges',
-    loadChildren: () => import('./exchanges/exchanges.module').then(m => m.ExchangesModule),
-  },
-
-  {
-    path: 'cadeosio3d',
-    loadChildren: () => import('./cadeosio3d/cadeosio3d.module').then(m => m.Cadeosio3dModule),
-  },
-  {
-    path: 'wallet',
-    loadChildren: () => import('./wallet/wallet.module').then(m => m.WalletModule),
-  },
-  {
-    path: 'secured',
-    loadChildren: () => import('./faq/faq.module').then(m => m.FaqModule),
-    canActivate: [LoggedInGuard]
-  },
-  { path: 'user-list', loadChildren: () => import('./campus/campus.module').then(m => m.CampusModule) },
-  { path: 'user-list', loadChildren: () => import('./plm/plm.module').then(m => m.PlmModule) }
+    { path : 'home', component: HomeComponent },
+    { path : 'p3d' , component : P3dComponent},
+    { path : 'plm' , component : PlmComponent},
+    { path : 'jobs' , component : JobsComponent},
+    { path : 'tools' , component : ToolsComponent},
+    { path : 'wallet' , component : WalletComponent},
+    { path : 'dashboard' , component : DashboardComponent},
+    { path : 'footer' , component : FooterComponent},
+    { path : 'campus' , component : CampusComponent},
+    { path : 'login', component: LoginComponent },
+    { path : 'register', component: RegisterComponent },
+    { path : 'list', component: ListComponent },
+    { path : 'edit', component: AddEditComponent },
+    { path : 'register', component: RegisterComponent },
+    // otherwise redirect to home
+    { path: '**', redirectTo: 'home' }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
 })
-export class AppRoutingModule {
-}
+export class AppRoutingModule { }
