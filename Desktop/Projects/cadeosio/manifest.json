@@ -1,0 +1,24 @@
+{
+    "name": "cadeosio",
+    "short_name": "CADEOS.io",
+    "description": "DECENTRALIZED CAD.FILES & PROJECT MANAGEMENT PLATFORM",
+    "icons": [{
+      "src": "src/assets/logo128x128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    }, {
+      "src": "src/assets/logo152x152.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    }, {
+      "src": "src/assets/logo256x256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    }, {
+      "src": "src/assets/logo512x512",
+      "sizes": "512x512",
+      "type": "image/png"
+    }],
+    "start_url": "src/index.html",
+    "display": "standalone"
+}

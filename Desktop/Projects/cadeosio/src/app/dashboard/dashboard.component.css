@@ -1,0 +1,95 @@
+
+
+
+html,body{
+    background-image: "../assets/ADE burning background.png";
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Numans', sans-serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow', sans-serif;
+    }
+    
+    .container{
+    height: 85%;
+    align-content: center;
+    
+    }
+    
+    .card{
+    height: 40%;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 60%;
+    background-color: rgba(30, 0, 49, 0.377) !important;
+    }
+    
+    .social_icon span{
+    font-size: 60px;
+    margin-left: 10px;
+    color: rgb(200, 18, 255);
+    }
+    
+    .social_icon span:hover{
+    color: white;
+    cursor: pointer;
+    }
+    
+    .card-header h3{
+    color: white;
+    }
+    
+    .social_icon{
+    position: absolute;
+    right: 20px;
+    top: -45px;
+    }
+    
+    .input-group-prepend span{
+    width: 50px;
+    background-color: rgb(153, 2, 184);
+    color: black;
+    border:0 !important;
+    }
+    
+    input:focus{
+    outline: 0 0 0 0  !important;
+    box-shadow: 0 0 0 0 !important;
+    
+    }
+    
+    .remember{
+    color: white;
+    }
+    
+    .remember input
+    {
+    width: 20px;
+    height: 20px;
+    margin-left: 15px;
+    margin-right: 5px;
+    }
+    
+    .login_btn{
+    color: rgb(255, 255, 255);
+    background-color: rgb(153, 2, 184);
+    width: 100px;
+    }
+    
+    .login_btn:hover{
+    color: black;
+    background-color: white;
+    }
+    
+    .links{
+    color: white;
+    }
+    
+    .links a{
+    margin-left: 4px;
+    }
+    
+    a {
+        color: #3b0036;
+        text-decoration: none;
+        background-color: transparent;
+    }
