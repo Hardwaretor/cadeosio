@@ -1,0 +1,86 @@
+*:active {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -moz-tap-highlight-color: rgba(0,0,0,0);
+    -tap-highlight-color: rgba(0,0,0,0);
+}
+
+body {
+  background-color: #000;
+  margin: 0;
+  overflow: hidden;
+}
+
+#main_canvas_container {
+  position: relative;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 400px;
+}
+
+#controls_container {
+  position: relative;
+  bottom: 0px;
+  right: 0px;
+  width: 30%;
+}
+
+#controls_container .btn:last-child {
+  margin-bottom: 0;
+}
+
+.hmd_conf_dialog {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+   transform: translate(-50%, -50%);
+   -webkit-transform: translate(-50%, -50%);
+}
+
+a {
+  font-family: Arial, sans-serif;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+a:active,
+a:hover {
+  outline-width: 0;
+}
+
+#controls_container .btn {
+  background-color: #ffffff;
+  border: 2px solid rgba(98, 98, 98, .2);
+  border-radius: 2px;
+  width: 170px;
+  height: 30px;
+  display: block;
+  float: left;
+  font-size: 16px;
+  font-weight: normal;
+  color: rgb(255, 0, 0);
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  padding-left: 0;
+  line-height: 28px;
+  margin-bottom: 4px;
+  box-shadow: 0px 0px 4px 0px rgba(98, 98, 98, .8);
+  -webkit-transition: opacity .1s ease-in-out;
+  transition: opacity .1s ease-in-out;
+}
+
+.btn.active {
+  background-color: #5276cf;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.row:after {
+  clear: both;
+  display: table;
+  content: " ";
+}

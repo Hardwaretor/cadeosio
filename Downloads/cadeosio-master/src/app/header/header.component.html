@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+
+<body>
+
+<nav class="mb-1 navbar navbar-expand-lg navbar-light bg-light lighten-1">
+    <img id="logosup" src= "../assets/logo512x512.png">
+    <a class="navbar-brand" href="#">CADEOS.io</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-555"
+      aria-controls="navbarSupportedContent-555" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent-555">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="./p3d" >3D</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="./plm" >PLM</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="./jobs" >JOBS</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="./tools">TOOLS</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="./wallet" >WALLET</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="./campus" >CAMPUS</a>
+        </li>
+      </ul>
+       
+
+      <div class="container d-flex flex-row-reverse">
+        <div class="row">
+
+          <div class="col">
+            <div class="btn-group">
+              <div class="row">
+                <a class="avatar-btn" href="login()">Login</a>
+                <a class="avatar-btn" href="logout()">Logout</a>
+              <button type="button" class="dropdown-toggle avatar-btn" data-toggle="dropdown">
+                  <span class="caret"></span><span class="sr-only"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu">
+                <a class="dropdown-item" href="./edit">Edit Profile</a>
+                <a class="dropdown-item" href="./login">Create Project</a>
+                <a class="dropdown-item" href="./login">Upload File</a>
+                <a class="dropdown-item" href="./login">Plublish Project</a>
+                <a class="dropdown-item" href="./login">User Jobs</a>
+                <a class="dropdown-item" href="./login">User Galleries</a>
+                <a class="dropdown-item" href="./login">Configuration</a>
+                <a class="dropdown-item" href="./register">New User</a>
+              </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <h5>Hi {{user.username}}!</h5>
+        <img src= "assets/LogoGris.png" class="rounded-circle z-depth-0"alt="avatar image" height="80">
+      </div>
+      
+        </div>
+      </div>
+    </div>
+</nav>
+</body>
+</html>
